@@ -241,9 +241,9 @@ footer p{margin:0 0 12px;line-height:1.6}
 .x{flex:none;width:42px;height:42px;border-radius:50%;border:1px solid rgba(18,28,48,.16);background:transparent;display:grid;place-items:center}
 .x:hover{border-color:var(--ink-text)}
 .sheet-body{padding:26px 36px 34px}
-.sheet-body ol{margin:0 0 24px;padding:0;list-style:none;counter-reset:m;display:grid;gap:10px}
-.sheet-body ol li{counter-increment:m;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:14px 16px;border-radius:12px;background:#fff;border:1px solid rgba(18,28,48,.08);font-size:15px}
-.sheet-body ol li::before{content:counter(m);font:600 22px/1 var(--serif);color:var(--gold-deep)}
+#pmBody ol{margin:0 0 24px;padding:0;list-style:none;counter-reset:m;display:grid;gap:10px}
+#pmBody ol li{counter-increment:m;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:14px 16px;border-radius:12px;background:#fff;border:1px solid rgba(18,28,48,.08);font-size:15px}
+#pmBody ol li::before{content:counter(m);font:600 22px/1 var(--serif);color:var(--gold-deep)}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(18,28,48,.12);border-radius:12px;overflow:hidden;margin-bottom:20px}
 .facts div{background:var(--paper-2);padding:14px 16px;font-size:14px}
 .facts span{display:block;color:var(--ink-muted);font-size:12.5px}
@@ -253,11 +253,18 @@ footer p{margin:0 0 12px;line-height:1.6}
 .sheet-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid rgba(18,28,48,.12)}
 .legal{font-size:15px;line-height:1.7;color:#2A364D}
 .legal h4{font:600 22px/1.2 var(--serif);color:var(--ink-text);margin:24px 0 6px}
-.legal ul,.legal ol{padding-left:22px}
+.legal ul,.legal ol{padding-left:24px;margin:8px 0 14px}
+.legal li{margin:4px 0}
+.legal p{margin:0 0 10px}
 .legal strong{color:var(--ink-text)}
 @media (max-width:600px){.facts{grid-template-columns:1fr}.sheet-head,.sheet-body{padding-left:20px;padding-right:20px}}
 
 @media (max-width:760px){.hide-sm{display:none}}
+@media (max-width:560px){
+  .topbar .wrap{justify-content:center}.topbar .wrap > a{display:none}
+  .stats{grid-template-columns:1fr}.stats div{display:flex;justify-content:space-between;gap:12px;align-items:baseline}.stats span{display:inline}
+  .hero h1{font-size:40px}.instrument .bar{font-size:12px;padding:12px 14px}
+}
 #loadError{display:none;max-width:520px;margin:120px auto;padding:22px;border:1px solid rgba(217,119,111,.4);border-radius:14px;color:var(--bear);text-align:center}
 </style>
 </head>
@@ -542,7 +549,7 @@ function openProduct(id){
   $('pmBody').innerHTML = `
     <p style="margin:0 0 22px;color:var(--ink-muted);font-size:16px">${esc(p.shortDesc)}</p>
     <ol>${(p.modules || []).map(m => `<li>${esc(m)}</li>`).join('')}</ol>
-    <div class="facts"><div><span>Delivery</span><b>${esc(p.delivery)}</b></div><div><span>Access period</span><b>${esc(p.accessPeriod)}</b></div><div><span>Support</span><b>${esc(p.support)}</b></div></div>
+    <div class="facts"><div><span>Delivery</span><b>${esc(p.delivery)}</b></div><div><span>Purchase</span><b>${esc(p.accessPeriod)}</b></div><div><span>After purchase</span><b>${esc(p.support)}</b></div></div>
     <p class="fine">Educational software and materials. Not financial advice and not a guarantee of profit; trading involves a high risk of loss. Digital product, all sales final. <a href="#legal/refund">Refund &amp; delivery policy</a> · <a href="#legal/risk">Risk disclaimer</a></p>
     <div class="sheet-foot"><div class="price">${money(p)}<small>${esc(p.currency || 'USD')}</small></div>${cta(p, false)}</div>`;
   openModal('productModal');
@@ -640,7 +647,8 @@ const Chart = (() => {
     ctx.font = '11px "Hanken Grotesk", system-ui'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
     for (let k = 0; k <= 5; k++) { const v = lo + (hi - lo) * k / 5, yy = Math.round(y(v)) + .5;
       ctx.strokeStyle = COL.grid; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(padL, yy); ctx.lineTo(W - padR + 8, yy); ctx.stroke();
-      ctx.fillStyle = COL.axis; ctx.fillText(v.toFixed(2), W - padR + 18, yy); }
+      const near = shown > marks.entryBar && [marks.tp, marks.sl, marks.entry].some(m => Math.abs(y(m) - yy) < 16);
+      if (!near) { ctx.fillStyle = COL.axis; ctx.fillText(v.toFixed(2), W - padR + 18, yy); } }
     const M = marks, queue = [], label = (txt, xx, yy, col, align = 'left') => queue.push([txt, xx, yy, col, align]);
     const flush = () => queue.forEach(([txt, xx, yy, col, align]) => {
       ctx.font = '600 12px "Hanken Grotesk", system-ui'; const w = ctx.measureText(txt).width, x0 = align === 'right' ? xx - w : xx;
@@ -651,7 +659,7 @@ const Chart = (() => {
       ctx.setLineDash([4, 5]); ctx.strokeStyle = 'rgba(169,198,217,.45)'; ctx.lineWidth = 1;
       [M.rHi, M.rLo].forEach(v => { ctx.beginPath(); ctx.moveTo(x(M.rStart) - step / 2, y(v)); ctx.lineTo(x(Math.min(shown, N - 1)), y(v)); ctx.stroke(); });
       ctx.setLineDash([]);
-      label('Range high', x(M.rStart), y(M.rHi) - 11, COL.text); label('Range low · sell stops', x(M.rStart), y(M.rLo) + 13, COL.text);
+      label('Range high', x(M.rStart), y(M.rHi) - 11, COL.text); label(W < 560 ? 'Range low' : 'Range low · sell stops', x(M.rStart), W < 560 ? y(M.rLo) - 11 : y(M.rLo) + 13, COL.text);
     }
     // FVG
     if (shown > M.disp + 1) {

@@ -11,8 +11,8 @@
   },
   "topBar": {
     "enabled": true,
-    "badgeText": "SECURE CHECKOUT VIA WHOP",
-    "infoText": "Digital products: PDF manuals, MT5 indicators, Expert Advisor and MQL5 source code"
+    "badgeText": "Secure checkout via Whop",
+    "infoText": "Digital downloads: PDF manuals, MT5 indicators and an Expert Advisor"
   },
   "nav": [
     {
@@ -54,13 +54,13 @@
       {
         "icon": "fa-terminal",
         "color": "indigo",
-        "title": "Readable MQL5",
-        "subtitle": "Full source, no DLLs"
+        "title": "Ready to run",
+        "subtitle": "Compiled MT5 programs, no DLLs"
       }
     ],
     "primaryCtaLabel": "Browse the catalog",
     "secondaryCtaLabel": "Ask a question",
-    "codeFileName": "QuantCore_RiskEngine.mqh",
+    "codeFileName": "Example · position sizing logic",
     "codeBadge": "MQL5",
     "code": "// Dynamic lot sizing & equity circuit breaker\ndouble CalculateNormalizedLot(string sym, double risk_pct, double sl_pts) {\n   double equity   = AccountInfoDouble(ACCOUNT_EQUITY);\n   double tick_val = SymbolInfoDouble(sym, SYMBOL_TRADE_TICK_VALUE);\n   double vol_step = SymbolInfoDouble(sym, SYMBOL_VOLUME_STEP);\n   double raw_lot  = (equity * (risk_pct / 100.0)) / (sl_pts * tick_val);\n   return MathFloor(raw_lot / vol_step) * vol_step;\n}\n\n// Fair Value Gap displacement check\nbool VerifyDisplacement(const MqlRates &r[]) {\n   double fvg_gap = r[0].low - r[2].high;\n   return (fvg_gap >= InpMinDisplacementPts * _Point);\n}",
     "stats": [
@@ -74,7 +74,7 @@
       },
       {
         "label": "Delivered as",
-        "value": ".mq5 · .pdf · .xlsx"
+        "value": ".ex5 · .pdf · .xlsx"
       }
     ]
   },
@@ -107,7 +107,7 @@
       "whopUrl": "",
       "currency": "USD",
       "delivery": "Instant ZIP download via Whop",
-      "support": "Email support",
+      "support": "Replacement of missing or damaged files",
       "id": "qc-risk-kit-250",
       "title": "Risk Manager & Trading Journal Kit (MT5 + Excel)",
       "category": "software",
@@ -118,7 +118,7 @@
       "shortDesc": "Everything needed to size positions correctly, respect daily loss limits and track results in R — inside MetaTrader 5 and Excel.",
       "deliverables": [
         "Risk Management Playbook (PDF)",
-        "MT5 Position Sizer script + Risk Dashboard panel (.mq5)",
+        "MT5 Position Sizer script + Risk Dashboard panel (.ex5)",
         "Excel calculator, trade journal & statistics"
       ],
       "modules": [
@@ -127,7 +127,7 @@
         "QuantCore_Risk_Dashboard (MT5 indicator): today and week P/L, room to daily limit, open risk at SL, positions without stop-loss, limit alerts",
         "Excel workbook: position-size calculator, 500-row journal with R results, statistics (win rate, expectancy, profit factor), equity curve, drawdown table"
       ],
-      "accessPeriod": "12 months of access and updates"
+      "accessPeriod": "One-time purchase, no subscription"
     },
     {
       "id": "qc-smc-500",
@@ -152,9 +152,9 @@
         "Module 3: Supply/Demand Valuation & Equilibrium (50%) Pricing",
         "Module 4: Lower-Timeframe Confirmation Entries & Position Sizing Formula"
       ],
-      "accessPeriod": "12 months of access and updates",
+      "accessPeriod": "One-time purchase, no subscription",
       "delivery": "Instant ZIP download via Whop",
-      "support": "Email support"
+      "support": "Replacement of missing or damaged files"
     },
     {
       "id": "qc-ict-750",
@@ -163,14 +163,14 @@
       "title": "IPDA & Time-Price Theory Manual",
       "category": "manual",
       "badge": "Advanced manual with indicator",
-      "version": "2026 Edition + Templates",
+      "version": "2026 Edition",
       "price": 750,
       "currency": "USD",
       "icon": "fa-clock",
       "shortDesc": "Manual covering price delivery concepts (20/40/60-day lookbacks), session killzones, the NY midnight open and time-based models.",
       "deliverables": [
         "IPDA & Time-Price PDF Manual (4 modules)",
-        "Session Killzones indicator for MT5 (.mq5)",
+        "Session Killzones indicator for MT5 (.ex5)",
         "SMT Divergence Reference Sheet (PDF)"
       ],
       "modules": [
@@ -179,9 +179,9 @@
         "Module 3: PD Array Hierarchy & Consequent Encroachment (50%)",
         "Module 4: Time-Window Models & SMT Divergence"
       ],
-      "accessPeriod": "12 months of access and updates",
+      "accessPeriod": "One-time purchase, no subscription",
       "delivery": "Instant ZIP download via Whop",
-      "support": "Email support"
+      "support": "Replacement of missing or damaged files"
     },
     {
       "id": "qc-orderflow-950",
@@ -197,7 +197,7 @@
       "shortDesc": "Auction Market Theory, developing POC migration, VWAP standard-deviation bands and cumulative volume delta.",
       "deliverables": [
         "Order Flow & VWAP Manual (PDF, 4 modules)",
-        "MT5 indicators: VWAP Bands + Tick Delta / CVD (.mq5)",
+        "MT5 indicators: VWAP Bands + Tick Delta / CVD (.ex5)",
         "XAUUSD & US Indices Study Protocol (PDF)"
       ],
       "modules": [
@@ -206,9 +206,9 @@
         "Module 3: Tick Delta Mechanics, Absorption vs. Exhaustion",
         "Module 4: Confluence Model for XAUUSD and Nasdaq"
       ],
-      "accessPeriod": "12 months of access and updates",
+      "accessPeriod": "One-time purchase, no subscription",
       "delivery": "Instant ZIP download via Whop",
-      "support": "Email support"
+      "support": "Replacement of missing or damaged files"
     },
     {
       "id": "qc-fvg-ind-1200",
@@ -217,13 +217,13 @@
       "title": "FVG, Killzone & Liquidity Scanner (MT5)",
       "category": "software",
       "badge": "MT5 indicator suite",
-      "version": "MT5 · Version 1.0",
+      "version": "Version 1.0",
       "price": 1200,
       "currency": "USD",
       "icon": "fa-compass-drafting",
       "shortDesc": "Multi-timeframe MetaTrader 5 indicator that maps order blocks, fair value gaps and equal highs/lows.",
       "deliverables": [
-        "Liquidity Mapper, Session Killzones & Tick Delta indicators (.mq5, up to 3 accounts)",
+        "Liquidity Mapper, Session Killzones & Tick Delta indicators (.ex5, up to 3 accounts)",
         "Pop-up, push & email alerts",
         "Preset .SET files for majors, gold & indices + user guide"
       ],
@@ -233,9 +233,9 @@
         "Engine 3: Asian range, London and New York killzones, NY midnight open",
         "Engine 4: tick-volume delta / CVD histogram with price-CVD divergence alerts"
       ],
-      "accessPeriod": "12 months of access and updates",
+      "accessPeriod": "One-time purchase, no subscription",
       "delivery": "Instant ZIP download via Whop",
-      "support": "Email support"
+      "support": "Replacement of missing or damaged files"
     },
     {
       "id": "qc-gold-ea-1500",
@@ -244,13 +244,13 @@
       "title": "XAUUSD Liquidity & VWAP Expert Advisor (MT5)",
       "category": "software",
       "badge": "MT5 Expert Advisor",
-      "version": "Version 1.0 (no martingale)",
+      "version": "Version 1.0 · no martingale",
       "price": 1500,
       "currency": "USD",
       "icon": "fa-robot",
       "shortDesc": "MQL5 Expert Advisor for XAUUSD and US indices based on session liquidity sweeps and fair value gap entries.",
       "deliverables": [
-        "QuantCore_ExecutionEA (.mq5, up to 3 accounts)",
+        "QuantCore_ExecutionEA (.ex5, up to 3 accounts)",
         "Built-in daily loss limit, spread, session & news filters",
         "Starting .SET profiles + user, VPS & backtesting guide"
       ],
@@ -260,9 +260,9 @@
         "Filters: New York trading windows, maximum spread, VWAP side, high-impact news window (MT5 calendar, live/demo)",
         "Testing: step-by-step backtest, out-of-sample and demo forward-test procedure"
       ],
-      "accessPeriod": "12 months of access and updates",
+      "accessPeriod": "One-time purchase, no subscription",
       "delivery": "Instant ZIP download via Whop",
-      "support": "Email support"
+      "support": "Replacement of missing or damaged files"
     },
     {
       "id": "qc-mql5-arch-2200",
@@ -271,7 +271,7 @@
       "title": "MQL5 EA Architecture Course + Source Code",
       "category": "software",
       "badge": "Course with source code",
-      "version": "MQL5 Framework",
+      "version": "Version 1.0",
       "price": 2200,
       "currency": "USD",
       "icon": "fa-laptop-code",
@@ -287,75 +287,75 @@
         "Module 3: Risk Engine, Lot Normalization & Daily Equity Limit",
         "Module 4: Real-Tick Backtesting & Walk-Forward Optimization"
       ],
-      "accessPeriod": "12 months of access and updates",
+      "accessPeriod": "One-time purchase, no subscription",
       "delivery": "Instant ZIP download via Whop",
-      "support": "Email support"
+      "support": "Replacement of missing or damaged files"
     },
     {
       "id": "qc-prop-desk-3500",
       "status": "coming_soon",
       "whopUrl": "",
-      "title": "Complete Suite + 1-on-1 Setup Session",
+      "title": "Complete Suite (5 Accounts)",
       "category": "enterprise",
       "badge": "Bundle for 5 accounts",
-      "version": "Pro Edition",
+      "version": "Version 1.0",
       "price": 3500,
       "currency": "USD",
       "icon": "fa-server",
-      "shortDesc": "All manuals, the full indicator suite, the MT5 Expert Advisor and the risk kit, plus a personal online setup session.",
+      "shortDesc": "All manuals, the full indicator suite, the MT5 Expert Advisor and the risk kit in one download.",
       "deliverables": [
-        "All manuals (SMC, IPDA, Order Flow, MQL5 course) + Risk Playbook",
-        "MT5 EA + all indicators & tools (5 account licenses)",
-        "2 hours of 1-on-1 online setup & VPS configuration"
+        "All manuals: SMC, IPDA, Order Flow + Risk Playbook",
+        "MT5 Expert Advisor + all indicators & tools (.ex5)",
+        "Licence for up to 5 trading accounts"
       ],
       "modules": [
-        "Includes the SMC, IPDA, Order Flow and MQL5 Architecture manuals, guides and checklists",
-        "Includes the Liquidity Scanner suite, VWAP Bands, Tick Delta, Expert Advisor, Position Sizer and Risk Dashboard",
-        "Use on up to 5 trading accounts you own or control",
-        "2 hours of online sessions (book within 60 days) and 12 months of priority email support"
+        "Manuals: SMC & Liquidity, IPDA & Time-Price, Order Flow & VWAP, Risk Management Playbook, checklists and study protocol",
+        "MT5 programs (.ex5): Liquidity Mapper, Session Killzones, VWAP Bands, Tick Delta, Risk Dashboard, Position Sizer",
+        "XAUUSD Liquidity & VWAP Expert Advisor (.ex5) with starting presets and the user, VPS & testing guide",
+        "Excel risk calculator and trading journal; licence for up to 5 trading accounts you own or control"
       ],
-      "accessPeriod": "12 months of access, updates and priority support",
-      "delivery": "Instant ZIP download via Whop + scheduled online session",
-      "support": "Priority email support"
+      "accessPeriod": "One-time purchase, no subscription",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files"
     },
     {
       "id": "qc-source-ent-5000",
       "status": "coming_soon",
       "whopUrl": "",
-      "title": "Full Source-Code License & Custom Development",
+      "title": "Full Source-Code License",
       "category": "enterprise",
       "badge": "Commercial licence",
-      "version": "Commercial License",
+      "version": "Version 1.0",
       "price": 5000,
       "currency": "USD",
       "icon": "fa-building-shield",
-      "shortDesc": "Complete QuantCore MQL5 source code (.mq5 / .mqh), all manuals, and custom development work.",
+      "shortDesc": "Everything in the Complete Suite, plus the MQL5 course and the full source code of every QuantCore program under a commercial licence.",
       "deliverables": [
-        "Complete MQL5 source code of all QuantCore programs",
-        "Licensing template (account lock, expiry, server check)",
-        "Up to 10 hours of custom development (scope agreed in writing)"
+        "MQL5 source code of every QuantCore program and the framework",
+        "Commercial licence: modify, compile, use on unlimited own accounts",
+        "All manuals, the MQL5 course and the compiled programs"
       ],
       "modules": [
-        "Commercial licence: modify and compile the code; use on unlimited own accounts; distribute compiled programs (see licence)",
-        "QC_License.mqh template to protect your own builds",
-        "Custom development by the developer — up to 10 hours, requested within 90 days",
-        "All manuals and guides included; 12 months of updates"
+        "Source code (.mq5 / .mqh): Liquidity Mapper, Session Killzones, VWAP Bands, Tick Delta, Risk Dashboard, Position Sizer, Execution EA",
+        "Framework libraries, sample EA, Monte Carlo script and the QC_License.mqh licensing template",
+        "Commercial licence: build your own programs and distribute compiled .ex5 versions under the licence terms",
+        "Includes every manual, the MQL5 EA Architecture course and all compiled programs"
       ],
-      "accessPeriod": "12 months of updates",
-      "delivery": "Instant ZIP download via Whop + custom work by email",
-      "support": "Dedicated developer support"
+      "accessPeriod": "One-time purchase, no subscription",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files"
     }
   ],
   "features": {
     "eyebrow": "",
-    "title": "Engineered to be read, tested and trusted",
-    "text": "Software you can inspect line by line, with documentation that explains every rule.",
+    "title": "Engineered around risk control",
+    "text": "Every rule is documented in plain language and every threshold is an input you control.",
     "items": [
       {
         "icon": "fa-layer-group",
         "color": "brand",
-        "title": "Rules you can verify",
-        "text": "Structure breaks use candle closes, sweeps use wicks, and every threshold is an input. Nothing is hidden behind a compiled black box."
+        "title": "Rules you can test",
+        "text": "Structure breaks use candle closes, sweeps use wicks, and every threshold is an input. The manuals describe each rule, so you can verify it in the Strategy Tester."
       },
       {
         "icon": "fa-file-shield",
@@ -364,10 +364,10 @@
         "text": "Position size comes from your broker’s own contract data. Daily limits, open-risk caps and spread guards protect the account."
       },
       {
-        "icon": "fa-headset",
+        "icon": "fa-bolt",
         "color": "indigo",
-        "title": "Direct support",
-        "text": "Questions about installation, settings or MetaTrader 5 go straight to the developer at quantcorestore@gmail.com."
+        "title": "Complete on delivery",
+        "text": "Each download contains everything listed on the product page, a start-here guide and installation steps. One-time purchase, no subscription."
       }
     ]
   },
@@ -383,6 +383,10 @@
         "a": "All products are digital and delivered instantly, so all sales are final and non-refundable. If a file is missing or damaged, email quantcorestore@gmail.com within 7 days and we will send a replacement. Please read the Refund & Delivery Policy before purchasing."
       },
       {
+        "q": "Are updates or support included?",
+        "a": "No. Each product is a one-time purchase of the version delivered — no subscription, updates, installation help or consultations. Everything you need to install and use it is in the package. If a file is missing or damaged, we replace it."
+      },
+      {
         "q": "Do the indicators and the Expert Advisor guarantee profit?",
         "a": "No. They are educational and analytical tools. Trading involves a high risk of loss, and no software can guarantee results. Always test on a demo account before any live use."
       },
@@ -392,7 +396,7 @@
       },
       {
         "q": "In what format are the MetaTrader 5 programs delivered?",
-        "a": "As MQL5 source code (.mq5 / .mqh). You compile them in MetaEditor, which is included free with MetaTrader 5 (open the file and press F7). Step-by-step instructions are included in every package."
+        "a": "Indicators, scripts and the Expert Advisor are delivered as compiled .ex5 files, ready to run in MetaTrader 5 (64-bit) for Windows. Source code is included only in the two products whose description says so: the MQL5 EA Architecture Course and the Full Source-Code License."
       },
       {
         "q": "What payment methods are accepted?",
@@ -412,7 +416,7 @@
     "telegramLabel": "",
     "phone": "",
     "hours": "",
-    "responseNote": "Email support on business days — we usually reply within 24 hours."
+    "responseNote": "Order and delivery questions are answered within 2 business days."
   },
   "payments": {
     "title": "Payments",
@@ -438,11 +442,11 @@
   "legal": {
     "terms": {
       "title": "Terms of Service & Sale (Public Offer)",
-      "html": "<p>Effective date: October 28, 2026</p><p>These Terms of Service &amp; Sale (\"Terms\") form a binding agreement between <strong>QuantCore Systems</strong> (the \"Seller\", \"we\", \"us\"), operator of the website quantcore-systems.github.io (the \"Website\"), and any person or legal entity that purchases, downloads or uses any of our products (the \"Client\", \"you\").</p><p><strong>By completing a checkout, clicking \"Pay\", \"Buy\", \"Join\" or a similar button, or by downloading or using any product, you confirm that you have read, understood and accepted these Terms, the Refund &amp; Delivery Policy, the Risk Disclaimer, the Privacy Policy and the End-User License Agreement (together, the \"Agreement\"). If you do not agree, do not purchase.</strong></p><h4>1. Definitions</h4><ul><li><strong>Product</strong> — any digital item sold by the Seller: PDF manuals and courses, spreadsheets, MetaTrader 5 (MT5) indicators, scripts and Expert Advisors in source (.mq5/.mqh) or compiled (.ex5) form, preset (.set) files, documentation, and any related digital materials.</li><li><strong>Service</strong> — a scheduled consultation, setup session or custom development work included in certain Products.</li><li><strong>Whop</strong> — the third-party platform (whop.com) through which payment is processed and Products are delivered.</li><li><strong>Delivery</strong> — the moment the Product becomes available for download or access in the Client's Whop account.</li></ul><h4>2. Nature of the Products — Education and Software Only</h4><p>2.1. All Products are <strong>educational materials and software tools</strong>. They are provided for informational and educational purposes only.</p><p>2.2. The Seller is <strong>not</strong> a broker, dealer, investment adviser, financial planner, fund manager, commodity trading advisor or any other regulated financial service provider. The Seller does <strong>not</strong> provide personal investment advice, trading signals tailored to your situation, account management or any financial service.</p><p>2.3. Nothing in any Product, on the Website, in support communication or in any Service constitutes a recommendation to buy, sell or hold any financial instrument, or an offer or solicitation to trade.</p><p>2.4. <strong>No guarantee of profit.</strong> The Seller does not promise, guarantee or imply that any Product, strategy, indicator or Expert Advisor will generate profit, avoid losses, pass any proprietary-firm challenge, or achieve any specific result. Any examples, charts, backtests or figures are illustrative and hypothetical.</p><p>2.5. The Client is solely responsible for all trading decisions, for the configuration of any software, and for all results, including losses.</p><h4>3. Eligibility</h4><p>3.1. You must be at least 18 years old (or the age of majority in your jurisdiction) and legally able to enter into contracts.</p><p>3.2. You are responsible for making sure that purchasing and using the Products, and trading financial instruments, is lawful where you live.</p><h4>4. Product Descriptions — Your Responsibility to Review</h4><p>4.1. Each Product page lists exactly what is included (files, formats, number of modules, access period and any Services). <strong>The Client confirms that before purchasing they reviewed the Product description and understand what they are buying.</strong></p><p>4.2. Software Products require MetaTrader 5 (64-bit) on a Windows computer or Windows VPS, and a trading account with a broker that supports the relevant symbols. Compatibility with any particular broker, symbol, account type or terminal build is the Client's responsibility to verify. Demo testing before live use is required (see the Risk Disclaimer).</p><p>4.3. Products that include MQL5 source code (.mq5/.mqh) may need to be compiled by the Client in MetaEditor (free, included with MetaTrader 5). Instructions are included with the Product.</p><h4>5. Prices and Payment</h4><p>5.1. Prices are shown in US dollars (USD) unless stated otherwise. Taxes or currency-conversion fees charged by your bank or by Whop may apply.</p><p>5.2. Payment is processed by Whop. The Seller never receives or stores your card details. Payment is subject to Whop's own terms and policies.</p><p>5.3. <strong>The Client confirms that they are the authorised holder of the payment method used</strong> and that the purchase is made voluntarily and intentionally.</p><p>5.4. The order is confirmed when Whop confirms successful payment. Whop's payment receipt and access record are proof of purchase and of Delivery.</p><h4>6. Delivery</h4><p>6.1. Products are delivered <strong>digitally and immediately</strong> after successful payment, through the Client's Whop account (and Whop's confirmation email). No physical goods are shipped.</p><p>6.2. <strong>Delivery is complete the moment the Product becomes available in the Client's Whop account</strong>, regardless of whether the Client downloads, opens or uses it.</p><p>6.3. The Client is responsible for providing a correct email address at checkout, for checking spam/junk folders, and for logging in to Whop to download files.</p><p>6.4. If you cannot find or download your files, you must contact us at <strong>quantcorestore@gmail.com</strong> within 7 days of purchase. We will re-send access or replacement files. Difficulty finding a download does not constitute non-delivery.</p><p>6.5. Services (setup sessions, custom development) are scheduled by email after purchase, as described in the Product. The Client must request scheduling within 60 days of purchase; unused sessions expire after that period and are not refundable.</p><h4>7. All Sales Are Final — No Refunds</h4><p>7.1. <strong>Because Products are digital and are delivered immediately, all sales are final. Payments are non-refundable, and Products cannot be returned, exchanged or cancelled after purchase.</strong></p><p>7.2. <strong>Waiver of withdrawal right.</strong> By completing the purchase, the Client expressly requests immediate access to the digital content and <strong>acknowledges that they thereby lose any statutory right of withdrawal or \"cooling-off\" period</strong> to the maximum extent permitted by applicable law (including, for consumers in the EU/UK, the right of withdrawal for digital content supplied immediately with the consumer's prior express consent).</p><p>7.3. In particular, <strong>no refund is given</strong> for: change of mind; not reading the Product description; not using the Product; trading losses or lack of profits; dissatisfaction with trading results; incompatibility with the Client's broker, symbol, computer, VPS or prop-firm rules; failure to compile or install software where the instructions were not followed; misunderstanding of the content; or duplicate purchases made knowingly.</p><p>7.4. The only remedies are those set out in the Refund &amp; Delivery Policy (re-delivery or replacement of corrupted files) and any mandatory rights that cannot be excluded by law. Nothing in these Terms limits rights that applicable law does not allow to be limited.</p><h4>8. Chargebacks and Payment Disputes</h4><p>8.1. <strong>Before opening any dispute or chargeback with your bank or Whop, you agree to contact us at quantcorestore@gmail.com and allow us 7 business days to resolve the issue.</strong></p><p>8.2. A chargeback filed for a Product that was delivered, or a claim that a purchase was \"not authorised\" or \"not received\" when Whop records show a successful payment and Delivery, is a breach of this Agreement. In such a case the Seller will submit Whop's payment and access records, the Client's acceptance of these Terms and any correspondence as evidence, and <strong>all licenses granted to the Client are immediately revoked.</strong></p><p>8.3. The Seller may refuse future sales to Clients who file unjustified disputes.</p><h4>9. License and Intellectual Property</h4><p>9.1. All Products are protected by copyright and are the intellectual property of QuantCore Systems. Purchase grants a <strong>limited, non-exclusive, non-transferable license</strong> to use the Product as described in the End-User License Agreement (EULA) included with each Product. No ownership is transferred.</p><p>9.2. You may not resell, share, publish, upload, distribute, sublicense or give away any Product or any part of it, including source code, PDFs or preset files, unless the specific Product license expressly allows it.</p><p>9.3. Violation of the license results in immediate termination of the license without refund and may lead to legal action.</p><h4>10. Access Period and Updates</h4><p>10.1. Each Product states its access/update period (for example, 12 months). After the access period ends, you may continue to use files you have already downloaded under the license, but you are not entitled to new versions, updates or support.</p><p>10.2. Updates, if released, are provided at the Seller's discretion. The Seller is not obliged to release updates, to adapt software to future MetaTrader builds, or to add features.</p><h4>11. Support</h4><p>11.1. Support is provided by email at <strong>quantcorestore@gmail.com</strong> for the support period stated on the Product, on business days. Support covers installation and use of the Product as described. It does not include trading advice, strategy design for your account, or custom development (unless purchased).</p><h4>12. Limitation of Liability</h4><p>12.1. Products are provided <strong>\"as is\" and \"as available\"</strong>, without warranties of any kind, express or implied, including merchantability, fitness for a particular purpose, accuracy, or uninterrupted or error-free operation.</p><p>12.2. To the maximum extent permitted by law, the Seller is <strong>not liable for any trading losses, lost profits, lost data, account losses, prop-firm challenge failures, or any indirect, incidental or consequential damages</strong> arising from the purchase or use of any Product or Service.</p><p>12.3. In any case, the Seller's total liability is limited to the amount the Client actually paid for the specific Product giving rise to the claim.</p><p>12.4. The Seller is not responsible for the actions, outages or policies of Whop, MetaQuotes, brokers, VPS providers, banks or any third party.</p><h4>13. Client Representations</h4><p>By purchasing, the Client represents that: (a) they read and accept this Agreement; (b) they reviewed the Product description; (c) they understand that trading involves substantial risk of loss; (d) they will not rely on any Product as financial advice; and (e) they are using their own funds and their own payment method.</p><h4>14. Changes to These Terms</h4><p>The Seller may update these Terms at any time. The version in force on the date of purchase applies to that purchase. The current version is always available on the Website.</p><h4>15. Governing Law and Disputes</h4><p>15.1. These Terms are governed by the laws of the Republic of Uzbekistan, without regard to conflict-of-law rules, except where mandatory consumer law of the Client's country applies.</p><p>15.2. The parties will first try to resolve any dispute by negotiation by email. Any dispute not resolved within 30 days shall be submitted to the competent courts at the Seller's location, unless mandatory law provides otherwise.</p><h4>16. Contact</h4><p>QuantCore Systems — quantcorestore@gmail.com — quantcore-systems.github.io</p>"
+      "html": "<p>Effective date: October 28, 2026</p><p>These Terms of Service &amp; Sale (\"Terms\") form a binding agreement between <strong>QuantCore Systems</strong> (the \"Seller\", \"we\", \"us\"), operator of the website quantcore-systems.github.io (the \"Website\"), and any person or legal entity that purchases, downloads or uses any of our products (the \"Client\", \"you\").</p><p><strong>By completing a checkout, clicking \"Pay\", \"Buy\", \"Join\" or a similar button, or by downloading or using any product, you confirm that you have read, understood and accepted these Terms, the Refund &amp; Delivery Policy, the Risk Disclaimer, the Privacy Policy and the End-User License Agreement (together, the \"Agreement\"). If you do not agree, do not purchase.</strong></p><h4>1. Definitions</h4><ul><li><strong>Product</strong> — any digital item sold by the Seller: PDF manuals and courses, spreadsheets, MetaTrader 5 (MT5) indicators, scripts and Expert Advisors in compiled (.ex5) form, preset (.set) files, documentation, and any related digital materials. MQL5 source code (.mq5/.mqh) is a Product only where the Product description expressly lists it.</li><li><strong>Whop</strong> — the third-party platform (whop.com) through which payment is processed and Products are delivered.</li><li><strong>Delivery</strong> — the moment the Product becomes available for download or access in the Client's Whop account.</li></ul><h4>2. Nature of the Products — Education and Software Only</h4><p>2.1. All Products are <strong>educational materials and software tools</strong>. They are provided for informational and educational purposes only.</p><p>2.2. The Seller is <strong>not</strong> a broker, dealer, investment adviser, financial planner, fund manager, commodity trading advisor or any other regulated financial service provider. The Seller does <strong>not</strong> provide personal investment advice, trading signals tailored to your situation, account management or any financial service.</p><p>2.3. Nothing in any Product, on the Website or in any email communication constitutes a recommendation to buy, sell or hold any financial instrument, or an offer or solicitation to trade.</p><p>2.4. <strong>No guarantee of profit.</strong> The Seller does not promise, guarantee or imply that any Product, strategy, indicator or Expert Advisor will generate profit, avoid losses, pass any proprietary-firm challenge, or achieve any specific result. Any examples, charts, backtests or figures are illustrative and hypothetical.</p><p>2.5. The Client is solely responsible for all trading decisions, for the configuration of any software, and for all results, including losses.</p><h4>3. Eligibility</h4><p>3.1. You must be at least 18 years old (or the age of majority in your jurisdiction) and legally able to enter into contracts.</p><p>3.2. You are responsible for making sure that purchasing and using the Products, and trading financial instruments, is lawful where you live.</p><h4>4. Product Descriptions — Your Responsibility to Review</h4><p>4.1. Each Product page lists exactly what is included (files, formats and number of modules). <strong>The Client confirms that before purchasing they reviewed the Product description and understand what they are buying.</strong></p><p>4.2. Software Products require MetaTrader 5 (64-bit) on a Windows computer or Windows VPS, and a trading account with a broker that supports the relevant symbols. Compatibility with any particular broker, symbol, account type or terminal build is the Client's responsibility to verify. Demo testing before live use is required (see the Risk Disclaimer).</p><p>4.3. MetaTrader 5 programs are supplied in compiled form (.ex5). Source code is not supplied unless the Product description expressly states that it is included. Products are complete when delivered; no customisation, installation or configuration work is included.</p><h4>5. Prices and Payment</h4><p>5.1. Prices are shown in US dollars (USD) unless stated otherwise. Taxes or currency-conversion fees charged by your bank or by Whop may apply.</p><p>5.2. Payment is processed by Whop. The Seller never receives or stores your card details. Payment is subject to Whop's own terms and policies.</p><p>5.3. <strong>The Client confirms that they are the authorised holder of the payment method used</strong> and that the purchase is made voluntarily and intentionally.</p><p>5.4. The order is confirmed when Whop confirms successful payment. Whop's payment receipt and access record are proof of purchase and of Delivery.</p><h4>6. Delivery</h4><p>6.1. Products are delivered <strong>digitally and immediately</strong> after successful payment, through the Client's Whop account (and Whop's confirmation email). No physical goods are shipped.</p><p>6.2. <strong>Delivery is complete the moment the Product becomes available in the Client's Whop account</strong>, regardless of whether the Client downloads, opens or uses it.</p><p>6.3. The Client is responsible for providing a correct email address at checkout, for checking spam/junk folders, and for logging in to Whop to download files.</p><p>6.4. If you cannot find or download your files, you must contact us at <strong>quantcorestore@gmail.com</strong> within 7 days of purchase. We will re-send access or replacement files. Difficulty finding a download does not constitute non-delivery.</p><h4>7. All Sales Are Final — No Refunds</h4><p>7.1. <strong>Because Products are digital and are delivered immediately, all sales are final. Payments are non-refundable, and Products cannot be returned, exchanged or cancelled after purchase.</strong></p><p>7.2. <strong>Waiver of withdrawal right.</strong> By completing the purchase, the Client expressly requests immediate access to the digital content and <strong>acknowledges that they thereby lose any statutory right of withdrawal or \"cooling-off\" period</strong> to the maximum extent permitted by applicable law (including, for consumers in the EU/UK, the right of withdrawal for digital content supplied immediately with the consumer's prior express consent).</p><p>7.3. In particular, <strong>no refund is given</strong> for: change of mind; not reading the Product description; not using the Product; trading losses or lack of profits; dissatisfaction with trading results; the absence of updates or new versions; incompatibility with the Client's broker, symbol, computer, VPS or prop-firm rules; failure to install or run software where the instructions were not followed; misunderstanding of the content; or duplicate purchases made knowingly.</p><p>7.4. The only remedies are those set out in the Refund &amp; Delivery Policy (re-delivery or replacement of corrupted files) and any mandatory rights that cannot be excluded by law. Nothing in these Terms limits rights that applicable law does not allow to be limited.</p><h4>8. Chargebacks and Payment Disputes</h4><p>8.1. <strong>Before opening any dispute or chargeback with your bank or Whop, you agree to contact us at quantcorestore@gmail.com and allow us 7 business days to resolve the issue.</strong></p><p>8.2. A chargeback filed for a Product that was delivered, or a claim that a purchase was \"not authorised\" or \"not received\" when Whop records show a successful payment and Delivery, is a breach of this Agreement. In such a case the Seller will submit Whop's payment and access records, the Client's acceptance of these Terms and any correspondence as evidence, and <strong>all licenses granted to the Client are immediately revoked.</strong></p><p>8.3. The Seller may refuse future sales to Clients who file unjustified disputes.</p><h4>9. License and Intellectual Property</h4><p>9.1. All Products are protected by copyright and are the intellectual property of QuantCore Systems. Purchase grants a <strong>limited, non-exclusive, non-transferable license</strong> to use the Product as described in the End-User License Agreement (EULA) included with each Product. No ownership is transferred.</p><p>9.2. You may not resell, share, publish, upload, distribute, sublicense or give away any Product or any part of it, including source code, PDFs or preset files, unless the specific Product license expressly allows it.</p><p>9.3. Violation of the license results in immediate termination of the license without refund and may lead to legal action.</p><h4>10. One-Time Purchase — No Updates Included</h4><p>10.1. Each Product is a one-time purchase of the files described on the Product page, in the version delivered. No subscription, updates, new versions, new features or adaptation to future MetaTrader builds are included or promised.</p><p>10.2. The download remains available in the Client's Whop account for as long as the Product is listed on Whop. The Client is responsible for keeping a copy of the downloaded files.</p><h4>11. Delivery Assistance Only</h4><p>11.1. The Seller's only after-sale obligation is delivery assistance by email at <strong>quantcorestore@gmail.com</strong>: re-sending access and replacing missing or corrupted files, as described in the Refund &amp; Delivery Policy.</p><p>11.2. No installation, configuration, coaching, consultation, trading advice, custom development or other services are included in any Product.</p><h4>12. Limitation of Liability</h4><p>12.1. Products are provided <strong>\"as is\" and \"as available\"</strong>, without warranties of any kind, express or implied, including merchantability, fitness for a particular purpose, accuracy, or uninterrupted or error-free operation.</p><p>12.2. To the maximum extent permitted by law, the Seller is <strong>not liable for any trading losses, lost profits, lost data, account losses, prop-firm challenge failures, or any indirect, incidental or consequential damages</strong> arising from the purchase or use of any Product.</p><p>12.3. In any case, the Seller's total liability is limited to the amount the Client actually paid for the specific Product giving rise to the claim.</p><p>12.4. The Seller is not responsible for the actions, outages or policies of Whop, MetaQuotes, brokers, VPS providers, banks or any third party.</p><h4>13. Client Representations</h4><p>By purchasing, the Client represents that: (a) they read and accept this Agreement; (b) they reviewed the Product description; (c) they understand that trading involves substantial risk of loss; (d) they will not rely on any Product as financial advice; and (e) they are using their own funds and their own payment method.</p><h4>14. Changes to These Terms</h4><p>The Seller may update these Terms at any time. The version in force on the date of purchase applies to that purchase. The current version is always available on the Website.</p><h4>15. Governing Law and Disputes</h4><p>15.1. These Terms are governed by the laws of the Republic of Uzbekistan, without regard to conflict-of-law rules, except where mandatory consumer law of the Client's country applies.</p><p>15.2. The parties will first try to resolve any dispute by negotiation by email. Any dispute not resolved within 30 days shall be submitted to the competent courts at the Seller's location, unless mandatory law provides otherwise.</p><h4>16. Contact</h4><p>QuantCore Systems — quantcorestore@gmail.com — quantcore-systems.github.io</p>"
     },
     "refund": {
       "title": "Refund & Delivery Policy",
-      "html": "<p>Effective date: October 28, 2026</p><p>This policy is part of the Terms of Service &amp; Sale of <strong>QuantCore Systems</strong>. By purchasing, you accept it.</p><h4>1. Digital Delivery</h4><ul><li>All products are <strong>digital</strong> and are delivered <strong>instantly</strong> after payment through your <strong>Whop account</strong> (whop.com). Whop also sends a confirmation email.</li><li><strong>Delivery is complete as soon as the product is available in your Whop account</strong>, whether or not you download or open it.</li><li>No physical items are shipped and there are no shipping fees.</li><li>Whop's records of payment and access are proof of delivery.</li></ul><h4>2. How to Get Your Files</h4><ol><li>Log in to whop.com with the email address you used at checkout.</li><li>Open the product you purchased.</li><li>Download the ZIP file and extract it.</li><li>Start with the file <strong>00_START_HERE.pdf</strong> inside the archive.</li></ol><p>Didn't receive the Whop email? Check your spam/junk folder, then log in to Whop directly.</p><h4>3. All Sales Are Final</h4><p><strong>Because our products are digital goods delivered immediately, all payments are final and non-refundable.</strong> Products cannot be returned, exchanged or cancelled once purchased.</p><p>By completing checkout you <strong>expressly request immediate access</strong> to the digital content and <strong>acknowledge that you lose any right of withdrawal or cooling-off period</strong>, to the maximum extent permitted by law.</p><p>We do <strong>not</strong> issue refunds for:</p><ul><li>change of mind, or buying without reading the product description;</li><li>not using, not downloading or not opening the product;</li><li>trading losses, lack of profits or dissatisfaction with trading results;</li><li>incompatibility with your broker, symbols, account type, computer, VPS or prop-firm rules;</li><li>failure to compile or install software when the included instructions were not followed;</li><li>misunderstanding of what a product does or contains.</li></ul><h4>4. What We Do Instead — Re-Delivery and Replacement</h4><p>If there is a genuine technical problem, we fix it — we do not refund:</p><ul><li><strong>Cannot find or download your files:</strong> email us within 7 days and we will re-send access.</li><li><strong>Corrupted or missing file in the archive:</strong> we will send a corrected replacement within 3 business days.</li><li><strong>Software does not compile or start on a supported MetaTrader 5 (64-bit) terminal while following the instructions:</strong> we will provide a corrected file or installation assistance.</li></ul><h4>5. Payment Disputes and Chargebacks</h4><p><strong>Contact us before contacting your bank.</strong> You agree to email <strong>quantcorestore@gmail.com</strong> and give us 7 business days to resolve any problem before opening a dispute or chargeback.</p><p>Disputes claiming \"not received\" or \"not authorised\" for a product that Whop shows as paid and delivered will be contested with Whop's payment and access records and your acceptance of our Terms. All licenses for the disputed product are revoked immediately.</p><h4>6. Services (Setup Sessions / Custom Development)</h4><p>Services included in some products must be scheduled by email within <strong>60 days</strong> of purchase. Unused or missed sessions (without 24 hours' notice) expire and are not refundable.</p><h4>7. Mandatory Legal Rights</h4><p>Nothing in this policy removes rights that the law of your country does not allow to be excluded. Where such a mandatory right applies, it applies only to the extent required by that law.</p><h4>8. Contact</h4><p>QuantCore Systems — <strong>quantcorestore@gmail.com</strong></p>"
+      "html": "<p>Effective date: October 28, 2026</p><p>This policy is part of the Terms of Service &amp; Sale of <strong>QuantCore Systems</strong>. By purchasing, you accept it.</p><h4>1. Digital Delivery</h4><ul><li>All products are <strong>digital</strong> and are delivered <strong>instantly</strong> after payment through your <strong>Whop account</strong> (whop.com). Whop also sends a confirmation email.</li><li><strong>Delivery is complete as soon as the product is available in your Whop account</strong>, whether or not you download or open it.</li><li>No physical items are shipped and there are no shipping fees.</li><li>Whop's records of payment and access are proof of delivery.</li></ul><h4>2. How to Get Your Files</h4><ol><li>Log in to whop.com with the email address you used at checkout.</li><li>Open the product you purchased.</li><li>Download the ZIP file and extract it.</li><li>Start with the file <strong>00_START_HERE.pdf</strong> inside the archive.</li></ol><p>Didn't receive the Whop email? Check your spam/junk folder, then log in to Whop directly.</p><h4>3. All Sales Are Final</h4><p><strong>Because our products are digital goods delivered immediately, all payments are final and non-refundable.</strong> Products cannot be returned, exchanged or cancelled once purchased.</p><p>By completing checkout you <strong>expressly request immediate access</strong> to the digital content and <strong>acknowledge that you lose any right of withdrawal or cooling-off period</strong>, to the maximum extent permitted by law.</p><p>We do <strong>not</strong> issue refunds for:</p><ul><li>change of mind, or buying without reading the product description;</li><li>not using, not downloading or not opening the product;</li><li>trading losses, lack of profits or dissatisfaction with trading results;</li><li>incompatibility with your broker, symbols, account type, computer, VPS or prop-firm rules;</li><li>failure to install or run software when the included instructions were not followed;</li><li>the absence of updates, new versions or new features (products are one-time purchases of the version delivered);</li><li>misunderstanding of what a product does or contains.</li></ul><h4>4. What We Do Instead — Re-Delivery and Replacement</h4><p>If there is a genuine technical problem, we fix it — we do not refund:</p><ul><li><strong>Cannot find or download your files:</strong> email us within 7 days and we will re-send access.</li><li><strong>Corrupted or missing file in the archive:</strong> we will send a corrected replacement within 3 business days.</li><li><strong>A program file does not load on a supported MetaTrader 5 (64-bit) terminal for Windows when installed as instructed:</strong> we will send a corrected file.</li></ul><h4>5. Payment Disputes and Chargebacks</h4><p><strong>Contact us before contacting your bank.</strong> You agree to email <strong>quantcorestore@gmail.com</strong> and give us 7 business days to resolve any problem before opening a dispute or chargeback.</p><p>Disputes claiming \"not received\" or \"not authorised\" for a product that Whop shows as paid and delivered will be contested with Whop's payment and access records and your acceptance of our Terms. All licenses for the disputed product are revoked immediately.</p><h4>6. Mandatory Legal Rights</h4><p>Nothing in this policy removes rights that the law of your country does not allow to be excluded. Where such a mandatory right applies, it applies only to the extent required by that law.</p><h4>7. Contact</h4><p>QuantCore Systems — <strong>quantcorestore@gmail.com</strong></p>"
     },
     "risk": {
       "title": "Risk Disclaimer",
@@ -450,11 +454,11 @@
     },
     "license": {
       "title": "End-User License Agreement (EULA)",
-      "html": "<p>Licensor: <strong>QuantCore Systems</strong> (quantcore-systems.github.io, quantcorestore@gmail.com)</p><p>This EULA is included with every QuantCore Systems product. By downloading, opening, installing or using the product, you accept this EULA together with the Terms of Service &amp; Sale, the Refund &amp; Delivery Policy and the Risk Disclaimer.</p><h4>1. Grant of License</h4><p>QuantCore Systems grants you a <strong>personal, limited, non-exclusive, non-transferable, revocable</strong> license to use the product for your own trading and education, within the account limits stated for the product.</p><ul><li><strong>Standard license</strong> (manuals, indicators, Expert Advisor): use on up to <strong>3</strong> MetaTrader 5 trading accounts that you own or control, unless the product page states otherwise.</li><li><strong>Bundle license:</strong> up to <strong>5</strong> accounts that you own or control.</li><li><strong>Commercial source-code license:</strong> as set out in the separate Commercial License included with that product.</li></ul><h4>2. Restrictions</h4><p>You may <strong>not</strong>: resell, rent, share, give away, publish or upload the product or any part of it (including PDFs, source code, compiled files and presets); share account access to it; remove copyright notices or branding; claim it as your own work; or use it to provide trading signals, account management or copy-trading services to others, except where the Commercial License expressly allows it.</p><p>Source code (.mq5/.mqh), where included, may be modified and compiled <strong>for your own use only</strong>. Modified versions remain subject to this EULA.</p><h4>3. Ownership</h4><p>The product is licensed, not sold. All intellectual property rights remain with QuantCore Systems.</p><h4>4. No Warranty</h4><p>The product is provided <strong>\"as is\"</strong>, without warranty of any kind. QuantCore Systems does not warrant that the product is error-free, that it will run on every broker or terminal build, or that it will produce any trading result.</p><h4>5. No Financial Advice — No Guarantee of Profit</h4><p>The product is an educational and analytical tool. It is <strong>not financial advice and not a guarantee of profit.</strong> Trading involves substantial risk of loss. You must test any software on a demo account before live use. You are solely responsible for all trading decisions and results.</p><h4>6. Limitation of Liability</h4><p>To the maximum extent permitted by law, QuantCore Systems is not liable for any trading losses, lost profits or indirect damages. Total liability is limited to the price you paid for the product.</p><h4>7. Termination</h4><p>This license terminates automatically, without refund, if you breach it or file an unjustified payment dispute. On termination you must delete all copies of the product.</p><h4>8. Governing Law</h4><p>This EULA is governed by the laws stated in the Terms of Service &amp; Sale.</p><p>© 2026 QuantCore Systems. All rights reserved.</p>"
+      "html": "<p>Licensor: <strong>QuantCore Systems</strong> (quantcore-systems.github.io, quantcorestore@gmail.com)</p><p>This EULA is included with every QuantCore Systems product. By downloading, opening, installing or using the product, you accept this EULA together with the Terms of Service &amp; Sale, the Refund &amp; Delivery Policy and the Risk Disclaimer.</p><h4>1. Grant of License</h4><p>QuantCore Systems grants you a <strong>personal, limited, non-exclusive, non-transferable, revocable</strong> license to use the product for your own trading and education, within the account limits stated for the product.</p><ul><li><strong>Standard license</strong> (manuals, indicators, scripts, Expert Advisor): use on up to <strong>3</strong> MetaTrader 5 trading accounts that you own or control, unless the product page states otherwise.</li><li><strong>Bundle license:</strong> up to <strong>5</strong> accounts that you own or control.</li><li><strong>Source-code products:</strong> only products whose description expressly includes source code contain it; their use is governed by this EULA and, where included, the Commercial License supplied with that product.</li></ul><h4>2. Restrictions</h4><p>You may <strong>not</strong>: resell, rent, share, give away, publish or upload the product or any part of it (including PDFs, compiled files, source code and presets); decompile, disassemble or reverse-engineer compiled files; share account access to it; remove copyright notices or branding; claim it as your own work; or use it to provide trading signals, account management or copy-trading services to others, except where the Commercial License expressly allows it.</p><p>Source code (.mq5/.mqh), where included, may be modified and compiled <strong>for your own use only</strong>. Modified versions remain subject to this EULA.</p><h4>3. Ownership</h4><p>The product is licensed, not sold. All intellectual property rights remain with QuantCore Systems.</p><h4>4. No Warranty</h4><p>The product is provided <strong>\"as is\"</strong>, in the version delivered, without warranty of any kind and without updates or support services. QuantCore Systems does not warrant that the product is error-free, that it will run on every broker or terminal build, or that it will produce any trading result.</p><h4>5. No Financial Advice — No Guarantee of Profit</h4><p>The product is an educational and analytical tool. It is <strong>not financial advice and not a guarantee of profit.</strong> Trading involves substantial risk of loss. You must test any software on a demo account before live use. You are solely responsible for all trading decisions and results.</p><h4>6. Limitation of Liability</h4><p>To the maximum extent permitted by law, QuantCore Systems is not liable for any trading losses, lost profits or indirect damages. Total liability is limited to the price you paid for the product.</p><h4>7. Termination</h4><p>This license terminates automatically, without refund, if you breach it or file an unjustified payment dispute. On termination you must delete all copies of the product.</p><h4>8. Governing Law</h4><p>This EULA is governed by the laws stated in the Terms of Service &amp; Sale.</p><p>© 2026 QuantCore Systems. All rights reserved.</p>"
     },
     "privacy": {
       "title": "Privacy Policy",
-      "html": "<p>Effective date: October 28, 2026</p><p><strong>QuantCore Systems</strong> (\"we\") respects your privacy. This policy explains what data we receive and how we use it.</p><h4>1. Data We Receive</h4><ul><li><strong>From Whop:</strong> your name or username, email address, the products you purchased, and payment status. <strong>We never receive or store your card details</strong> — payments are processed by Whop.</li><li><strong>From you:</strong> anything you send us by email (for example, support requests or your MetaTrader 5 account number for license purposes).</li><li><strong>Website:</strong> the Website is a static page hosted on GitHub Pages. We do not use our own analytics or advertising cookies. GitHub may log technical data (such as IP address) as described in GitHub's privacy statement.</li></ul><h4>2. How We Use Data</h4><p>Only to deliver products, manage licenses, provide support, prevent fraud and handle payment disputes, and to meet legal obligations.</p><h4>3. Sharing</h4><p>We do not sell or rent personal data. We share data only with service providers needed to operate the store (Whop for payments and delivery; email provider for support), or when required by law, or to defend a payment dispute.</p><h4>4. Retention</h4><p>We keep purchase and support records for as long as needed for licensing, support, accounting and dispute handling, and as required by law.</p><h4>5. Your Rights</h4><p>You may request access to, correction of, or deletion of your personal data (subject to legal and dispute-handling retention needs) by emailing <strong>quantcorestore@gmail.com</strong>.</p><h4>6. Contact</h4><p>QuantCore Systems — quantcorestore@gmail.com</p>"
+      "html": "<p>Effective date: October 28, 2026</p><p><strong>QuantCore Systems</strong> (\"we\") respects your privacy. This policy explains what data we receive and how we use it.</p><h4>1. Data We Receive</h4><ul><li><strong>From Whop:</strong> your name or username, email address, the products you purchased, and payment status. <strong>We never receive or store your card details</strong> — payments are processed by Whop.</li><li><strong>From you:</strong> anything you send us by email (for example, a request to re-send a file).</li><li><strong>Website:</strong> the Website is a static page hosted on GitHub Pages. We do not use our own analytics or advertising cookies. GitHub may log technical data (such as IP address) as described in GitHub's privacy statement.</li></ul><h4>2. How We Use Data</h4><p>Only to deliver products, re-send or replace files, prevent fraud, handle payment disputes and meet legal obligations.</p><h4>3. Sharing</h4><p>We do not sell or rent personal data. We share data only with service providers needed to operate the store (Whop for payments and delivery; email provider for delivery messages), or when required by law, or to defend a payment dispute.</p><h4>4. Retention</h4><p>We keep purchase and correspondence records for as long as needed for licensing, accounting and dispute handling, and as required by law.</p><h4>5. Your Rights</h4><p>You may request access to, correction of, or deletion of your personal data (subject to legal and dispute-handling retention needs) by emailing <strong>quantcorestore@gmail.com</strong>.</p><h4>6. Contact</h4><p>QuantCore Systems — quantcorestore@gmail.com</p>"
     }
   },
   "footer": {
@@ -471,7 +475,7 @@
   },
   "tiers": {
     "title": "Complete packages",
-    "text": "Everything in the catalog, with personal setup or a commercial source-code licence and custom development."
+    "text": "Everything in the catalog in one download — for up to five accounts, or with the full source code under a commercial licence."
   },
   "steps": {
     "title": "From checkout to your first test",
@@ -486,12 +490,12 @@
         "text": "Your archive appears in your Whop account straight away. Open 00_START_HERE.pdf first."
       },
       {
-        "title": "Compile in MetaEditor",
-        "text": "Copy the .mq5 files into MetaTrader 5, open them in MetaEditor and press F7. The guide shows each step."
+        "title": "Install in MetaTrader 5",
+        "text": "Copy the .ex5 files into the MQL5 folders and refresh the Navigator. The start-here guide shows each step."
       },
       {
         "title": "Test on demo",
-        "text": "Backtest with real ticks and run on a demo account before any live use. Support is one email away."
+        "text": "Backtest with real ticks and run on a demo account before any live use."
       }
     ]
   }

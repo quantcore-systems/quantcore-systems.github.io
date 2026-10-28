@@ -241,9 +241,9 @@
     { key: 'shortDesc', label: 'Короткое описание', type: 'textarea' },
     { key: 'deliverables', label: 'Что входит (по одному в строке)', type: 'strings' },
     { key: 'modules', label: 'Содержание / модули (по одному в строке)', type: 'strings' },
-    { key: 'accessPeriod', label: 'Срок доступа', type: 'text', help: 'Whop запрещает «lifetime access» — указывайте конкретный срок.' },
+    { key: 'accessPeriod', label: 'Тип покупки (в окне товара)', type: 'text', help: 'Например: One-time purchase, no subscription. Не пишите «lifetime» — Whop это запрещает.' },
     { key: 'delivery', label: 'Способ доставки', type: 'text', half: true },
-    { key: 'support', label: 'Поддержка', type: 'text', half: true }
+    { key: 'support', label: 'После покупки', type: 'text', half: true }
   ];
 
   const TABS = [
@@ -307,7 +307,7 @@
       { path: 'tiers.text', label: 'Подзаголовок', type: 'textarea', rows: 2 }
     ]},
     { id: 'products', label: 'Товары', icon: 'fa-box', fields: [
-      { path: 'products', label: 'Товары', type: 'list', itemLabel: (x) => `${x.title || 'Без названия'} — ${x.price ?? ''} ${x.currency || ''} · ${({ coming_soon: 'скоро', available: 'в продаже', hidden: 'скрыт' })[x.status] || x.status}`, newItem: () => ({ id: 'product-' + Date.now(), status: 'coming_soon', whopUrl: '', title: 'Новый товар', category: (data.catalog.categories[0] || {}).id || 'manual', badge: '', version: '', price: 100, currency: 'USD', icon: 'fa-cube', shortDesc: '', deliverables: [], modules: [], accessPeriod: '12 months of access and updates', delivery: 'Instant ZIP download via Whop', support: 'Email support' }), fields: productFields, duplicate: true }
+      { path: 'products', label: 'Товары', type: 'list', itemLabel: (x) => `${x.title || 'Без названия'} — ${x.price ?? ''} ${x.currency || ''} · ${({ coming_soon: 'скоро', available: 'в продаже', hidden: 'скрыт' })[x.status] || x.status}`, newItem: () => ({ id: 'product-' + Date.now(), status: 'coming_soon', whopUrl: '', title: 'Новый товар', category: (data.catalog.categories[0] || {}).id || 'manual', badge: '', version: '', price: 100, currency: 'USD', icon: 'fa-cube', shortDesc: '', deliverables: [], modules: [], accessPeriod: 'One-time purchase, no subscription', delivery: 'Instant ZIP download via Whop', support: 'Replacement of missing or damaged files' }), fields: productFields, duplicate: true }
     ]},
     { id: 'catalog', label: 'Каталог: тексты', icon: 'fa-table-cells', fields: [
       { path: 'catalog.eyebrow', label: 'Надзаголовок', type: 'text' },
