@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>QuantCore Admin</title>
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { background: #06090F; color: #E2E8F0; font-family: Inter, system-ui, sans-serif; }
+    .inp { width: 100%; padding: .55rem .8rem; border-radius: .6rem; background: #0B0F17; border: 1px solid #334155; color: #fff; font-size: .85rem; }
+    .inp:focus { outline: none; border-color: #38BDF8; }
+    textarea.inp { min-height: 5rem; font-family: inherit; }
+    textarea.code { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: .78rem; }
+    .lbl { display: block; font-size: .75rem; font-weight: 600; color: #CBD5E1; margin-bottom: .3rem; }
+    .help { font-size: .7rem; color: #64748B; margin-top: .25rem; }
+    .card { background: #0B0F17; border: 1px solid #1E293B; border-radius: 1rem; }
+    .btn { display: inline-flex; align-items: center; gap: .4rem; padding: .5rem .9rem; border-radius: .6rem; font-size: .8rem; font-weight: 600; transition: .15s; }
+    .btn-pri { background: #0EA5E9; color: #06090F; } .btn-pri:hover { background: #38BDF8; }
+    .btn-sec { background: #1E293B; color: #E2E8F0; border: 1px solid #334155; } .btn-sec:hover { background: #334155; }
+    .btn-dan { background: rgba(244,63,94,.1); color: #FB7185; border: 1px solid rgba(244,63,94,.3); } .btn-dan:hover { background: rgba(244,63,94,.2); }
+    .btn:disabled { opacity: .5; cursor: not-allowed; }
+    .tab { display: flex; align-items: center; gap: .6rem; width: 100%; text-align: left; padding: .55rem .8rem; border-radius: .6rem; font-size: .85rem; color: #94A3B8; }
+    .tab:hover { background: #111827; color: #fff; }
+    .tab.active { background: rgba(14,165,233,.12); color: #38BDF8; }
+    .item-head { cursor: pointer; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- LOGIN -->
+  <div id="loginView" class="min-h-screen flex items-center justify-center p-4">
+    <div class="card w-full max-w-lg p-6 sm:p-8 space-y-5">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center text-slate-950"><i class="fa-solid fa-lock"></i></div>
+        <div>
+          <h1 class="text-lg font-bold text-white">Админ-панель сайта</h1>
+          <p class="text-xs text-slate-400">Вход по GitHub-токену с доступом к репозиторию сайта</p>
+        </div>
+      </div>
+      <form id="loginForm" class="space-y-4">
+        <div class="grid grid-cols-2 gap-3">
+          <div><label class="lbl">Владелец (owner)</label><input id="lgOwner" class="inp" value="quantcore-systems" required></div>
+          <div><label class="lbl">Ветка</label><input id="lgBranch" class="inp" value="main" required></div>
+        </div>
+        <div><label class="lbl">Репозиторий</label><input id="lgRepo" class="inp" value="quantcore-systems.github.io" required></div>
+        <div>
+          <label class="lbl">GitHub токен</label>
+          <input id="lgToken" type="password" class="inp" placeholder="github_pat_..." required autocomplete="off">
+          <p class="help">Создайте fine-grained токен: доступ только к этому репозиторию, право <b>Contents: Read and write</b>.
+            <a class="text-sky-400 underline" target="_blank" rel="noopener" href="https://github.com/settings/personal-access-tokens/new">Создать токен</a></p>
+        </div>
+        <label class="flex items-center gap-2 text-xs text-slate-300"><input id="lgRemember" type="checkbox"> Запомнить на этом устройстве</label>
+        <div id="loginError" class="hidden text-xs text-rose-400 p-3 rounded-lg bg-rose-500/10 border border-rose-500/30"></div>
+        <button id="loginBtn" class="btn btn-pri w-full justify-center py-3" type="submit"><i class="fa-solid fa-right-to-bracket"></i> Войти</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- EDITOR -->
+  <div id="editorView" class="hidden min-h-screen flex flex-col">
+    <header class="sticky top-0 z-30 bg-slate-950/95 backdrop-blur border-b border-slate-800">
+      <div class="px-4 h-14 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3 min-w-0">
+          <button id="sideToggle" class="lg:hidden btn btn-sec px-2.5"><i class="fa-solid fa-bars"></i></button>
+          <span class="font-bold text-white truncate">QuantCore Admin</span>
+          <span id="dirtyBadge" class="hidden text-[11px] px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/30">Есть несохранённые изменения</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <a id="viewSiteLink" target="_blank" rel="noopener" class="btn btn-sec hidden sm:inline-flex"><i class="fa-solid fa-arrow-up-right-from-square"></i> Сайт</a>
+          <button id="discardBtn" class="btn btn-sec" title="Отменить изменения"><i class="fa-solid fa-rotate-left"></i><span class="hidden sm:inline">Отменить</span></button>
+          <button id="saveBtn" class="btn btn-pri"><i class="fa-solid fa-floppy-disk"></i> Сохранить</button>
+          <button id="logoutBtn" class="btn btn-sec" title="Выйти"><i class="fa-solid fa-right-from-bracket"></i></button>
+        </div>
+      </div>
+    </header>
+    <div class="flex flex-1">
+      <aside id="sidebar" class="hidden lg:block w-60 shrink-0 border-r border-slate-800 p-3 space-y-1 bg-slate-950 fixed lg:static inset-y-14 left-0 z-20 overflow-y-auto"></aside>
+      <main class="flex-1 min-w-0 p-4 sm:p-6 lg:p-8">
+        <div id="statusBox" class="hidden mb-4 text-xs p-3 rounded-lg"></div>
+        <div id="panel" class="max-w-4xl space-y-5"></div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+  'use strict';
+  const FILE = 'content.json';
+  let cfg = null;          // {owner, repo, branch, token}
+  let data = null;         // working copy
+  let original = '';       // JSON string from repo
+  let sha = null;
+  let activeTab = 'general';
+
+  // ---------- helpers ----------
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, attrs = {}, ...kids) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === 'class') n.className = v;
+      else if (k.startsWith('on')) n.addEventListener(k.slice(2), v);
+      else if (k === 'html') n.innerHTML = v;
+      else if (v !== undefined && v !== null && v !== false) n.setAttribute(k, v === true ? '' : v);
+    }
+    kids.flat().forEach(c => { if (c != null) n.append(c.nodeType ? c : document.createTextNode(c)); });
+    return n;
+  };
+  const b64encode = (str) => {
+    const bytes = new TextEncoder().encode(str);
+    let bin = '';
+    for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+    return btoa(bin);
+  };
+  const b64decode = (b64) => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\s/g, '')), c => c.charCodeAt(0)));
+  const clone = (o) => JSON.parse(JSON.stringify(o));
+  const isDirty = () => data && JSON.stringify(data, null, 2) !== original;
+
+  function status(msg, kind = 'info') {
+    const box = $('statusBox');
+    const styles = {
+      info: 'bg-sky-500/10 border border-sky-500/30 text-sky-300',
+      ok: 'bg-emerald-500/10 border border-emerald-500/30 text-emerald-300',
+      err: 'bg-rose-500/10 border border-rose-500/30 text-rose-300'
+    };
+    box.className = 'mb-4 text-xs p-3 rounded-lg ' + styles[kind];
+    box.textContent = msg;
+    box.classList.remove('hidden');
+  }
+  function markDirty() { $('dirtyBadge').classList.toggle('hidden', !isDirty()); }
+
+  async function gh(path, opts = {}) {
+    const res = await fetch(`https://api.github.com/repos/${cfg.owner}/${cfg.repo}${path}`, {
+      ...opts,
+      headers: { 'Accept': 'application/vnd.github+json', 'Authorization': `Bearer ${cfg.token}`, 'X-GitHub-Api-Version': '2022-11-28', ...(opts.headers || {}) },
+      cache: 'no-store'
+    });
+    const body = await res.json().catch(() => ({}));
+    if (!res.ok) { const e = new Error(body.message || ('HTTP ' + res.status)); e.status = res.status; throw e; }
+    return body;
+  }
+
+  async function loadContent() {
+    const file = await gh(`/contents/${FILE}?ref=${encodeURIComponent(cfg.branch)}`);
+    sha = file.sha;
+    data = JSON.parse(b64decode(file.content));
+    original = JSON.stringify(data, null, 2);
+    markDirty();
+  }
+
+  // ---------- auth ----------
+  function storedCfg() {
+    try { return JSON.parse(sessionStorage.getItem('qc_admin') || localStorage.getItem('qc_admin') || 'null'); } catch { return null; }
+  }
+  function storeCfg(c, remember) {
+    try {
+      sessionStorage.removeItem('qc_admin'); localStorage.removeItem('qc_admin');
+      (remember ? localStorage : sessionStorage).setItem('qc_admin', JSON.stringify(c));
+    } catch {}
+  }
+
+  async function login(c, remember) {
+    cfg = c;
+    const repo = await gh('');
+    if (!repo.permissions || !repo.permissions.push) throw new Error('У токена нет права записи в этот репозиторий (нужно Contents: Read and write).');
+    await loadContent();
+    if (remember !== undefined) storeCfg(c, remember);
+    $('loginView').classList.add('hidden');
+    $('editorView').classList.remove('hidden');
+    $('viewSiteLink').href = cfg.repo.endsWith('.github.io') ? `https://${cfg.repo}/` : `https://${cfg.owner}.github.io/${cfg.repo}/`;
+    renderSidebar(); renderPanel();
+  }
+
+  $('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = $('loginBtn'); btn.disabled = true; $('loginError').classList.add('hidden');
+    try {
+      await login({ owner: $('lgOwner').value.trim(), repo: $('lgRepo').value.trim(), branch: $('lgBranch').value.trim(), token: $('lgToken').value.trim() }, $('lgRemember').checked);
+    } catch (err) {
+      $('loginError').textContent = err.status === 401 ? 'Неверный или просроченный токен.' : err.status === 404 ? 'Репозиторий или content.json не найден (или у токена нет к нему доступа).' : err.message;
+      $('loginError').classList.remove('hidden');
+    } finally { btn.disabled = false; }
+  });
+
+  $('logoutBtn').addEventListener('click', () => {
+    if (isDirty() && !confirm('Есть несохранённые изменения. Выйти без сохранения?')) return;
+    try { sessionStorage.removeItem('qc_admin'); localStorage.removeItem('qc_admin'); } catch {}
+    location.reload();
+  });
+
+  // ---------- save ----------
+  $('saveBtn').addEventListener('click', save);
+  async function save() {
+    if (!isDirty()) { status('Изменений нет.', 'info'); return; }
+    const btn = $('saveBtn'); btn.disabled = true;
+    status('Сохраняю…', 'info');
+    try {
+      const text = JSON.stringify(data, null, 2) + '\n';
+      const res = await gh(`/contents/${FILE}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: 'Update site content', content: b64encode(text), sha, branch: cfg.branch,
+          committer: { name: 'QuantCore Systems', email: 'quantcorestore@gmail.com' }, author: { name: 'QuantCore Systems', email: 'quantcorestore@gmail.com' } })
+      });
+      sha = res.content.sha;
+      original = JSON.stringify(data, null, 2);
+      markDirty();
+      status('Сохранено. Сайт обновится примерно через 1–2 минуты.', 'ok');
+    } catch (err) {
+      if (err.status === 409 || err.status === 422) status('Файл был изменён в другом месте. Нажмите «Отменить», чтобы загрузить свежую версию, и внесите правки заново.', 'err');
+      else status('Ошибка сохранения: ' + err.message, 'err');
+    } finally { btn.disabled = false; }
+  }
+
+  $('discardBtn').addEventListener('click', async () => {
+    if (isDirty() && !confirm('Отменить все несохранённые изменения и загрузить версию с GitHub?')) return;
+    try { await loadContent(); renderPanel(); status('Загружена актуальная версия с GitHub.', 'ok'); }
+    catch (err) { status('Ошибка загрузки: ' + err.message, 'err'); }
+  });
+
+  window.addEventListener('beforeunload', (e) => { if (isDirty()) { e.preventDefault(); e.returnValue = ''; } });
+  document.addEventListener('keydown', (e) => { if ((e.ctrlKey || e.metaKey) && e.key === 's' && data) { e.preventDefault(); save(); } });
+  $('sideToggle').addEventListener('click', () => $('sidebar').classList.toggle('hidden'));
+
+  // ---------- schema ----------
+  const ICON_HELP = 'Название иконки Font Awesome, например fa-robot, fa-book-open. Каталог: fontawesome.com/icons';
+  const COLOR_OPTS = [['brand', 'Голубой'], ['emerald', 'Зелёный'], ['indigo', 'Фиолетовый'], ['amber', 'Жёлтый'], ['rose', 'Красный']];
+
+  const productFields = [
+    { key: 'status', label: 'Статус', type: 'select', options: [['coming_soon', 'Скоро (waitlist)'], ['available', 'В продаже'], ['hidden', 'Скрыт']], help: '«В продаже» включает кнопку покупки — только когда товар реально готов и ссылка Whop вставлена.' },
+    { key: 'whopUrl', label: 'Ссылка Whop (checkout или страница товара)', type: 'text', placeholder: 'https://whop.com/checkout/plan_XXXX', help: 'Для статуса «Скоро» сюда можно вставить ссылку на waitlist в Whop.' },
+    { key: 'title', label: 'Название', type: 'text' },
+    { key: 'id', label: 'ID (латиница, без пробелов)', type: 'text' },
+    { key: 'category', label: 'Категория', type: 'select', options: () => (data.catalog.categories || []).map(c => [c.id, c.label]) },
+    { key: 'price', label: 'Цена', type: 'number', half: true },
+    { key: 'currency', label: 'Валюта', type: 'select', options: [['USD', 'USD'], ['EUR', 'EUR'], ['GBP', 'GBP']], half: true },
+    { key: 'badge', label: 'Бейдж (верхняя метка)', type: 'text', half: true },
+    { key: 'version', label: 'Версия / издание', type: 'text', half: true },
+    { key: 'icon', label: 'Иконка', type: 'text', help: ICON_HELP },
+    { key: 'shortDesc', label: 'Короткое описание', type: 'textarea' },
+    { key: 'deliverables', label: 'Что входит (по одному в строке)', type: 'strings' },
+    { key: 'modules', label: 'Содержание / модули (по одному в строке)', type: 'strings' },
+    { key: 'accessPeriod', label: 'Срок доступа', type: 'text', help: 'Whop запрещает «lifetime access» — указывайте конкретный срок.' },
+    { key: 'delivery', label: 'Способ доставки', type: 'text', half: true },
+    { key: 'support', label: 'Поддержка', type: 'text', half: true }
+  ];
+
+  const TABS = [
+    { id: 'general', label: 'Общие и SEO', icon: 'fa-gear', fields: [
+      { section: 'SEO (поисковики)' },
+      { path: 'seo.title', label: 'Заголовок вкладки браузера (title)', type: 'text' },
+      { path: 'seo.description', label: 'Описание для поисковиков', type: 'textarea' },
+      { section: 'Логотип' },
+      { path: 'brand.namePart1', label: 'Название, часть 1 (белым)', type: 'text', half: true },
+      { path: 'brand.namePart2', label: 'Название, часть 2 (голубым)', type: 'text', half: true },
+      { path: 'brand.versionTag', label: 'Метка версии (пусто — скрыть)', type: 'text', half: true },
+      { path: 'brand.subtitle', label: 'Подзаголовок под логотипом', type: 'text', half: true },
+      { section: 'Верхняя полоса' },
+      { path: 'topBar.enabled', label: 'Показывать верхнюю полосу', type: 'bool' },
+      { path: 'topBar.badgeText', label: 'Зелёный бейдж', type: 'text' },
+      { path: 'topBar.infoText', label: 'Текст справа от бейджа', type: 'text' },
+      { section: 'Меню' },
+      { path: 'nav', label: 'Пункты меню', type: 'list', itemLabel: (x) => x.label || 'Пункт', newItem: () => ({ label: 'Новый пункт', href: '#' }), fields: [
+        { key: 'label', label: 'Текст', type: 'text', half: true },
+        { key: 'href', label: 'Ссылка (#catalog, #faq, #legal/terms или https://…)', type: 'text', half: true }
+      ]}
+    ]},
+    { id: 'hero', label: 'Главный экран', icon: 'fa-star', fields: [
+      { path: 'hero.badge', label: 'Строка над заголовком', type: 'text' },
+      { path: 'hero.titleBefore', label: 'Заголовок: часть 1', type: 'text' },
+      { path: 'hero.titleHighlight', label: 'Заголовок: часть 2', type: 'text' },
+      { path: 'hero.titleAfter', label: 'Заголовок: часть 3', type: 'text' },
+      { path: 'hero.text', label: 'Текст под заголовком', type: 'textarea' },
+      { path: 'hero.primaryCtaLabel', label: 'Главная кнопка', type: 'text', half: true },
+      { path: 'hero.secondaryCtaLabel', label: 'Вторая кнопка (ведёт к контактам)', type: 'text', half: true },
+      { path: 'hero.badges', label: 'Плашки под текстом', type: 'list', itemLabel: (x) => x.title, newItem: () => ({ icon: 'fa-check', color: 'brand', title: 'Новая плашка', subtitle: '' }), fields: [
+        { key: 'title', label: 'Заголовок', type: 'text', half: true },
+        { key: 'subtitle', label: 'Подпись', type: 'text', half: true },
+        { key: 'icon', label: 'Иконка', type: 'text', half: true, help: ICON_HELP },
+        { key: 'color', label: 'Цвет', type: 'select', options: COLOR_OPTS, half: true }
+      ]},
+      { section: 'Окно с кодом (блок «Engineered…») и показатели под графиком' },
+      { path: 'hero.codeFileName', label: 'Имя файла', type: 'text', half: true },
+      { path: 'hero.codeBadge', label: 'Метка справа', type: 'text', half: true },
+      { path: 'hero.code', label: 'Код', type: 'textarea', code: true, rows: 14 },
+      { path: 'hero.stats', label: 'Показатели под кодом', type: 'list', itemLabel: (x) => x.label, newItem: () => ({ label: 'Label', value: 'Value' }), fields: [
+        { key: 'label', label: 'Подпись', type: 'text', half: true },
+        { key: 'value', label: 'Значение', type: 'text', half: true }
+      ]}
+    ]},
+    { id: 'statement', label: 'Блок «Принципы»', icon: 'fa-quote-left', fields: [
+      { path: 'statement.quote', label: 'Крупная цитата (пусто — скрыть блок)', type: 'textarea', rows: 3 },
+      { path: 'statement.points', label: 'Пункты справа (по одному в строке)', type: 'strings', rows: 4 }
+    ]},
+    { id: 'steps', label: 'Блок «Как это работает»', icon: 'fa-list-ol', fields: [
+      { path: 'steps.title', label: 'Заголовок', type: 'text' },
+      { path: 'steps.text', label: 'Подзаголовок', type: 'text' },
+      { path: 'steps.items', label: 'Шаги', type: 'list', itemLabel: (x) => x.title, newItem: () => ({ title: 'Новый шаг', text: '' }), fields: [
+        { key: 'title', label: 'Название шага', type: 'text' },
+        { key: 'text', label: 'Описание', type: 'textarea' }
+      ]}
+    ]},
+    { id: 'tiers', label: 'Блок «Пакеты»', icon: 'fa-gem', fields: [
+      { section: 'Товары с категорией «Bundles» (id enterprise) показываются здесь большими панелями' },
+      { path: 'tiers.title', label: 'Заголовок', type: 'text' },
+      { path: 'tiers.text', label: 'Подзаголовок', type: 'textarea', rows: 2 }
+    ]},
+    { id: 'products', label: 'Товары', icon: 'fa-box', fields: [
+      { path: 'products', label: 'Товары', type: 'list', itemLabel: (x) => `${x.title || 'Без названия'} — ${x.price ?? ''} ${x.currency || ''} · ${({ coming_soon: 'скоро', available: 'в продаже', hidden: 'скрыт' })[x.status] || x.status}`, newItem: () => ({ id: 'product-' + Date.now(), status: 'coming_soon', whopUrl: '', title: 'Новый товар', category: (data.catalog.categories[0] || {}).id || 'manual', badge: '', version: '', price: 100, currency: 'USD', icon: 'fa-cube', shortDesc: '', deliverables: [], modules: [], accessPeriod: '12 months of access and updates', delivery: 'Instant ZIP download via Whop', support: 'Email support' }), fields: productFields, duplicate: true }
+    ]},
+    { id: 'catalog', label: 'Каталог: тексты', icon: 'fa-table-cells', fields: [
+      { path: 'catalog.eyebrow', label: 'Надзаголовок', type: 'text' },
+      { path: 'catalog.title', label: 'Заголовок', type: 'text' },
+      { path: 'catalog.text', label: 'Описание', type: 'textarea' },
+      { path: 'catalog.buyButton', label: 'Кнопка «Купить»', type: 'text', half: true },
+      { path: 'catalog.comingSoonLabel', label: 'Метка «Скоро»', type: 'text', half: true },
+      { path: 'catalog.comingSoonButton', label: 'Кнопка waitlist (есть ссылка)', type: 'text', half: true },
+      { path: 'catalog.comingSoonNoLinkButton', label: 'Кнопка «Сообщить» (нет ссылки, откроет email)', type: 'text', half: true },
+      { path: 'catalog.categories', label: 'Категории (фильтры)', type: 'list', itemLabel: (x) => `${x.label} (${x.id})`, newItem: () => ({ id: 'cat' + Date.now(), label: 'Новая категория' }), fields: [
+        { key: 'label', label: 'Название', type: 'text', half: true },
+        { key: 'id', label: 'ID (латиница)', type: 'text', half: true }
+      ]}
+    ]},
+    { id: 'features', label: 'Блок «Как это работает»', icon: 'fa-layer-group', fields: [
+      { path: 'features.eyebrow', label: 'Надзаголовок', type: 'text' },
+      { path: 'features.title', label: 'Заголовок', type: 'text' },
+      { path: 'features.text', label: 'Описание', type: 'textarea' },
+      { path: 'features.items', label: 'Карточки', type: 'list', itemLabel: (x) => x.title, newItem: () => ({ icon: 'fa-check', color: 'brand', title: 'Новая карточка', text: '' }), fields: [
+        { key: 'title', label: 'Заголовок', type: 'text' },
+        { key: 'text', label: 'Текст', type: 'textarea' },
+        { key: 'icon', label: 'Иконка', type: 'text', half: true, help: ICON_HELP },
+        { key: 'color', label: 'Цвет', type: 'select', options: COLOR_OPTS, half: true }
+      ]}
+    ]},
+    { id: 'faq', label: 'FAQ', icon: 'fa-circle-question', fields: [
+      { path: 'faq.title', label: 'Заголовок раздела', type: 'text' },
+      { path: 'faq.items', label: 'Вопросы', type: 'list', itemLabel: (x) => x.q, newItem: () => ({ q: 'Новый вопрос?', a: '' }), fields: [
+        { key: 'q', label: 'Вопрос', type: 'text' },
+        { key: 'a', label: 'Ответ', type: 'textarea' }
+      ]}
+    ]},
+    { id: 'seller', label: 'Продавец и контакты', icon: 'fa-id-card', fields: [
+      { path: 'seller.legalName', label: 'Продавец / юрлицо', type: 'textarea', rows: 2 },
+      { path: 'seller.address', label: 'Адрес (пусто — скрыть)', type: 'textarea', rows: 2, help: 'Указывайте только реальный адрес — Whop и платёжные сервисы проверяют данные продавца.' },
+      { path: 'seller.email', label: 'Email', type: 'text', half: true },
+      { path: 'seller.phone', label: 'Телефон (пусто — скрыть)', type: 'text', half: true },
+      { path: 'seller.telegramUrl', label: 'Ссылка Telegram (пусто — скрыть)', type: 'text', half: true },
+      { path: 'seller.telegramLabel', label: 'Текст ссылки Telegram', type: 'text', half: true },
+      { path: 'seller.hours', label: 'Часы работы', type: 'text', half: true },
+      { path: 'seller.responseNote', label: 'Заметка о времени ответа', type: 'text', half: true }
+    ]},
+    { id: 'payments', label: 'Оплата', icon: 'fa-credit-card', fields: [
+      { path: 'payments.title', label: 'Заголовок', type: 'text' },
+      { path: 'payments.note', label: 'Текст под значками', type: 'textarea' },
+      { path: 'payments.badges', label: 'Значки', type: 'list', itemLabel: (x) => x.label, newItem: () => ({ icon: 'fa-brands fa-cc-visa', label: 'Card', color: 'text-white' }), fields: [
+        { key: 'label', label: 'Подпись', type: 'text', half: true },
+        { key: 'icon', label: 'Классы иконки', type: 'text', half: true, help: 'Например: fa-brands fa-cc-visa, fa-brands fa-google-pay' },
+        { key: 'color', label: 'Цвет (класс)', type: 'select', options: [['text-white', 'Белый'], ['text-blue-400', 'Синий'], ['text-amber-500', 'Оранжевый'], ['text-emerald-400', 'Зелёный'], ['text-slate-300', 'Серый']] }
+      ]}
+    ]},
+    { id: 'legal', label: 'Правовые документы', icon: 'fa-scale-balanced', fields: [
+      { path: 'legal', label: 'Документы', type: 'map', help: 'Ссылка на документ на сайте: #legal/КЛЮЧ. Текст — HTML: <h4>Заголовок</h4>, <p>Абзац</p>, <ul><li>Пункт</li></ul>.', newItem: () => ({ title: 'Новый документ', html: '<p></p>' }), fields: [
+        { key: 'title', label: 'Название', type: 'text' },
+        { key: 'html', label: 'Текст (HTML)', type: 'textarea', code: true, rows: 16, preview: true }
+      ]}
+    ]},
+    { id: 'footer', label: 'Подвал', icon: 'fa-shoe-prints', fields: [
+      { path: 'footer.disclaimer', label: 'Дисклеймер', type: 'textarea', rows: 5 },
+      { path: 'footer.copyright', label: 'Копирайт', type: 'text' }
+    ]},
+    { id: 'json', label: 'JSON (всё сразу)', icon: 'fa-code', raw: true }
+  ];
+
+  // ---------- path utils ----------
+  const getP = (path) => path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), data);
+  function setP(path, val) {
+    const ks = path.split('.'); let o = data;
+    ks.slice(0, -1).forEach(k => { if (o[k] == null || typeof o[k] !== 'object') o[k] = {}; o = o[k]; });
+    o[ks.at(-1)] = val;
+  }
+
+  // ---------- field rendering ----------
+  function fieldNode(f, getter, setter) {
+    const wrap = el('div', { class: f.half ? 'sm:col-span-1' : 'sm:col-span-2' });
+    const id = 'f' + Math.random().toString(36).slice(2);
+    const val = getter();
+    let input;
+    const onChange = (v) => { setter(v); markDirty(); };
+
+    switch (f.type) {
+      case 'bool':
+        input = el('input', { type: 'checkbox', id, onchange: (e) => onChange(e.target.checked) });
+        input.checked = !!val;
+        wrap.append(el('label', { class: 'flex items-center gap-2 text-sm text-slate-200', for: id }, input, f.label));
+        break;
+      case 'select': {
+        const opts = typeof f.options === 'function' ? f.options() : f.options;
+        input = el('select', { class: 'inp', id, onchange: (e) => onChange(e.target.value) },
+          opts.map(([v, l]) => { const o = el('option', { value: v }, l); if (v === val) o.selected = true; return o; }));
+        if (val != null && !opts.some(([v]) => v === val)) input.prepend(Object.assign(el('option', { value: val }, val + ' (?)'), { selected: true }));
+        wrap.append(el('label', { class: 'lbl', for: id }, f.label), input);
+        break;
+      }
+      case 'number':
+        input = el('input', { type: 'number', step: 'any', class: 'inp', id, oninput: (e) => onChange(e.target.value === '' ? 0 : Number(e.target.value)) });
+        input.value = val ?? '';
+        wrap.append(el('label', { class: 'lbl', for: id }, f.label), input);
+        break;
+      case 'strings':
+        input = el('textarea', { class: 'inp', id, rows: f.rows || 4, oninput: (e) => onChange(e.target.value.split('\n').map(s => s.trim()).filter(Boolean)) });
+        input.value = (val || []).join('\n');
+        wrap.append(el('label', { class: 'lbl', for: id }, f.label), input);
+        break;
+      case 'textarea': {
+        input = el('textarea', { class: 'inp' + (f.code ? ' code' : ''), id, rows: f.rows || 3 });
+        input.value = val ?? '';
+        wrap.append(el('label', { class: 'lbl', for: id }, f.label), input);
+        let prev;
+        if (f.preview) {
+          prev = el('div', { class: 'mt-2 p-4 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 leading-relaxed [&_h4]:font-bold [&_h4]:text-white [&_h4]:mt-3 [&_p]:mt-1.5 [&_ul]:list-disc [&_ul]:pl-5' });
+          prev.innerHTML = val || '';
+          wrap.append(el('div', { class: 'help mt-2' }, 'Предпросмотр:'), prev);
+        }
+        input.addEventListener('input', (e) => { onChange(e.target.value); if (prev) prev.innerHTML = e.target.value; });
+        break;
+      }
+      case 'list': wrap.append(listNode(f, getter, setter)); return wrap;
+      case 'map': wrap.append(mapNode(f, getter, setter)); return wrap;
+      default:
+        input = el('input', { type: 'text', class: 'inp', id, placeholder: f.placeholder || '', oninput: (e) => onChange(e.target.value) });
+        input.value = val ?? '';
+        wrap.append(el('label', { class: 'lbl', for: id }, f.label), input);
+    }
+    if (f.help) wrap.append(el('p', { class: 'help' }, f.help));
+    return wrap;
+  }
+
+  function fieldsGrid(fields, obj) {
+    return el('div', { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4' },
+      fields.map(f => fieldNode(f, () => obj[f.key], (v) => { obj[f.key] = v; })));
+  }
+
+  function listNode(f, getter, setter) {
+    if (!Array.isArray(getter())) setter([]);
+    const arr = getter();
+    const box = el('div', { class: 'space-y-2' });
+    const open = new Set();
+    const draw = () => {
+      box.innerHTML = '';
+      box.append(el('div', { class: 'flex items-center justify-between' },
+        el('span', { class: 'lbl mb-0' }, `${f.label} (${arr.length})`),
+        el('button', { class: 'btn btn-sec', type: 'button', onclick: () => { arr.push(f.newItem()); open.add(arr.length - 1); markDirty(); draw(); } }, el('i', { class: 'fa-solid fa-plus' }), 'Добавить')));
+      arr.forEach((item, i) => {
+        const isOpen = open.has(i);
+        const card = el('div', { class: 'card' });
+        const head = el('div', { class: 'item-head flex items-center gap-2 px-4 py-3', onclick: (e) => { if (e.target.closest('button')) return; isOpen ? open.delete(i) : open.add(i); draw(); } },
+          el('i', { class: `fa-solid ${isOpen ? 'fa-chevron-down' : 'fa-chevron-right'} text-slate-500 text-xs w-3` }),
+          el('span', { class: 'flex-1 text-sm text-white truncate' }, (f.itemLabel ? f.itemLabel(item) : `#${i + 1}`) || `#${i + 1}`),
+          el('button', { class: 'btn btn-sec px-2 py-1', type: 'button', title: 'Выше', disabled: i === 0, onclick: () => { [arr[i - 1], arr[i]] = [arr[i], arr[i - 1]]; open.clear(); markDirty(); draw(); } }, el('i', { class: 'fa-solid fa-arrow-up text-xs' })),
+          el('button', { class: 'btn btn-sec px-2 py-1', type: 'button', title: 'Ниже', disabled: i === arr.length - 1, onclick: () => { [arr[i + 1], arr[i]] = [arr[i], arr[i + 1]]; open.clear(); markDirty(); draw(); } }, el('i', { class: 'fa-solid fa-arrow-down text-xs' })),
+          f.duplicate ? el('button', { class: 'btn btn-sec px-2 py-1', type: 'button', title: 'Копия', onclick: () => { const c = clone(item); if (c.id) c.id += '-copy'; if (c.title) c.title += ' (copy)'; arr.splice(i + 1, 0, c); open.clear(); open.add(i + 1); markDirty(); draw(); } }, el('i', { class: 'fa-regular fa-copy text-xs' })) : null,
+          el('button', { class: 'btn btn-dan px-2 py-1', type: 'button', title: 'Удалить', onclick: () => { if (!confirm('Удалить этот элемент?')) return; arr.splice(i, 1); open.clear(); markDirty(); draw(); } }, el('i', { class: 'fa-solid fa-trash text-xs' })));
+        card.append(head);
+        if (isOpen) {
+          const body = el('div', { class: 'px-4 pb-4 pt-1 border-t border-slate-800' }, fieldsGrid(f.fields, item));
+          body.addEventListener('input', () => { head.querySelector('span').textContent = f.itemLabel ? f.itemLabel(item) : `#${i + 1}`; });
+          body.addEventListener('change', () => { head.querySelector('span').textContent = f.itemLabel ? f.itemLabel(item) : `#${i + 1}`; });
+          card.append(body);
+        }
+        box.append(card);
+      });
+    };
+    draw();
+    return box;
+  }
+
+  function mapNode(f, getter, setter) {
+    if (!getter() || typeof getter() !== 'object') setter({});
+    const obj = getter();
+    const box = el('div', { class: 'space-y-3' });
+    const draw = () => {
+      box.innerHTML = '';
+      box.append(el('div', { class: 'flex items-center justify-between' },
+        el('span', { class: 'lbl mb-0' }, f.label),
+        el('button', { class: 'btn btn-sec', type: 'button', onclick: () => {
+          const key = (prompt('Ключ нового документа (латиница, например cookies):') || '').trim().toLowerCase();
+          if (!key) return;
+          if (!/^[a-z0-9-]+$/.test(key)) { alert('Только латинские буквы, цифры и дефис.'); return; }
+          if (obj[key]) { alert('Такой ключ уже есть.'); return; }
+          obj[key] = f.newItem(); markDirty(); draw();
+        } }, el('i', { class: 'fa-solid fa-plus' }), 'Добавить документ')));
+      if (f.help) box.append(el('p', { class: 'help' }, f.help));
+      Object.keys(obj).forEach(k => {
+        box.append(el('div', { class: 'card p-4 space-y-3' },
+          el('div', { class: 'flex items-center justify-between' },
+            el('code', { class: 'text-xs text-sky-400' }, '#legal/' + k),
+            el('button', { class: 'btn btn-dan px-2 py-1', type: 'button', onclick: () => { if (!confirm(`Удалить документ «${obj[k].title}»?`)) return; delete obj[k]; markDirty(); draw(); } }, el('i', { class: 'fa-solid fa-trash text-xs' }))),
+          fieldsGrid(f.fields, obj[k])));
+      });
+    };
+    draw();
+    return box;
+  }
+
+  // ---------- layout ----------
+  function renderSidebar() {
+    const sb = $('sidebar'); sb.innerHTML = '';
+    TABS.forEach(t => sb.append(el('button', { class: 'tab' + (t.id === activeTab ? ' active' : ''), onclick: () => { activeTab = t.id; renderSidebar(); renderPanel(); if (innerWidth < 1024) sb.classList.add('hidden'); window.scrollTo(0, 0); } },
+      el('i', { class: `fa-solid ${t.icon} w-4 text-center` }), t.label)));
+  }
+
+  function renderPanel() {
+    const tab = TABS.find(t => t.id === activeTab);
+    const p = $('panel'); p.innerHTML = '';
+    p.append(el('h2', { class: 'text-xl font-bold text-white' }, tab.label));
+
+    if (tab.raw) {
+      const ta = el('textarea', { class: 'inp code', rows: 32, spellcheck: 'false' });
+      ta.value = JSON.stringify(data, null, 2);
+      const err = el('p', { class: 'help' }, 'Здесь можно править любые поля сайта напрямую. Изменения применяются после нажатия «Применить JSON».');
+      p.append(el('div', { class: 'card p-4 space-y-3' }, ta, err,
+        el('button', { class: 'btn btn-pri', type: 'button', onclick: () => {
+          try { data = JSON.parse(ta.value); markDirty(); status('JSON применён. Не забудьте нажать «Сохранить».', 'ok'); }
+          catch (e) { status('Ошибка в JSON: ' + e.message, 'err'); }
+        } }, el('i', { class: 'fa-solid fa-check' }), 'Применить JSON')));
+      return;
+    }
+
+    let grid = null;
+    const flush = () => { grid = el('div', { class: 'card p-5 grid grid-cols-1 sm:grid-cols-2 gap-4' }); p.append(grid); };
+    tab.fields.forEach(f => {
+      if (f.section) { p.append(el('h3', { class: 'text-sm font-bold uppercase tracking-wider text-slate-400 pt-2' }, f.section)); grid = null; return; }
+      if (f.type === 'list' || f.type === 'map') { p.append(fieldNode(f, () => getP(f.path), (v) => setP(f.path, v))); grid = null; return; }
+      if (!grid) flush();
+      grid.append(fieldNode(f, () => getP(f.path), (v) => setP(f.path, v)));
+    });
+  }
+
+  // ---------- auto login ----------
+  (async () => {
+    const c = storedCfg();
+    if (!c) return;
+    ['owner', 'repo', 'branch'].forEach(k => { const i = $('lg' + k[0].toUpperCase() + k.slice(1)); if (i) i.value = c[k]; });
+    try { await login(c); }
+    catch (err) {
+      try { sessionStorage.removeItem('qc_admin'); localStorage.removeItem('qc_admin'); } catch {}
+      $('loginError').textContent = 'Сохранённый вход больше не действует: ' + err.message;
+      $('loginError').classList.remove('hidden');
+    }
+  })();
+  </script>
+</body>
+</html>
