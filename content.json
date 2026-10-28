@@ -103,8 +103,8 @@
   },
   "products": [
     {
-      "status": "coming_soon",
-      "whopUrl": "",
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_EuqVRbjtBUdxM",
       "currency": "USD",
       "delivery": "Instant ZIP download via Whop",
       "support": "Replacement of missing or damaged files",
@@ -131,8 +131,8 @@
     },
     {
       "id": "qc-smc-500",
-      "status": "coming_soon",
-      "whopUrl": "",
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_E5tjvxYLu7X8I",
       "title": "SMC & Liquidity Concepts Manual",
       "category": "manual",
       "badge": "PDF manual and checklists",
@@ -158,8 +158,8 @@
     },
     {
       "id": "qc-ict-750",
-      "status": "coming_soon",
-      "whopUrl": "",
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_gX0ng3aqVmQbO",
       "title": "IPDA & Time-Price Theory Manual",
       "category": "manual",
       "badge": "Advanced manual with indicator",
@@ -185,8 +185,8 @@
     },
     {
       "id": "qc-orderflow-950",
-      "status": "coming_soon",
-      "whopUrl": "",
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_4WEgVkJKJzb9o",
       "title": "Order Flow, Volume Delta & VWAP Suite",
       "category": "manual",
       "badge": "Manual with two MT5 indicators",
@@ -212,8 +212,8 @@
     },
     {
       "id": "qc-fvg-ind-1200",
-      "status": "coming_soon",
-      "whopUrl": "",
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_g4FbHPgkrCbNM",
       "title": "FVG, Killzone & Liquidity Scanner (MT5)",
       "category": "software",
       "badge": "MT5 indicator suite",
@@ -239,8 +239,8 @@
     },
     {
       "id": "qc-gold-ea-1500",
-      "status": "coming_soon",
-      "whopUrl": "",
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_E07iV114aFMew",
       "title": "XAUUSD Liquidity & VWAP Expert Advisor (MT5)",
       "category": "software",
       "badge": "MT5 Expert Advisor",
@@ -266,8 +266,8 @@
     },
     {
       "id": "qc-mql5-arch-2200",
-      "status": "coming_soon",
-      "whopUrl": "",
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_62LLykPjCiQ4O",
       "title": "MQL5 EA Architecture Course + Source Code",
       "category": "software",
       "badge": "Course with source code",
@@ -293,8 +293,8 @@
     },
     {
       "id": "qc-prop-desk-3500",
-      "status": "coming_soon",
-      "whopUrl": "",
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",
       "title": "Complete Suite (5 Accounts)",
       "category": "enterprise",
       "badge": "Bundle for 5 accounts",
@@ -320,8 +320,8 @@
     },
     {
       "id": "qc-source-ent-5000",
-      "status": "coming_soon",
-      "whopUrl": "",
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_B9D87LFKxuqUd",
       "title": "Full Source-Code License",
       "category": "enterprise",
       "badge": "Commercial licence",
@@ -401,10 +401,6 @@
       {
         "q": "What payment methods are accepted?",
         "a": "All payment methods supported by Whop checkout in your country, typically Visa, Mastercard, Apple Pay and Google Pay."
-      },
-      {
-        "q": "Some products say “Coming soon”. What does that mean?",
-        "a": "These products are not open for purchase yet. Use the button on the product card to be notified when they become available."
       }
     ]
   },
