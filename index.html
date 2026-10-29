@@ -123,6 +123,24 @@ nav.main a:hover{color:var(--text)}nav.main a:hover::after{transform:scaleX(1)}
 .statement li svg{flex:none;width:20px;height:20px;color:var(--gold);margin-top:3px}
 @media (max-width:900px){.statement .wrap{grid-template-columns:1fr;gap:36px}}
 
+
+/* ---------- market desk (news) ---------- */
+.desk{padding:96px 0;border-top:1px solid var(--line)}
+.desk .sec-head p{color:var(--glacier)}
+.news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.ncard{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r-m);background:linear-gradient(180deg,#101A31,#0C1529);overflow:hidden;text-decoration:none;transition:border-color .25s,transform .25s}
+.ncard:hover{border-color:rgba(212,180,131,.5);transform:translateY(-2px)}
+.ncard .cv{aspect-ratio:16/9;background:#0C1529 center/cover no-repeat;border-bottom:1px solid var(--line)}
+.ncard .bd{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.ncard .when{font:400 12px/1.2 var(--mono);color:var(--fog);display:flex;gap:10px;flex-wrap:wrap}
+.ncard .kind{color:var(--gold);text-transform:uppercase;letter-spacing:.08em}
+.ncard h3{font:600 24px/1.12 var(--serif);margin:0;color:#F6F2EA}
+.ncard p{margin:0;color:var(--glacier);font-size:14.5px}
+.ncard.launch{border-color:rgba(212,180,131,.45);background:linear-gradient(160deg,rgba(212,180,131,.12),#0C1529 55%)}
+.ncard.launch .price{font:600 22px/1 var(--serif);color:var(--gold-2);margin-top:auto}
+.desk .more{margin-top:28px}
+@media (max-width:960px){.news-grid{grid-template-columns:1fr}}
+
 /* ---------- catalog (light) ---------- */
 .catalog{background:var(--paper);color:var(--ink-text);padding:110px 0 120px;position:relative}
 .catalog::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
@@ -330,6 +348,13 @@ footer p{margin:0 0 12px;line-height:1.6}
       </div>
     </section>
 
+    <section class="desk" id="news" hidden>
+      <div class="wrap">
+        <div class="sec-head"><div><h2>Market Desk</h2><p>Daily notes on what moved gold, indices, currencies and rates, and what to watch next. New tools are announced here first.</p></div><a class="btn btn-ghost btn-sm" href="news.html">All posts</a></div>
+        <div class="news-grid" id="newsGrid"></div>
+      </div>
+    </section>
+
     <section class="catalog" id="catalog">
       <div class="wrap">
         <div class="sec-head">
@@ -416,7 +441,7 @@ let C = null, filter = 'all';
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const get = (o, p) => p.split('.').reduce((a, k) => a == null ? undefined : a[k], o);
-const safeUrl = (u) => /^(https?:|mailto:|tel:|#)/i.test(String(u || '').trim()) ? String(u).trim() : '';
+const safeUrl = (u) => /^(https?:|mailto:|tel:|#|[\w-]+\.html(?:[?#][\w=&.%-]*)?$)/i.test(String(u || '').trim()) ? String(u).trim() : '';
 const money = (p) => { const n = Number(p.price) || 0, s = {USD:'$',EUR:'€',GBP:'£'}[p.currency || 'USD']; return s ? s + n.toLocaleString('en-US') : n.toLocaleString('en-US'); };
 const ICON = {
   check:'<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10.5l4 4 8-9"/></svg>',
@@ -724,6 +749,20 @@ const Chart = (() => {
   window.addEventListener('resize', () => { resize(); if (reduce) draw(candles.length, 1); });
   return { start };
 })();
+
+
+const fmtWhen = (iso) => { const d = new Date(iso); if (isNaN(d)) return ''; return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',timeZone:'UTC'}) + ' · ' + d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'UTC'}) + ' UTC'; };
+function newsCard(n){
+  const href = 'news.html?p=' + encodeURIComponent(n.slug), launch = n.type === 'launch';
+  const cover = n.cover ? `<div class="cv" style="background-image:url('${esc(n.cover)}')"></div>` : '';
+  return `<a class="ncard${launch ? ' launch' : ''}" href="${esc(href)}">${cover}<div class="bd"><div class="when"><span class="kind">${launch ? 'New release' : 'Market analysis'}</span><time datetime="${esc(n.published)}">${esc(fmtWhen(n.published))}</time></div><h3>${esc(n.title)}</h3><p>${esc(n.summary)}</p>${launch && n.price ? `<div class="price">$${esc(Number(n.price).toLocaleString('en-US'))}</div>` : ''}</div></a>`;
+}
+function renderNews(list){
+  const items = (list || []).slice().sort((a, b) => String(b.published).localeCompare(String(a.published))).slice(0, 3);
+  if (!items.length) return;
+  $('newsGrid').innerHTML = items.map(newsCard).join(''); $('news').hidden = false;
+}
+fetch('news/index.json?v=' + Date.now(), { cache: 'no-store' }).then(r => r.ok ? r.json() : []).then(renderNews).catch(() => {});
 
 fetch('content.json?v=' + Date.now(), { cache: 'no-store' })
   .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })

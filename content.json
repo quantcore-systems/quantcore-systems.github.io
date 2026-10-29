@@ -20,6 +20,10 @@
       "href": "#catalog"
     },
     {
+      "label": "News",
+      "href": "news.html"
+    },
+    {
       "label": "How It Works",
       "href": "#architecture"
     },
