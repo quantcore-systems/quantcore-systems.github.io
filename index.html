@@ -124,6 +124,13 @@ nav.main a:hover{color:var(--text)}nav.main a:hover::after{transform:scaleX(1)}
 @media (max-width:900px){.statement .wrap{grid-template-columns:1fr;gap:36px}}
 
 
+/* ---------- language switcher ---------- */
+.lang-sw{display:inline-flex;border:1px solid var(--line-2);border-radius:999px;padding:3px;gap:2px}
+.lang-sw button{border:0;background:transparent;color:var(--fog);font-size:12px;font-weight:600;letter-spacing:.04em;padding:5px 9px;border-radius:999px}
+.lang-sw button[aria-pressed=true]{background:var(--gold);color:#1A1408}
+.lang-sw button:hover{color:var(--text)} .lang-sw button[aria-pressed=true]:hover{color:#1A1408}
+.mnav .lang-sw{margin-top:14px}
+@media (max-width:560px){#langSw{display:none}}
 /* ---------- market desk (news) ---------- */
 .desk{padding:96px 0;border-top:1px solid var(--line)}
 .desk .sec-head p{color:var(--glacier)}
@@ -292,7 +299,7 @@ footer p{margin:0 0 12px;line-height:1.6}
 <div id="app" hidden>
   <div class="topbar" id="topBar"><div class="wrap">
     <span><span class="lock">●</span><span data-bind="topBar.badgeText"></span><span class="sr"> — </span><span class="hide-sm" data-bind="topBar.infoText" style="margin-left:14px;color:var(--fog)"></span></span>
-    <a href="#legal/refund">Delivery &amp; refund policy</a>
+    <a href="#legal/refund" data-t="topRefund">Delivery &amp; refund policy</a>
   </div></div>
 
   <header class="site">
@@ -303,7 +310,8 @@ footer p{margin:0 0 12px;line-height:1.6}
         <span class="tag" id="versionTag" data-bind="brand.versionTag"></span>
       </a>
       <nav class="main" id="mainNav" aria-label="Main"></nav>
-      <a class="btn btn-ghost btn-sm hdr-cta" href="#catalog">View products</a>
+      <div class="lang-sw" id="langSw" role="group" aria-label="Language"></div>
+      <a class="btn btn-ghost btn-sm hdr-cta" href="#catalog" data-t="viewProducts">View products</a>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 18 18" stroke="currentColor" stroke-width="1.6"><path d="M2 5h14M2 9h14M2 13h14"/></svg></button>
     </div>
     <nav class="mnav" id="mobileNav" aria-label="Mobile"></nav>
@@ -325,18 +333,18 @@ footer p{margin:0 0 12px;line-height:1.6}
         <div>
           <div class="instrument">
             <div class="in">
-              <div class="bar"><span><b>XAUUSD · M5</b>Liquidity sweep model</span><span class="live"><i></i>Replay</span></div>
+              <div class="bar"><span><b>XAUUSD · M5</b><span data-t="chartBar">Liquidity sweep model</span></span><span class="live"><i></i><span data-t="replay">Replay</span></span></div>
               <canvas id="chart" role="img" aria-label="Animated chart: a range forms, price sweeps the range low, a strong bullish candle leaves a fair value gap, and a long entry is taken with a stop below the sweep and a target at two times the risk."></canvas>
               <ol class="phases" id="phases">
-                <li data-p="1"><b>Range</b>Liquidity builds</li>
-                <li data-p="2"><b>Sweep</b>Stops are taken</li>
-                <li data-p="3"><b>Displacement</b>A gap is left</li>
-                <li data-p="4"><b>Defined risk</b>Stop and 2R target</li>
+                <li data-p="1"><b data-t="ph1b">Range</b><span data-t="ph1">Liquidity builds</span></li>
+                <li data-p="2"><b data-t="ph2b">Sweep</b><span data-t="ph2">Stops are taken</span></li>
+                <li data-p="3"><b data-t="ph3b">Displacement</b><span data-t="ph3">A gap is left</span></li>
+                <li data-p="4"><b data-t="ph4b">Defined risk</b><span data-t="ph4">Stop and 2R target</span></li>
               </ol>
               <div class="stats" id="heroStats"></div>
             </div>
           </div>
-          <p class="chart-note">Illustrative replay with synthetic data. It shows how the software reads price, not a trading result.</p>
+          <p class="chart-note" data-t="chartNote">Illustrative replay with synthetic data. It shows how the software reads price, not a trading result.</p>
         </div>
       </div>
     </section>
@@ -350,7 +358,7 @@ footer p{margin:0 0 12px;line-height:1.6}
 
     <section class="desk" id="news" hidden>
       <div class="wrap">
-        <div class="sec-head"><div><h2>Market Desk</h2><p>Daily notes on what moved gold, indices, currencies and rates, and what to watch next. New tools are announced here first.</p></div><a class="btn btn-ghost btn-sm" href="news.html">All posts</a></div>
+        <div class="sec-head"><div><h2 data-t="deskTitle">Market Desk</h2><p data-t="deskText">Daily notes on what moved gold, indices, currencies and rates, and what to watch next. New tools are announced here first.</p></div><a class="btn btn-ghost btn-sm" href="news.html" data-t="allPosts">All posts</a></div>
         <div class="news-grid" id="newsGrid"></div>
       </div>
     </section>
@@ -406,7 +414,7 @@ footer p{margin:0 0 12px;line-height:1.6}
           <p id="addressBlock" data-bind="seller.address"></p>
         </div>
         <div>
-          <h4>Support</h4>
+          <h4 data-t="support">Support</h4>
           <ul>
             <li id="emailRow"><a id="emailLink"></a></li>
             <li id="telegramRow"><a id="telegramLink" target="_blank" rel="noopener noreferrer"></a></li>
@@ -414,10 +422,10 @@ footer p{margin:0 0 12px;line-height:1.6}
             <li data-bind="seller.responseNote"></li>
           </ul>
         </div>
-        <div><h4>Legal</h4><ul id="legalLinks"></ul></div>
+        <div><h4 data-t="legal">Legal</h4><ul id="legalLinks"></ul></div>
         <div><h4 data-bind="payments.title"></h4><div class="pay" id="paymentBadges"></div><p data-bind="payments.note"></p></div>
       </div>
-      <div class="disc"><p><b>Disclaimer.</b> <span data-bind="footer.disclaimer"></span></p><p data-bind="footer.copyright"></p></div>
+      <div class="disc"><p><b data-t="disclaimer">Disclaimer.</b> <span data-bind="footer.disclaimer"></span></p><p data-bind="footer.copyright"></p></div>
     </div>
   </footer>
 </div>
@@ -438,6 +446,31 @@ footer p{margin:0 0 12px;line-height:1.6}
 <script>
 'use strict';
 let C = null, filter = 'all';
+const LANGS = ['en', 'ru', 'uz'];
+let LANG = (() => { try { const q = new URLSearchParams(location.search).get('lang'); if (LANGS.includes(q)) { localStorage.setItem('qc_lang', q); return q; } const s = localStorage.getItem('qc_lang'); if (LANGS.includes(s)) return s; } catch (e) {} const n = (navigator.language || 'en').slice(0, 2); return n === 'ru' ? 'ru' : n === 'uz' ? 'uz' : 'en'; })();
+let TR = null;
+const UI_EN = {topRefund:'Delivery & refund policy', whatsInside:"What's inside", noProducts:'No products in this category yet.', delivery:'Delivery', purchase:'Purchase', afterPurchase:'After purchase',
+  fine:'Educational software and materials. Not financial advice and not a guarantee of profit; trading involves a high risk of loss. Digital product, all sales final.', refundLink:'Refund & delivery policy', riskLink:'Risk disclaimer',
+  newRelease:'New release', marketAnalysis:'Market analysis', rangeHigh:'Range high', rangeLow:'Range low', rangeLowLong:'Range low · sell stops', fvg:'Fair value gap', sweep:'Liquidity sweep', tp:'TP 2R', stop:'Stop', entry:'Entry',
+  months:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']};
+const t = (k) => (TR && TR.ui && TR.ui[k] != null) ? TR.ui[k] : UI_EN[k];
+function deepMerge(a, b){ if (Array.isArray(b) || typeof b !== 'object' || b === null) return b; const o = Object.assign({}, a); for (const k of Object.keys(b)) o[k] = (a && typeof a[k] === 'object' && !Array.isArray(a[k])) ? deepMerge(a[k], b[k]) : b[k]; return o; }
+function applyLang(base){
+  if (!TR) return base;
+  const c = deepMerge(base, TR.content || {});
+  const pc = TR.productCommon || {}, pv = {'Version 1.0': pc.version};
+  c.products = (base.products || []).map(p => { const tp = (TR.products || {})[p.id] || {}; return Object.assign({}, p, { delivery: pc.delivery || p.delivery, accessPeriod: pc.accessPeriod || p.accessPeriod, support: pc.support || p.support, version: tp.version || pv[p.version] || p.version }, tp); });
+  c.legal = {}; for (const k of Object.keys(base.legal || {})) c.legal[k] = Object.assign({}, base.legal[k], { title: (TR.legal || {})[k] || base.legal[k].title, note: TR.legalNote });
+  return c;
+}
+function renderLang(){
+  const html = LANGS.map(l => `<button type="button" data-lang="${l}" aria-pressed="${l === LANG}">${l.toUpperCase()}</button>`).join('');
+  $('langSw').innerHTML = html;
+  const m = $('mobileNav'); if (m && !m.querySelector('.lang-sw')) m.insertAdjacentHTML('beforeend', `<div class="lang-sw" role="group" aria-label="Language">${html}</div>`); else if (m) m.querySelector('.lang-sw').innerHTML = html;
+  document.documentElement.lang = LANG;
+  document.querySelectorAll('[data-t]').forEach(el => { if (!el.dataset.en) el.dataset.en = el.textContent; const v = TR && TR.ui && TR.ui[el.dataset.t]; el.textContent = v != null ? v : el.dataset.en; });
+  $('menuBtn').setAttribute('aria-label', (TR && TR.ui.openMenu) || 'Open menu');
+}
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const get = (o, p) => p.split('.').reduce((a, k) => a == null ? undefined : a[k], o);
@@ -519,23 +552,23 @@ function renderList(){
       <ul>${(p.deliverables || []).map(d => `<li>${esc(d)}</li>`).join('')}</ul>
       <div class="buy">
         <div class="price">${money(p)}<small>${esc(p.currency || 'USD')}</small></div>
-        <div class="acts"><button class="linkbtn" data-product="${esc(p.id)}">What's inside</button>${cta(p, false)}</div>
+        <div class="acts"><button class="linkbtn" data-product="${esc(p.id)}">${esc(t('whatsInside'))}</button>${cta(p, false)}</div>
       </div>
-    </article>`).join('') || '<p style="padding:30px 0;color:var(--ink-muted)">No products in this category yet.</p>';
+    </article>`).join('') || `<p style="padding:30px 0;color:var(--ink-muted)">${esc(t('noProducts'))}</p>`;
 }
 
 function renderTiers(){
-  const t = visible().filter(isTier);
-  $('bundles').hidden = !t.length;
+  const tiers = visible().filter(isTier);
+  $('bundles').hidden = !tiers.length;
   const soon = esc((C.catalog || {}).comingSoonLabel || 'Coming soon');
-  $('tierGrid').innerHTML = t.map(p => `
+  $('tierGrid').innerHTML = tiers.map(p => `
     <article class="tier"><div class="in">
       <div class="label"><span>${esc(p.badge)}</span>${p.status !== 'available' ? `<span>${soon}</span>` : ''}</div>
       <h3>${esc(p.title)}</h3>
       <p>${esc(p.shortDesc)}</p>
       <div class="price">${money(p)}<small>${esc(p.currency || 'USD')}</small></div>
       <ul>${(p.deliverables || []).map(d => `<li>${ICON.check}<span>${esc(d)}</span></li>`).join('')}</ul>
-      <div class="acts">${cta(p, true)}<button class="linkbtn" data-product="${esc(p.id)}">What's inside</button></div>
+      <div class="acts">${cta(p, true)}<button class="linkbtn" data-product="${esc(p.id)}">${esc(t('whatsInside'))}</button></div>
     </div></article>`).join('');
 }
 
@@ -574,15 +607,15 @@ function openProduct(id){
   $('pmBody').innerHTML = `
     <p style="margin:0 0 22px;color:var(--ink-muted);font-size:16px">${esc(p.shortDesc)}</p>
     <ol>${(p.modules || []).map(m => `<li>${esc(m)}</li>`).join('')}</ol>
-    <div class="facts"><div><span>Delivery</span><b>${esc(p.delivery)}</b></div><div><span>Purchase</span><b>${esc(p.accessPeriod)}</b></div><div><span>After purchase</span><b>${esc(p.support)}</b></div></div>
-    <p class="fine">Educational software and materials. Not financial advice and not a guarantee of profit; trading involves a high risk of loss. Digital product, all sales final. <a href="#legal/refund">Refund &amp; delivery policy</a> · <a href="#legal/risk">Risk disclaimer</a></p>
+    <div class="facts"><div><span>${esc(t('delivery'))}</span><b>${esc(p.delivery)}</b></div><div><span>${esc(t('purchase'))}</span><b>${esc(p.accessPeriod)}</b></div><div><span>${esc(t('afterPurchase'))}</span><b>${esc(p.support)}</b></div></div>
+    <p class="fine">${esc(t('fine'))} <a href="#legal/refund">${esc(t('refundLink'))}</a> · <a href="#legal/risk">${esc(t('riskLink'))}</a></p>
     <div class="sheet-foot"><div class="price">${money(p)}<small>${esc(p.currency || 'USD')}</small></div>${cta(p, false)}</div>`;
   openModal('productModal');
 }
 
 function openLegal(k){
   const d = (C.legal || {})[k]; if (!d) return;
-  $('lmTitle').textContent = d.title; $('lmBody').innerHTML = d.html || '';
+  $('lmTitle').textContent = d.title; $('lmBody').innerHTML = (d.note ? `<p style="padding:12px 14px;border:1px solid rgba(212,180,131,.4);border-radius:10px;background:rgba(212,180,131,.08)">${esc(d.note)}</p>` : '') + (d.html || '');
   document.querySelectorAll('.modal.open').forEach(m => m.classList.remove('open'));
   openModal('legalModal');
 }
@@ -593,7 +626,7 @@ function render(){
   document.querySelector('meta[name=description]').content = (C.seo && C.seo.description) || '';
   $('topBar').hidden = !(C.topBar && C.topBar.enabled);
   $('versionTag').hidden = !(C.brand && C.brand.versionTag);
-  bind(); renderNav(); renderHero(); renderStatement(); renderFilters(); renderList(); renderTiers(); renderSteps(); renderFeatures(); renderFaq(); renderFooter();
+  bind(); renderNav(); renderLang(); renderHero(); renderStatement(); renderFilters(); renderList(); renderTiers(); renderSteps(); renderFeatures(); renderFaq(); renderFooter();
 }
 
 document.addEventListener('click', e => {
@@ -684,14 +717,14 @@ const Chart = (() => {
       ctx.setLineDash([4, 5]); ctx.strokeStyle = 'rgba(169,198,217,.45)'; ctx.lineWidth = 1;
       [M.rHi, M.rLo].forEach(v => { ctx.beginPath(); ctx.moveTo(x(M.rStart) - step / 2, y(v)); ctx.lineTo(x(Math.min(shown, N - 1)), y(v)); ctx.stroke(); });
       ctx.setLineDash([]);
-      label('Range high', x(M.rStart), y(M.rHi) - 11, COL.text); label(W < 560 ? 'Range low' : 'Range low · sell stops', x(M.rStart), W < 560 ? y(M.rLo) - 11 : y(M.rLo) + 13, COL.text);
+      label(t('rangeHigh'), x(M.rStart), y(M.rHi) - 11, COL.text); label(W < 560 ? t('rangeLow') : t('rangeLowLong'), x(M.rStart), W < 560 ? y(M.rLo) - 11 : y(M.rLo) + 13, COL.text);
     }
     // FVG
     if (shown > M.disp + 1) {
       const x0 = x(M.disp) - step / 2, x1 = W - padR;
       ctx.fillStyle = COL.goldFill; ctx.fillRect(x0, y(M.fTop), x1 - x0, y(M.fBot) - y(M.fTop));
       ctx.strokeStyle = 'rgba(212,180,131,.55)'; ctx.strokeRect(x0 + .5, y(M.fTop) + .5, x1 - x0 - 1, y(M.fBot) - y(M.fTop));
-      label('Fair value gap', x0 + 4, y(M.fTop) - 12, COL.gold);
+      label(t('fvg'), x0 + 4, y(M.fTop) - 12, COL.gold);
     }
     // candles
     for (let i = 0; i < Math.min(shown, N); i++) {
@@ -708,7 +741,7 @@ const Chart = (() => {
     if (shown > M.sw) {
       const xx = x(M.sw), yy = y(M.swLow);
       ctx.strokeStyle = COL.gold; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(xx, yy, 9, 0, Math.PI * 2); ctx.stroke();
-      label('Liquidity sweep', xx - 14, yy + 2, COL.gold, 'right');
+      label(t('sweep'), xx - 14, yy + 2, COL.gold, 'right');
     }
     // entry, SL, TP
     if (shown > M.entryBar) {
@@ -720,7 +753,7 @@ const Chart = (() => {
         ctx.fillStyle = '#0B1426'; ctx.textAlign = 'left'; ctx.fillText(txt, tx + 7, ty + .5); };
       ctx.fillStyle = 'rgba(111,191,154,.07)'; ctx.fillRect(xe, y(M.tp), xr - xe, y(M.entry) - y(M.tp));
       ctx.fillStyle = 'rgba(217,119,111,.08)'; ctx.fillRect(xe, y(M.entry), xr - xe, y(M.sl) - y(M.entry));
-      line(M.tp, COL.tp, 'TP 2R'); line(M.sl, COL.sl, 'Stop'); line(M.entry, COL.gold, 'Entry');
+      line(M.tp, COL.tp, t('tp')); line(M.sl, COL.sl, t('stop')); line(M.entry, COL.gold, t('entry'));
       ctx.fillStyle = COL.gold; ctx.beginPath(); ctx.arc(xe, y(M.entry), 4, 0, Math.PI * 2); ctx.fill();
     }
     flush();
@@ -751,22 +784,29 @@ const Chart = (() => {
 })();
 
 
-const fmtWhen = (iso) => { const d = new Date(iso); if (isNaN(d)) return ''; return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',timeZone:'UTC'}) + ' · ' + d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'UTC'}) + ' UTC'; };
+const fmtWhen = (iso) => { const d = new Date(iso); if (isNaN(d)) return ''; const p2 = (n) => String(n).padStart(2, '0'); return `${p2(d.getUTCDate())} ${t('months')[d.getUTCMonth()]} ${d.getUTCFullYear()} · ${p2(d.getUTCHours())}:${p2(d.getUTCMinutes())} UTC`; };
+const loc = (n) => (n.i18n && n.i18n[LANG]) ? Object.assign({}, n, n.i18n[LANG]) : n;
 function newsCard(n){
-  const href = 'news.html?p=' + encodeURIComponent(n.slug), launch = n.type === 'launch';
+  n = loc(n); const href = 'news.html?p=' + encodeURIComponent(n.slug), launch = n.type === 'launch';
   const cover = n.cover ? `<div class="cv" style="background-image:url('${esc(n.cover)}')"></div>` : '';
-  return `<a class="ncard${launch ? ' launch' : ''}" href="${esc(href)}">${cover}<div class="bd"><div class="when"><span class="kind">${launch ? 'New release' : 'Market analysis'}</span><time datetime="${esc(n.published)}">${esc(fmtWhen(n.published))}</time></div><h3>${esc(n.title)}</h3><p>${esc(n.summary)}</p>${launch && n.price ? `<div class="price">$${esc(Number(n.price).toLocaleString('en-US'))}</div>` : ''}</div></a>`;
+  return `<a class="ncard${launch ? ' launch' : ''}" href="${esc(href)}">${cover}<div class="bd"><div class="when"><span class="kind">${esc(launch ? t('newRelease') : t('marketAnalysis'))}</span><time datetime="${esc(n.published)}">${esc(fmtWhen(n.published))}</time></div><h3>${esc(n.title)}</h3><p>${esc(n.summary)}</p>${launch && n.price ? `<div class="price">$${esc(Number(n.price).toLocaleString('en-US'))}</div>` : ''}</div></a>`;
 }
+let NEWS = [];
 function renderNews(list){
+  if (list) NEWS = list;
+  list = NEWS;
   const items = (list || []).slice().sort((a, b) => String(b.published).localeCompare(String(a.published))).slice(0, 3);
   if (!items.length) return;
   $('newsGrid').innerHTML = items.map(newsCard).join(''); $('news').hidden = false;
 }
 fetch('news/index.json?v=' + Date.now(), { cache: 'no-store' }).then(r => r.ok ? r.json() : []).then(renderNews).catch(() => {});
 
-fetch('content.json?v=' + Date.now(), { cache: 'no-store' })
-  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-  .then(d => { C = d; render(); $('app').hidden = false; Chart.start(); onHash(); })
+let BASE = null;
+const loadTR = (l) => l === 'en' ? Promise.resolve(null) : fetch(`i18n/${l}.json?v=${Date.now()}`, { cache: 'no-store' }).then(r => r.ok ? r.json() : null).catch(() => null);
+function setLang(l){ if (!LANGS.includes(l)) return; LANG = l; try { localStorage.setItem('qc_lang', l); } catch (e) {} loadTR(l).then(tr => { TR = tr; C = applyLang(BASE); render(); renderNews(); }); }
+document.addEventListener('click', e => { const b = e.target.closest('[data-lang]'); if (b) setLang(b.dataset.lang); });
+Promise.all([fetch('content.json?v=' + Date.now(), { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }), loadTR(LANG)])
+  .then(([d, tr]) => { BASE = d; TR = tr; C = applyLang(d); render(); renderNews(); $('app').hidden = false; Chart.start(); onHash(); })
   .catch(err => { console.error(err); $('loadError').style.display = 'block'; });
 </script>
 </body>

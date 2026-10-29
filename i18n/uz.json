@@ -1,0 +1,464 @@
+{
+ "ui": {
+  "viewProducts": "Katalog",
+  "openMenu": "Menyuni ochish",
+  "chartBar": "Likvidlikni olish modeli",
+  "replay": "Takror",
+  "ph1b": "Diapazon",
+  "ph1": "Likvidlik yig'iladi",
+  "ph2b": "Olish",
+  "ph2": "Stoplar ishlaydi",
+  "ph3b": "Impuls",
+  "ph3": "Gep qoladi",
+  "ph4b": "Belgilangan risk",
+  "ph4": "Stop va 2R maqsad",
+  "chartNote": "Sintetik ma'lumotlardagi namunaviy takror. Dastur narxni qanday o'qishini ko'rsatadi, bu savdo natijasi emas.",
+  "deskTitle": "Market Desk",
+  "deskText": "Oltin, indekslar, valyutalar va stavkalarni nima harakatlantirgani va keyin nimaga e'tibor berish kerakligi haqida kunlik sharhlar. Yangi vositalar birinchi bo'lib shu yerda e'lon qilinadi.",
+  "allPosts": "Barcha postlar",
+  "support": "Yordam",
+  "legal": "Hujjatlar",
+  "disclaimer": "Ogohlantirish.",
+  "whatsInside": "Ichida nima bor",
+  "noProducts": "Bu toifada hozircha mahsulot yo'q.",
+  "delivery": "Yetkazish",
+  "purchase": "Xarid",
+  "afterPurchase": "Xariddan keyin",
+  "fine": "O'quv dasturiy ta'minoti va materiallari. Moliyaviy maslahat emas va foyda kafolati emas; savdo yuqori zarar xavfi bilan bog'liq. Raqamli mahsulot, barcha sotuvlar yakuniy.",
+  "refundLink": "Qaytarish va yetkazish siyosati",
+  "riskLink": "Risk haqida ogohlantirish",
+  "topRefund": "Yetkazish va qaytarish",
+  "newRelease": "Yangi mahsulot",
+  "marketAnalysis": "Bozor tahlili",
+  "rangeHigh": "Diapazon cho'qqisi",
+  "rangeLow": "Diapazon tubi",
+  "rangeLowLong": "Diapazon tubi · sotuvchilar stoplari",
+  "fvg": "Adolatli qiymat gepi",
+  "sweep": "Likvidlikni olish",
+  "tp": "TP 2R",
+  "stop": "Stop",
+  "entry": "Kirish",
+  "products": "Mahsulotlar",
+  "terms": "Shartlar",
+  "deskHeadText": "Oltin, fond indekslari, valyutalar va stavkalarni nima harakatlantirgani, bu nima uchun muhimligi va kalendarda keyin nima borligi haqida kunlik sharh, shuningdek QuantCore'ning yangi vositalari e'lonlari.",
+  "all": "Barchasi",
+  "newReleases": "Yangi mahsulotlar",
+  "noPosts": "Hozircha postlar yo'q.",
+  "back": "← Barcha postlar",
+  "oneTime": "bir martalik · ZIP darhol yuklab olinadi",
+  "buy": "Whop'da sotib olish",
+  "viewCatalog": "Katalog",
+  "sources": "Manbalar",
+  "noteLaunch": "Faqat dasturiy ta'minot va o'quv materiallari. Investitsiya maslahati emas va foyda kafolati emas. Barcha sotuvlar yakuniy — Qaytarish va yetkazish siyosatiga qarang.",
+  "noteAnalysis": "Ta'lim maqsadidagi umumiy bozor sharhi — investitsiya maslahati, sotib olish yoki sotish tavsiyasi yoki savdo signali emas. Narxlar va voqealar tez o'zgaradi; joriy ma'lumotlarni tekshiring. Leveraj bilan savdo yuqori zarar xavfiga ega.",
+  "footer": "Market Desk postlari ta'lim maqsadidagi umumiy bozor sharhidir. Ular investitsiya maslahati, biror vositani sotib olish yoki sotish tavsiyasi yoki savdo signali emas. Forex, CFD, oltin va indekslar savdosi pul yo'qotishning yuqori xavfi bilan bog'liq.",
+  "translatedNote": "Bu post faqat ingliz tilida mavjud.",
+  "months": [
+   "yan",
+   "fev",
+   "mar",
+   "apr",
+   "may",
+   "iyun",
+   "iyul",
+   "avg",
+   "sen",
+   "okt",
+   "noy",
+   "dek"
+  ],
+  "days": [
+   "Yak",
+   "Du",
+   "Se",
+   "Ch",
+   "Pa",
+   "Ju",
+   "Sh"
+  ]
+ },
+ "legalNote": "Yuridik hujjatlar ingliz tilida tuzilgan. Sayt tarjimasi bilan farq bo'lsa, ingliz tilidagi matn ustun hisoblanadi.",
+ "legal": {
+  "terms": "Xizmat ko'rsatish va sotish shartlari (ommaviy oferta)",
+  "refund": "Qaytarish va yetkazish siyosati",
+  "risk": "Risk haqida ogohlantirish",
+  "license": "Litsenziya shartnomasi (EULA)",
+  "privacy": "Maxfiylik siyosati"
+ },
+ "content": {
+  "seo": {
+   "title": "QuantCore Systems — MQL5 dasturlari, indikatorlar va savdo ta'limi",
+   "description": "QuantCore Systems'dan MetaTrader 5 indikatorlari, ekspert maslahatchi freymvorklari va o'quv qo'llanmalari. Whop orqali xavfsiz to'lov va yetkazish."
+  },
+  "brand": {
+   "subtitle": "Algoritmik arxitektura va miqdoriy ta'lim"
+  },
+  "topBar": {
+   "badgeText": "Whop orqali xavfsiz to'lov",
+   "infoText": "Raqamli fayllar: PDF qo'llanmalar, MT5 indikatorlari va ekspert maslahatchi"
+  },
+  "nav": [
+   {
+    "label": "Mahsulotlar",
+    "href": "#catalog"
+   },
+   {
+    "label": "Yangiliklar",
+    "href": "news.html"
+   },
+   {
+    "label": "Qanday ishlaydi",
+    "href": "#architecture"
+   },
+   {
+    "label": "Savollar",
+    "href": "#faq"
+   },
+   {
+    "label": "Shartlar",
+    "href": "#legal/terms"
+   }
+  ],
+  "hero": {
+   "badge": "MetaTrader 5 dasturlari va savdo ta'limi",
+   "titleBefore": "Stop-loss atrofida qurilgan savdo dasturlari,",
+   "titleHighlight": "shov-shuv",
+   "titleAfter": "emas.",
+   "text": "Aniq qoidalarga asoslangan MT5 indikatorlari, qat'iy risk limitlariga ega ekspert maslahatchi va bozor tuzilmasi g'oyalarini tekshiriladigan qoidalarga aylantiruvchi qo'llanmalar. To'lov Whop orqali, darhol yuklab olinadi.",
+   "badges": [
+    {
+     "icon": "fa-shield-halved",
+     "color": "brand",
+     "title": "Xavfsiz to'lov",
+     "subtitle": "Whop orqali karta va hamyon to'lovlari"
+    },
+    {
+     "icon": "fa-bolt",
+     "color": "emerald",
+     "title": "Darhol yuklab olish",
+     "subtitle": "ZIP arxiv Whop akkauntingizda"
+    },
+    {
+     "icon": "fa-terminal",
+     "color": "indigo",
+     "title": "Ishga tayyor",
+     "subtitle": "Kompilyatsiya qilingan MT5 dasturlari, DLL'siz"
+    }
+   ],
+   "primaryCtaLabel": "Katalogni ko'rish",
+   "secondaryCtaLabel": "Savol berish",
+   "codeFileName": "Namuna · lot hajmini hisoblash",
+   "stats": [
+    {
+     "label": "Platforma",
+     "value": "MetaTrader 5"
+    },
+    {
+     "label": "Bitim riski",
+     "value": "Kapitalning qat'iy foizi"
+    },
+    {
+     "label": "Format",
+     "value": ".ex5 · .pdf · .xlsx"
+    }
+   ]
+  },
+  "catalog": {
+   "title": "Vositalar va qo'llanmalar",
+   "text": "Har bir mahsulot bitta ZIP arxiv: boshlash qo'llanmasi, quyida sanab o'tilgan fayllar va to'liq litsenziya shartlari.",
+   "categories": [
+    {
+     "id": "manual",
+     "label": "PDF qo'llanmalar va kurslar"
+    },
+    {
+     "id": "software",
+     "label": "MT5 dasturlari va indikatorlari"
+    },
+    {
+     "id": "enterprise",
+     "label": "To'plamlar"
+    }
+   ],
+   "comingSoonLabel": "Tez orada",
+   "comingSoonButton": "Kutish ro'yxatiga",
+   "comingSoonNoLinkButton": "Xabar bering",
+   "buyButton": "Whop'da sotib olish"
+  },
+  "features": {
+   "title": "Risk nazorati atrofida qurilgan",
+   "text": "Har bir qoida oddiy tilda yozilgan, har bir chegara siz boshqaradigan parametr.",
+   "items": [
+    {
+     "icon": "fa-layer-group",
+     "color": "brand",
+     "title": "Tekshirsa bo'ladigan qoidalar",
+     "text": "Tuzilma buzilishi sham yopilishi bo'yicha, likvidlik olinishi soya bo'yicha aniqlanadi, har bir chegara kirish parametri. Qo'llanmalar har bir qoidani tushuntiradi, shuning uchun uni strategiya testerida tekshirish mumkin."
+    },
+    {
+     "icon": "fa-file-shield",
+     "color": "emerald",
+     "title": "Avval risk nazorati",
+     "text": "Pozitsiya hajmi brokeringizning kontrakt ma'lumotlaridan hisoblanadi. Kunlik limitlar, ochiq risk chegarasi va spred filtri hisobni himoya qiladi."
+    },
+    {
+     "icon": "fa-bolt",
+     "color": "indigo",
+     "title": "To'liq to'plam darhol",
+     "text": "Har bir arxivda mahsulot sahifasida ko'rsatilgan hamma narsa, boshlash qo'llanmasi va o'rnatish bosqichlari bor. Bir martalik xarid, obunasiz."
+    }
+   ]
+  },
+  "faq": {
+   "title": "Ko'p beriladigan savollar",
+   "items": [
+    {
+     "q": "To'lovdan keyin fayllarni qanday olaman?",
+     "a": "To'lovni Whop amalga oshiradi. Muvaffaqiyatli to'lovdan so'ng ZIP arxiv darhol Whop akkauntingizda (whop.com) yuklab olish uchun tayyor bo'ladi, Whop esa tasdiq xatini yuboradi. Har bir arxiv 00_START_HERE.pdf fayli bilan boshlanadi."
+    },
+    {
+     "q": "Pulni qaytarib olsa bo'ladimi?",
+     "a": "Barcha mahsulotlar raqamli va darhol yetkaziladi, shuning uchun barcha sotuvlar yakuniy va pul qaytarilmaydi. Agar fayl yo'q yoki buzilgan bo'lsa, 7 kun ichida quantcorestore@gmail.com manziliga yozing — almashtirib yuboramiz. Iltimos, xariddan oldin Qaytarish va yetkazish siyosatini o'qing."
+    },
+    {
+     "q": "Yangilanishlar yoki yordam kiradimi?",
+     "a": "Yo'q. Har bir mahsulot yetkazilgan versiyaning bir martalik xaridi: obuna, yangilanishlar, o'rnatishda yordam va maslahatlar kirmaydi. O'rnatish va ishlatish uchun kerakli hamma narsa arxivda bor. Fayl yo'q yoki buzilgan bo'lsa, almashtirib beramiz."
+    },
+    {
+     "q": "Indikatorlar va ekspert maslahatchi foydani kafolatlaydimi?",
+     "a": "Yo'q. Ular o'quv va tahliliy vositalar. Savdo yuqori zarar xavfi bilan bog'liq va hech qanday dastur natijani kafolatlay olmaydi. Haqiqiy savdodan oldin doim demo hisobda sinab ko'ring."
+    },
+    {
+     "q": "Pulni boshqarasizmi yoki moliyaviy maslahat berasizmi?",
+     "a": "Yo'q. QuantCore Systems dasturiy ta'minot va o'quv materiallari yetkazib beruvchisi. Biz mablag'larni boshqarmaymiz, broker emasmiz, shaxsiy investitsiya maslahati va savdo signallari bermaymiz."
+    },
+    {
+     "q": "MetaTrader 5 dasturlari qanday ko'rinishda yetkaziladi?",
+     "a": "Indikatorlar, skriptlar va ekspert maslahatchilar Windows uchun MetaTrader 5 (64-bit) da ishga tayyor kompilyatsiya qilingan .ex5 fayllar ko'rinishida yetkaziladi. Manba kodi faqat tavsifida aniq ko'rsatilgan mahsulotlarga kiradi: MQL5 EA Architecture Course va Full Source-Code License."
+    },
+    {
+     "q": "Qanday to'lov usullari qabul qilinadi?",
+     "a": "Mamlakatingizda Whop to'lovi qo'llab-quvvatlaydigan barcha usullar — odatda Visa, Mastercard, Apple Pay va Google Pay."
+    }
+   ]
+  },
+  "seller": {
+   "responseNote": "Buyurtma va yetkazish bo'yicha savollarga 2 ish kuni ichida javob beramiz."
+  },
+  "payments": {
+   "title": "To'lov",
+   "note": "To'lovlarni Whop xavfsiz qayta ishlaydi. Biz karta ma'lumotlaringizni ko'rmaymiz va saqlamaymiz."
+  },
+  "footer": {
+   "disclaimer": "QuantCore Systems kompyuter dasturlari (MQL5 indikatorlari, skriptlari va ekspert maslahatchilari) va o'quv nashrlarini ishlab chiqadi va tarqatadi. Bu saytdagi hech narsa moliyaviy maslahat, ishonchli boshqaruv, brokerlik xizmati yoki savdoga taklif emas. Forex, CFD, oltin va indekslar savdosi pul yo'qotishning yuqori xavfi bilan bog'liq. Mahsulotlarimiz foyda kafolati emas. O'tgan yoki modellashtirilgan natijalar kelajakdagi natijalarni kafolatlamaydi. Barcha sotuvlar yakuniy — Qaytarish va yetkazish siyosatiga qarang.",
+   "copyright": "© 2026 QuantCore Systems. Barcha huquqlar himoyalangan."
+  },
+  "statement": {
+   "quote": "Martingeylsiz. To'rsiz. Har bir pozitsiyada stop-loss va dastur sizni to'xtatishidan oldin uni to'xtatadigan kunlik limit.",
+   "points": [
+    "Har bir lot sizning risk foizingiz va stopgacha bo'lgan masofadan hisoblanadi.",
+    "Kunlik zarar limitlari, spred filtri va savdo oynalari ichiga qurilgan, alohida qo'shimcha emas.",
+    "Har bir qoida qo'llanmalarda yozilgan, shuning uchun pul tavakkal qilishdan oldin uni o'zingiz tekshira olasiz."
+   ]
+  },
+  "tiers": {
+   "title": "To'liq to'plamlar",
+   "text": "Butun katalog bitta yuklamada — beshta hisob uchun yoki tijorat litsenziyasi bilan to'liq manba kodi bilan."
+  },
+  "steps": {
+   "title": "To'lovdan birinchi sinovgacha",
+   "text": "Xariddan keyin nima bo'ladi.",
+   "items": [
+    {
+     "title": "Whop'da to'lang",
+     "text": "To'lovni Whop amalga oshiradi. Siz sotish shartlarini qabul qilasiz va pochtangizga chek keladi."
+    },
+    {
+     "title": "ZIP'ni yuklab oling",
+     "text": "Arxiv darhol Whop akkauntingizda paydo bo'ladi. Avval 00_START_HERE.pdf ni oching."
+    },
+    {
+     "title": "MetaTrader 5 ga o'rnating",
+     "text": ".ex5 fayllarni MQL5 papkalariga nusxalang va Navigatorni yangilang. Boshlash qo'llanmasi har bir qadamni ko'rsatadi."
+    },
+    {
+     "title": "Demoda sinang",
+     "text": "Haqiqiy tiklarda bektest qiling va haqiqiy savdodan oldin demo hisobda ishga tushiring."
+    }
+   ]
+  }
+ },
+ "products": {
+  "qc-risk-kit-250": {
+   "title": "Risk menejeri va savdo jurnali to'plami (MT5 + Excel)",
+   "badge": "MT5 vositalari va Excel",
+   "shortDesc": "Pozitsiyani to'g'ri hisoblash, kunlik zarar limitlariga rioya qilish va natijalarni R da hisoblash uchun hamma narsa — MetaTrader 5 va Excel ichida.",
+   "deliverables": [
+    "Risk menejmenti qo'llanmasi (PDF)",
+    "MT5 lot hisoblash skripti + risk paneli (.ex5)",
+    "Excel kalkulyator, savdo jurnali va statistika"
+   ],
+   "modules": [
+    "Qo'llanma: zarar arifmetikasi, bitim riski, zararlar seriyasi, pozitsiya hajmi, zarar limitlari, drawdown nazorati, jurnal, kunlik tartib",
+    "QuantCore_PositionSizer (MT5 skript): broker kontrakt ma'lumotlari bo'yicha risk foizi va stop-lossdan lot; xohlasangiz SL/TP bilan buyurtma",
+    "QuantCore_Risk_Dashboard (MT5 indikator): kunlik va haftalik foyda/zarar, kunlik limitgacha qoldiq, stoplar bo'yicha ochiq risk, stop-losssiz pozitsiyalar, ogohlantirishlar",
+    "Excel kitobi: pozitsiya kalkulyatori, R natijali 500 qatorli jurnal, statistika (yutuq foizi, kutilma, profit-faktor), kapital egri chizig'i, drawdown jadvali"
+   ]
+  },
+  "qc-smc-500": {
+   "title": "SMC va likvidlik bo'yicha qo'llanma",
+   "badge": "PDF qo'llanma va chek-listlar",
+   "shortDesc": "Bozor tuzilmasi, induksiya, order-bloklarni tekshirish va premium/discount zonalari bo'yicha tizimli qo'llanma.",
+   "deliverables": [
+    "PDF qo'llanma (4 modul, rasmli)",
+    "Bir nechta taymfreymda kirish chek-listi (PDF)",
+    "Pozitsiya kalkulyatori (.xlsx + MT5 skript)"
+   ],
+   "modules": [
+    "1-modul: bozor tuzilmasi, BOS va likvidlik olinishi, induksiya (IDM)",
+    "2-modul: order-bloklarni tekshirish, ekstremal va qaror POI'lari, breaker-bloklar",
+    "3-modul: talab/taklif bahosi va muvozanat (50%)",
+    "4-modul: kichik taymfreymda kirishni tasdiqlash va pozitsiya hajmi formulasi"
+   ],
+   "version": "2026 nashri"
+  },
+  "qc-ict-750": {
+   "title": "IPDA va vaqt-narx nazariyasi qo'llanmasi",
+   "badge": "Indikatorli chuqur qo'llanma",
+   "shortDesc": "Narx yetkazish tushunchalari (20/40/60 kunlik oynalar), sessiya killzonalari, Nyu-York yarim tungi ochilishi va vaqtga asoslangan modellar bo'yicha qo'llanma.",
+   "deliverables": [
+    "IPDA va Time-Price PDF qo'llanmasi (4 modul)",
+    "MT5 uchun Session Killzones indikatori (.ex5)",
+    "SMT divergensiya ma'lumotnomasi (PDF)"
+   ],
+   "modules": [
+    "1-modul: diapazonning tashqi va ichki likvidligi",
+    "2-modul: sessiya killzonalari, Nyu-York yarim tungi ochilishi va Power of Three",
+    "3-modul: PD massivlar ierarxiyasi va Consequent Encroachment (50%)",
+    "4-modul: vaqt oynasi modellari va SMT divergensiya"
+   ],
+   "version": "2026 nashri"
+  },
+  "qc-orderflow-950": {
+   "title": "Order Flow, Volume Delta va VWAP to'plami",
+   "badge": "Qo'llanma va ikkita MT5 indikatori",
+   "shortDesc": "Auksion bozori nazariyasi, rivojlanayotgan POC siljishi, VWAP standart og'ish chiziqlari va kumulyativ hajm deltasi.",
+   "deliverables": [
+    "Order Flow va VWAP qo'llanmasi (PDF, 4 modul)",
+    "MT5 indikatorlari: VWAP Bands + Tick Delta / CVD (.ex5)",
+    "XAUUSD va AQSh indekslarini o'rganish protokoli (PDF)"
+   ],
+   "modules": [
+    "1-modul: auksion bozori nazariyasi, qiymat zonasi, HVN/LVN va DPOC siljishi",
+    "2-modul: VWAP hisoblash va ±1, 2, 3 sigma chiziqlari",
+    "3-modul: tik deltasi mexanikasi, yutilish va charchash",
+    "4-modul: XAUUSD va Nasdaq uchun konfluens modeli"
+   ]
+  },
+  "qc-fvg-ind-1200": {
+   "title": "FVG, killzona va likvidlik skaneri (MT5)",
+   "badge": "MT5 indikatorlar to'plami",
+   "shortDesc": "Order-bloklar, adolatli qiymat geplari va teng cho'qqi/tublarni belgilaydigan ko'p taymfreymli MetaTrader 5 indikatori.",
+   "deliverables": [
+    "Liquidity Mapper, Session Killzones va Tick Delta indikatorlari (.ex5, 3 tagacha hisob)",
+    "Qalqib chiquvchi, push va email ogohlantirishlar",
+    "Asosiy juftliklar, oltin va indekslar uchun .SET presetlari + qo'llanma"
+   ],
+   "modules": [
+    "1-dvigatel: ko'p taymfreymli BOS / CHoCH (tana yopilishi bo'yicha), induksiya belgilari, order-bloklar, teng cho'qqi/tublar",
+    "2-dvigatel: yopilmagan adolatli qiymat geplari va 50% (CE) darajasi",
+    "3-dvigatel: Osiyo diapazoni, London va Nyu-York killzonalari, Nyu-York yarim tungi ochilishi",
+    "4-dvigatel: narx va CVD divergensiyasi ogohlantirishli tik deltasi / CVD gistogrammasi"
+   ]
+  },
+  "qc-gold-ea-1500": {
+   "title": "XAUUSD Liquidity & VWAP ekspert maslahatchisi (MT5)",
+   "badge": "MT5 ekspert maslahatchi",
+   "shortDesc": "Sessiya likvidligini olish va adolatli qiymat geplari bo'yicha kirishlarga asoslangan XAUUSD va AQSh indekslari uchun MQL5 ekspert maslahatchi.",
+   "deliverables": [
+    "QuantCore_ExecutionEA (.ex5, 3 tagacha hisob)",
+    "Ichki kunlik zarar limiti, spred, sessiya va yangilik filtrlari",
+    "Boshlang'ich .SET profillar + ishlatish, VPS va test qo'llanmasi"
+   ],
+   "modules": [
+    "Mantiq: Osiyo diapazoni / oldingi kun / lookback darajasi likvidligini olish, so'ng adolatli qiymat gepi qoldiruvchi impuls sham",
+    "Risk: risk foizi va stop-lossdan lot, kunlik zarar limiti, kunlik maksimal bitimlar, zararsizlik va qisman yopish",
+    "Filtrlar: Nyu-York savdo oynalari, maksimal spred, VWAP tomoni, muhim yangiliklar oynasi (MT5 kalendari, real/demo)",
+    "Test: bosqichma-bosqich bektest, tanlovdan tashqari tekshiruv va demoda forward-test"
+   ],
+   "version": "Versiya 1.0 · martingeylsiz"
+  },
+  "qc-mql5-arch-2200": {
+   "title": "MQL5 ekspert maslahatchi arxitekturasi kursi + manba kodi",
+   "badge": "Manba kodli kurs",
+   "shortDesc": "Ekspert maslahatchilar yaratish uchun modulli .mq5 / .mqh manba kodi freymvorki bilan dasturlash kursi.",
+   "deliverables": [
+    "MQL5 EA arxitekturasi kursi (PDF, 4 modul)",
+    "Freymvork manba kodi (.mq5 / .mqh) + namuna EA",
+    "Walk-forward va Monte-Karlo test qo'llanmasi + MT5 skript"
+   ],
+   "modules": [
+    "1-modul: MQL5 hodisalar modeli (OnInit, OnTick, OnTradeTransaction)",
+    "2-modul: SMC, FVG va tik deltasi mantiqini dasturlash",
+    "3-modul: risk dvigateli, lotni normallashtirish va kunlik kapital limiti",
+    "4-modul: haqiqiy tiklarda bektest va walk-forward optimallashtirish"
+   ]
+  },
+  "qc-trade-manager-450": {
+   "title": "QuantCore Trade Manager (MT5)",
+   "badge": "MT5 yordamchi EA",
+   "shortDesc": "Qo'lda va EA ochgan pozitsiyalaringizni boshqaradigan yordamchi ekspert maslahatchi: yetishmayotgan stoplarni qo'yadi, zararsizlikka o'tkazadi, foydaning bir qismini oladi, ATR bo'yicha trailing qiladi va zarar limitiga yetganda hisobni kunga qulflaydi. O'zi bitim ochmaydi.",
+   "deliverables": [
+    "QuantCore_TradeManager ekspert maslahatchisi (.ex5)",
+    "3 ta profil: Standard, Prop-firm, Swing",
+    "Foydalanuvchi qo'llanmasi (PDF)"
+   ],
+   "modules": [
+    "Stop-losssiz pozitsiyalarga stop-loss (punkt yoki ATR) va x R da take-profit qo'yadi",
+    "x R da siljish bilan zararsizlik, x R da bitta qisman yopish",
+    "ATR yoki punktli trailing-stop, faqat foyda tomonga siljiydi",
+    "Kunlik qulf: boshqariladigan pozitsiyalarni yopadi va keyingi savdo kunigacha yangilarini bloklaydi",
+    "Grafikdagi panel: stoplar bo'yicha ochiq risk, stopsiz pozitsiyalar, kun natijasi, qulf holati; ogohlantirish va push",
+    "Qamrov: grafik simvoli yoki barcha simvollar; qo'lda bitimlar, bitta magic raqam yoki barcha EA'lar"
+   ]
+  },
+  "qc-prop-desk-3500": {
+   "title": "To'liq to'plam (5 hisob)",
+   "badge": "5 hisob uchun to'plam",
+   "shortDesc": "Barcha qo'llanmalar, to'liq indikatorlar to'plami, MT5 ekspert maslahatchisi va risk to'plami bitta yuklamada.",
+   "deliverables": [
+    "Barcha qo'llanmalar: SMC, IPDA, Order Flow + risk qo'llanmasi",
+    "MT5 ekspert maslahatchi + barcha indikatorlar va vositalar (.ex5)",
+    "5 tagacha savdo hisobi uchun litsenziya"
+   ],
+   "modules": [
+    "Qo'llanmalar: SMC va likvidlik, IPDA va Time-Price, Order Flow va VWAP, risk menejmenti, chek-listlar va o'rganish protokoli",
+    "MT5 dasturlari (.ex5): Liquidity Mapper, Session Killzones, VWAP Bands, Tick Delta, Risk Dashboard, Position Sizer",
+    "XAUUSD Liquidity & VWAP ekspert maslahatchisi (.ex5) boshlang'ich presetlar va ishlatish, VPS va test qo'llanmasi bilan",
+    "Excel risk kalkulyatori va savdo jurnali; o'zingizga tegishli 5 tagacha savdo hisobi uchun litsenziya"
+   ]
+  },
+  "qc-source-ent-5000": {
+   "title": "To'liq manba kodi litsenziyasi",
+   "badge": "Tijorat litsenziyasi",
+   "shortDesc": "To'liq to'plamdagi hamma narsa, qo'shimcha ravishda MQL5 kursi va har bir QuantCore dasturining to'liq manba kodi tijorat litsenziyasi bilan.",
+   "deliverables": [
+    "Barcha QuantCore dasturlari va freymvorkning MQL5 manba kodi",
+    "Tijorat litsenziyasi: o'zgartirish, kompilyatsiya qilish, o'z hisoblaringizda cheklovsiz ishlatish",
+    "Barcha qo'llanmalar, MQL5 kursi va kompilyatsiya qilingan dasturlar"
+   ],
+   "modules": [
+    "Manba kodi (.mq5 / .mqh): Liquidity Mapper, Session Killzones, VWAP Bands, Tick Delta, Risk Dashboard, Position Sizer, Execution EA",
+    "Freymvork kutubxonalari, namuna EA, Monte-Karlo skripti va QC_License.mqh litsenziyalash shabloni",
+    "Tijorat litsenziyasi: o'z dasturlaringizni yarating va kompilyatsiya qilingan .ex5 versiyalarini litsenziya shartlari asosida tarqating",
+    "Barcha qo'llanmalar, MQL5 EA arxitekturasi kursi va barcha kompilyatsiya qilingan dasturlar kiradi"
+   ]
+  }
+ },
+ "productCommon": {
+  "delivery": "Whop orqali ZIP darhol yuklab olinadi",
+  "accessPeriod": "Bir martalik xarid, obunasiz",
+  "support": "Yo'q yoki buzilgan fayllarni almashtirish",
+  "version": "Versiya 1.0"
+ }
+}

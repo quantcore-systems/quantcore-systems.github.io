@@ -9,7 +9,17 @@
   "tags": [
    "release"
   ],
-  "price": 450
+  "price": 450,
+  "i18n": {
+   "ru": {
+    "title": "Новинка: QuantCore Trade Manager (MT5)",
+    "summary": "Служебный советник, который сопровождает ваши ручные позиции и позиции советников: ставит недостающие стопы, переводит в безубыток, фиксирует часть прибыли, ведёт трейлинг по ATR и блокирует счёт на день при достижении лимита убытка. Сам сделки не открывает."
+   },
+   "uz": {
+    "title": "Yangi: QuantCore Trade Manager (MT5)",
+    "summary": "Qo'lda va EA ochgan pozitsiyalaringizni boshqaradigan yordamchi ekspert maslahatchi: yetishmayotgan stoplarni qo'yadi, zararsizlikka o'tkazadi, foydaning bir qismini oladi, ATR bo'yicha trailing qiladi va zarar limitiga yetganda hisobni kunga qulflaydi. O'zi bitim ochmaydi."
+   }
+  }
  },
  {
   "slug": "2026-10-29-fed-holds-two-vote-to-hike",
@@ -23,6 +33,16 @@
    "gold",
    "oil",
    "yields"
-  ]
+  ],
+  "i18n": {
+   "ru": {
+    "title": "ФРС взяла паузу, двое голосовали за повышение: что это значит для золота, нефти и доходностей",
+    "summary": "ФРС сохранила ставку 3,75–4,00%, двое проголосовали за повышение. Золото снижается к $4 040, нефть дешевеет на фоне новых контактов США и Ирана, доходность 10-летних выше 5% перед ЕЦБ, ВВП и PCE США."
+   },
+   "uz": {
+    "title": "FRS pauza qildi, ikki a'zo oshirish tarafdori: oltin, neft va daromadlilik uchun bu nimani anglatadi",
+    "summary": "FRS stavkani 3,75–4,00% da saqladi, ikki a'zo oshirishga ovoz berdi. Oltin $4 040 tomon pasaymoqda, AQSh–Eron aloqalari fonida neft arzonlashmoqda, YeMB, AQSh YaIM va PCE oldidan 10 yillik daromadlilik 5% dan yuqori."
+   }
+  }
  }
 ]

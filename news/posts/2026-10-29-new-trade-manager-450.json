@@ -17,5 +17,31 @@
   "price": 450,
   "url": "https://whop.com/checkout/plan_VpDvCLSFhm082",
   "badge": "MT5 utility EA"
+ },
+ "i18n": {
+  "ru": {
+   "title": "Новинка: QuantCore Trade Manager (MT5)",
+   "summary": "Служебный советник, который сопровождает ваши ручные позиции и позиции советников: ставит недостающие стопы, переводит в безубыток, фиксирует часть прибыли, ведёт трейлинг по ATR и блокирует счёт на день при достижении лимита убытка. Сам сделки не открывает.",
+   "html": "<p>Служебный советник, который сопровождает ваши ручные позиции и позиции советников: ставит недостающие стопы, переводит в безубыток, фиксирует часть прибыли, ведёт трейлинг по ATR и блокирует счёт на день при достижении лимита убытка. Сам сделки не открывает.</p><h2>Что делает</h2><ul><li>Добавляет стоп-лосс (пункты или ATR) и тейк-профит на x R позициям без них</li><li>Безубыток на x R со сдвигом, одно частичное закрытие на x R</li><li>Трейлинг-стоп по ATR или в пунктах, двигается только в сторону прибыли</li><li>Дневная блокировка: закрывает сопровождаемые позиции и блокирует новые до следующего торгового дня</li><li>Панель на графике: открытый риск по стопам, позиции без стопа, результат дня, статус блокировки; оповещения и push</li><li>Охват: символ графика или все символы; ручные сделки, один magic-номер или все советники</li></ul><h2>Что входит</h2><ul><li>Советник QuantCore_TradeManager (.ex5)</li><li>3 профиля: Standard, Prop-firm, Swing</li><li>Руководство пользователя (PDF)</li></ul><h2>Доставка и лицензия</h2><ul><li>Мгновенная загрузка ZIP в аккаунте Whop сразу после оплаты.</li><li>Разовая покупка версии 1.0; без подписки, без обновлений и услуг.</li><li>Лицензия: до 3 торговых счетов.</li><li>Программы MetaTrader 5 поставляются в скомпилированном виде (.ex5); исходный код не входит.</li></ul>",
+   "product": {
+    "id": "qc-trade-manager-450",
+    "title": "QuantCore Trade Manager (MT5)",
+    "price": 450,
+    "url": "https://whop.com/checkout/plan_VpDvCLSFhm082",
+    "badge": "Служебный советник MT5"
+   }
+  },
+  "uz": {
+   "title": "Yangi: QuantCore Trade Manager (MT5)",
+   "summary": "Qo'lda va EA ochgan pozitsiyalaringizni boshqaradigan yordamchi ekspert maslahatchi: yetishmayotgan stoplarni qo'yadi, zararsizlikka o'tkazadi, foydaning bir qismini oladi, ATR bo'yicha trailing qiladi va zarar limitiga yetganda hisobni kunga qulflaydi. O'zi bitim ochmaydi.",
+   "html": "<p>Qo&#x27;lda va EA ochgan pozitsiyalaringizni boshqaradigan yordamchi ekspert maslahatchi: yetishmayotgan stoplarni qo&#x27;yadi, zararsizlikka o&#x27;tkazadi, foydaning bir qismini oladi, ATR bo&#x27;yicha trailing qiladi va zarar limitiga yetganda hisobni kunga qulflaydi. O&#x27;zi bitim ochmaydi.</p><h2>Nima qiladi</h2><ul><li>Stop-losssiz pozitsiyalarga stop-loss (punkt yoki ATR) va x R da take-profit qo&#x27;yadi</li><li>x R da siljish bilan zararsizlik, x R da bitta qisman yopish</li><li>ATR yoki punktli trailing-stop, faqat foyda tomonga siljiydi</li><li>Kunlik qulf: boshqariladigan pozitsiyalarni yopadi va keyingi savdo kunigacha yangilarini bloklaydi</li><li>Grafikdagi panel: stoplar bo&#x27;yicha ochiq risk, stopsiz pozitsiyalar, kun natijasi, qulf holati; ogohlantirish va push</li><li>Qamrov: grafik simvoli yoki barcha simvollar; qo&#x27;lda bitimlar, bitta magic raqam yoki barcha EA&#x27;lar</li></ul><h2>Nimalar kiradi</h2><ul><li>QuantCore_TradeManager ekspert maslahatchisi (.ex5)</li><li>3 ta profil: Standard, Prop-firm, Swing</li><li>Foydalanuvchi qo&#x27;llanmasi (PDF)</li></ul><h2>Yetkazish va litsenziya</h2><ul><li>To&#x27;lovdan so&#x27;ng ZIP darhol Whop akkauntingizda yuklab olinadi.</li><li>1.0 versiyaning bir martalik xaridi; obuna, yangilanish va xizmatlar yo&#x27;q.</li><li>Litsenziya: 3 tagacha savdo hisobi.</li><li>MetaTrader 5 dasturlari kompilyatsiya qilingan holda (.ex5) yetkaziladi; manba kodi kirmaydi.</li></ul>",
+   "product": {
+    "id": "qc-trade-manager-450",
+    "title": "QuantCore Trade Manager (MT5)",
+    "price": 450,
+    "url": "https://whop.com/checkout/plan_VpDvCLSFhm082",
+    "badge": "MT5 yordamchi EA"
+   }
+  }
  }
 }

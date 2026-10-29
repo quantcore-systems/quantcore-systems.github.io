@@ -69,7 +69,12 @@ article .cover{border-radius:var(--r-m);border:1px solid var(--line);margin:0 0 
 .sources{font-size:13px;color:var(--fog)} .sources a{color:var(--glacier)}
 footer{border-top:1px solid var(--line);padding:30px 0 40px;font-size:13px;color:var(--fog)}
 .empty{color:var(--fog);padding:40px 0 90px}
+.lang-sw{display:inline-flex;border:1px solid var(--line-2);border-radius:999px;padding:3px;gap:2px}
+.lang-sw button{border:0;background:transparent;color:var(--fog);font:600 12px var(--sans);letter-spacing:.04em;padding:5px 9px;border-radius:999px;cursor:pointer}
+.lang-sw button[aria-pressed=true]{background:var(--gold);color:#1A1408}
+.tnote{font-size:13px;color:var(--fog);margin:-18px 0 26px}
 @media (max-width:960px){.feed{grid-template-columns:1fr} nav .hide-sm{display:none}}
+@media (max-width:560px){header .wrap{gap:10px} nav{gap:12px;font-size:14px} .brand small{display:none} .brand b{font-size:21px} .lang-sw button{padding:4px 7px}}
 </style>
 </head>
 <body>
@@ -78,31 +83,45 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;font-size:13px;color
     <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="21" cy="21" r="14.5" stroke="#D4B483" stroke-width="3" stroke-linecap="round" stroke-dasharray="76 15.1" transform="rotate(8 21 21)"/><line x1="36.5" y1="27" x2="36.5" y2="46" stroke="#D4B483" stroke-width="2" stroke-linecap="round"/><rect x="32.5" y="31" width="8" height="10.5" rx="1.4" fill="#D4B483"/><rect x="15" y="17" width="3.2" height="8.5" rx=".8" fill="#A9C6D9" opacity=".75"/><rect x="20.4" y="13.5" width="3.2" height="11" rx=".8" fill="#A9C6D9"/><rect x="25.8" y="18.5" width="3.2" height="6" rx=".8" fill="#A9C6D9" opacity=".55"/></svg>
     <span><b>QuantCore</b><small>Systems</small></span>
   </a>
-  <nav><a href="./#catalog">Products</a><a href="news.html">Market Desk</a><a class="hide-sm" href="./#legal/terms">Terms</a></nav>
+  <nav><a href="./#catalog" data-t="products">Products</a><a class="hide-sm" href="news.html">Market Desk</a><a class="hide-sm" href="./#legal/terms" data-t="terms">Terms</a><span class="lang-sw" id="langSw" role="group" aria-label="Language"></span></nav>
 </div></header>
 
 <main id="main"></main>
 
-<footer><div class="wrap">Market Desk posts are general market commentary for education only. They are not investment advice, not a recommendation to buy or sell any instrument and not a trading signal. Trading forex, CFDs, gold and indices carries a high risk of losing money. © 2026 QuantCore Systems · quantcorestore@gmail.com</div></footer>
+<footer><div class="wrap" data-t="footer">Market Desk posts are general market commentary for education only. They are not investment advice, not a recommendation to buy or sell any instrument and not a trading signal. Trading forex, CFDs, gold and indices carries a high risk of losing money. © 2026 QuantCore Systems · quantcorestore@gmail.com</div></footer>
 
 <script>
 'use strict';
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fmtWhen = (iso) => { const d = new Date(iso); if (isNaN(d)) return ''; return d.toLocaleDateString('en-GB',{weekday:'short',day:'2-digit',month:'short',year:'numeric',timeZone:'UTC'}) + ' · ' + d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'UTC'}) + ' UTC'; };
+const fmtWhen = (iso) => { const d = new Date(iso); if (isNaN(d)) return ''; const p2 = (n) => String(n).padStart(2, '0'); return `${t('days')[d.getUTCDay()]}, ${p2(d.getUTCDate())} ${t('months')[d.getUTCMonth()]} ${d.getUTCFullYear()} · ${p2(d.getUTCHours())}:${p2(d.getUTCMinutes())} UTC`; };
 const slugOk = (s) => /^[a-z0-9-]{3,120}$/.test(s || '');
-let ALL = [], kind = 'all';
+let ALL = [], kind = 'all', TR = null;
+const LANGS = ['en', 'ru', 'uz'];
+let LANG = (() => { try { const q = new URLSearchParams(location.search).get('lang'); if (LANGS.includes(q)) { localStorage.setItem('qc_lang', q); return q; } const s = localStorage.getItem('qc_lang'); if (LANGS.includes(s)) return s; } catch (e) {} const n = (navigator.language || 'en').slice(0, 2); return n === 'ru' ? 'ru' : n === 'uz' ? 'uz' : 'en'; })();
+const EN = {deskHeadText:'A daily note on what moved gold, equity indices, currencies and rates, why it mattered, and what is on the calendar next — plus announcements of new QuantCore tools.', all:'All', marketAnalysis:'Market analysis', newReleases:'New releases', newRelease:'New release', noPosts:'No posts yet.', back:'← All posts', oneTime:'one-time · instant ZIP download', buy:'Buy on Whop', viewCatalog:'View catalog', sources:'Sources',
+  noteLaunch:'Software and educational material only. Not investment advice and not a guarantee of profit. All sales are final — see the Refund & Delivery Policy.',
+  noteAnalysis:'General market commentary for education only — not investment advice, not a recommendation to buy or sell and not a trading signal. Prices and events move quickly; check current data before acting. Trading leveraged products carries a high risk of loss.',
+  translatedNote:'', months:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], days:['Sun','Mon','Tue','Wed','Thu','Fri','Sat']};
+const t = (k) => (TR && TR.ui && TR.ui[k] != null) ? TR.ui[k] : EN[k];
+const loc = (n) => (n && n.i18n && n.i18n[LANG]) ? Object.assign({}, n, n.i18n[LANG], { _tr: true }) : Object.assign({}, n, { _tr: LANG === 'en' });
+function renderChrome(){
+  $('#langSw').innerHTML = LANGS.map(l => `<button type="button" data-lang="${l}" aria-pressed="${l === LANG}">${l.toUpperCase()}</button>`).join('');
+  document.documentElement.lang = LANG;
+  document.querySelectorAll('[data-t]').forEach(el => { if (!el.dataset.en) el.dataset.en = el.textContent; const v = TR && TR.ui && TR.ui[el.dataset.t]; el.textContent = v != null ? v : el.dataset.en; });
+}
+const loadTR = (l) => l === 'en' ? Promise.resolve(null) : fetch(`i18n/${l}.json?v=${Date.now()}`, { cache: 'no-store' }).then(r => r.ok ? r.json() : null).catch(() => null);
 
 function card(n){
-  const launch = n.type === 'launch';
+  n = loc(n); const launch = n.type === 'launch';
   const cover = n.cover ? `<div class="cv" style="background-image:url('${esc(n.cover)}')"></div>` : '';
-  return `<a class="ncard${launch ? ' launch' : ''}" href="news.html?p=${encodeURIComponent(n.slug)}">${cover}<div class="bd"><div class="when"><span class="kind">${launch ? 'New release' : 'Market analysis'}</span><time datetime="${esc(n.published)}">${esc(fmtWhen(n.published))}</time></div><h3>${esc(n.title)}</h3><p>${esc(n.summary)}</p>${launch && n.price ? `<div class="price">$${Number(n.price).toLocaleString('en-US')}</div>` : ''}</div></a>`;
+  return `<a class="ncard${launch ? ' launch' : ''}" href="news.html?p=${encodeURIComponent(n.slug)}">${cover}<div class="bd"><div class="when"><span class="kind">${esc(launch ? t('newRelease') : t('marketAnalysis'))}</span><time datetime="${esc(n.published)}">${esc(fmtWhen(n.published))}</time></div><h3>${esc(n.title)}</h3><p>${esc(n.summary)}</p>${launch && n.price ? `<div class="price">$${Number(n.price).toLocaleString('en-US')}</div>` : ''}</div></a>`;
 }
 function renderList(){
   const items = ALL.filter(n => kind === 'all' || n.type === kind);
-  $('#main').innerHTML = `<section class="wrap head"><h1>Market Desk</h1><p>A daily note on what moved gold, equity indices, currencies and rates, why it mattered, and what is on the calendar next — plus announcements of new QuantCore tools.</p>
-    <div class="tabs" role="group" aria-label="Filter posts">${[['all','All'],['analysis','Market analysis'],['launch','New releases']].map(([k,l]) => `<button data-k="${k}" aria-pressed="${k === kind}">${l}</button>`).join('')}</div></section>
-    <section class="wrap">${items.length ? `<div class="feed">${items.map(card).join('')}</div>` : '<p class="empty">No posts yet.</p>'}</section>`;
+  $('#main').innerHTML = `<section class="wrap head"><h1>Market Desk</h1><p>${esc(t('deskHeadText'))}</p>
+    <div class="tabs" role="group" aria-label="Filter posts">${[['all',t('all')],['analysis',t('marketAnalysis')],['launch',t('newReleases')]].map(([k,l]) => `<button data-k="${k}" aria-pressed="${k === kind}">${l}</button>`).join('')}</div></section>
+    <section class="wrap">${items.length ? `<div class="feed">${items.map(card).join('')}</div>` : `<p class="empty">${esc(t('noPosts'))}</p>`}</section>`;
   document.title = 'Market Desk — QuantCore Systems';
 }
 async function renderPost(slug){
@@ -110,24 +129,29 @@ async function renderPost(slug){
   let post = null;
   try { const r = await fetch(`news/posts/${slug}.json?v=${Date.now()}`, { cache: 'no-store' }); if (r.ok) post = await r.json(); } catch (e) {}
   if (!post || !meta) { renderList(); return; }
+  post = loc(post);
   const launch = post.type === 'launch';
-  const offer = launch && post.product ? `<div class="offer"><div><div class="kind" style="font-size:12px">${esc(post.product.badge || 'New release')}</div><div style="font:600 26px/1.1 var(--serif);margin:6px 0">${esc(post.product.title)}</div><div class="price">$${Number(post.product.price).toLocaleString('en-US')} <span style="font:400 13px var(--sans);color:var(--fog)">one-time · instant ZIP download</span></div></div><div style="display:flex;gap:10px;flex-wrap:wrap">${post.product.url ? `<a class="btn btn-gold" href="${esc(post.product.url)}" target="_blank" rel="noopener">Buy on Whop</a>` : ''}<a class="btn btn-ghost" href="./#catalog">View catalog</a></div></div>` : '';
-  const src = (post.sources || []).length ? `<p class="sources">Sources: ${post.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener nofollow">${esc(s.title)}</a>`).join(' · ')}</p>` : '';
-  $('#main').innerHTML = `<article><a class="back" href="news.html">← All posts</a>
-    <div class="when"><span class="kind">${launch ? 'New release' : 'Market analysis'}</span><time datetime="${esc(post.published)}">${esc(fmtWhen(post.published))}</time></div>
-    <h1>${esc(post.title)}</h1><p class="lede">${esc(post.summary)}</p>
+  const offer = launch && post.product ? `<div class="offer"><div><div class="kind" style="font-size:12px">${esc(post.product.badge || 'New release')}</div><div style="font:600 26px/1.1 var(--serif);margin:6px 0">${esc(post.product.title)}</div><div class="price">$${Number(post.product.price).toLocaleString('en-US')} <span style="font:400 13px var(--sans);color:var(--fog)">${esc(t('oneTime'))}</span></div></div><div style="display:flex;gap:10px;flex-wrap:wrap">${post.product.url ? `<a class="btn btn-gold" href="${esc(post.product.url)}" target="_blank" rel="noopener">${esc(t('buy'))}</a>` : ''}<a class="btn btn-ghost" href="./#catalog">${esc(t('viewCatalog'))}</a></div></div>` : '';
+  const src = (post.sources || []).length ? `<p class="sources">${esc(t('sources'))}: ${post.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener nofollow">${esc(s.title)}</a>`).join(' · ')}</p>` : '';
+  $('#main').innerHTML = `<article><a class="back" href="news.html">${esc(t('back'))}</a>
+    <div class="when"><span class="kind">${esc(launch ? t('newRelease') : t('marketAnalysis'))}</span><time datetime="${esc(post.published)}">${esc(fmtWhen(post.published))}</time></div>
+    <h1>${esc(post.title)}</h1><p class="lede">${esc(post.summary)}</p>${!post._tr && t('translatedNote') ? `<p class="tnote">${esc(t('translatedNote'))}</p>` : ''}
     ${post.cover ? `<img class="cover" src="${esc(post.cover)}" alt="${esc(post.coverAlt || post.title)}">` : ''}
     ${offer}<div class="body">${post.html || ''}</div>${offer}${src}
-    <div class="note">${launch ? 'Software and educational material only. Not investment advice and not a guarantee of profit. All sales are final — see the <a href="./#legal/refund">Refund &amp; Delivery Policy</a>.' : 'General market commentary for education only — not investment advice, not a recommendation to buy or sell and not a trading signal. Prices and events move quickly; check current data before acting. Trading leveraged products carries a high risk of loss.'}</div></article>`;
+    <div class="note">${esc(launch ? t('noteLaunch') : t('noteAnalysis'))}</div></article>`;
   document.title = post.title + ' — QuantCore Systems';
   const d = document.querySelector('meta[name=description]'); if (d) d.content = post.summary;
   scrollTo(0, 0);
 }
 function route(){ const p = new URLSearchParams(location.search).get('p'); if (slugOk(p)) renderPost(p); else renderList(); }
-document.addEventListener('click', e => { const b = e.target.closest('[data-k]'); if (b) { kind = b.dataset.k; renderList(); } });
-fetch('news/index.json?v=' + Date.now(), { cache: 'no-store' }).then(r => r.ok ? r.json() : []).then(list => {
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-k]'); if (b) { kind = b.dataset.k; renderList(); return; }
+  const l = e.target.closest('[data-lang]'); if (l) { LANG = l.dataset.lang; try { localStorage.setItem('qc_lang', LANG); } catch (x) {} loadTR(LANG).then(tr => { TR = tr; renderChrome(); route(); }); }
+});
+Promise.all([fetch('news/index.json?v=' + Date.now(), { cache: 'no-store' }).then(r => r.ok ? r.json() : []).catch(() => []), loadTR(LANG)]).then(([list, tr]) => {
+  TR = tr; renderChrome();
   ALL = (list || []).slice().sort((a, b) => String(b.published).localeCompare(String(a.published))); route();
-}).catch(() => { ALL = []; route(); });
+});
 </script>
 </body>
 </html>
