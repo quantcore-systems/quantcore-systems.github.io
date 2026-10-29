@@ -1,5 +1,17 @@
 [
  {
+  "slug": "2026-10-29-new-trade-manager-450",
+  "type": "launch",
+  "title": "New: QuantCore Trade Manager (MT5)",
+  "summary": "A utility Expert Advisor that manages your manual and EA positions: adds missing stops, moves to break-even, takes partial profit, trails with ATR and locks the account for the day at your loss limit. It never opens trades.",
+  "published": "2026-10-29T09:23:27Z",
+  "cover": "news/img/2026-10-29-new-trade-manager-450-cover.png",
+  "tags": [
+   "release"
+  ],
+  "price": 450
+ },
+ {
   "slug": "2026-10-29-fed-holds-two-vote-to-hike",
   "type": "analysis",
   "title": "Fed holds, two vote to hike: what it means for gold, oil and yields",

@@ -1,0 +1,21 @@
+{
+ "slug": "2026-10-29-new-trade-manager-450",
+ "type": "launch",
+ "title": "New: QuantCore Trade Manager (MT5)",
+ "summary": "A utility Expert Advisor that manages your manual and EA positions: adds missing stops, moves to break-even, takes partial profit, trails with ATR and locks the account for the day at your loss limit. It never opens trades.",
+ "published": "2026-10-29T09:23:27Z",
+ "cover": "news/img/2026-10-29-new-trade-manager-450-cover.png",
+ "coverAlt": "QuantCore Trade Manager (MT5) release banner",
+ "price": 450,
+ "tags": [
+  "release"
+ ],
+ "html": "<p>A utility Expert Advisor that manages your manual and EA positions: adds missing stops, moves to break-even, takes partial profit, trails with ATR and locks the account for the day at your loss limit. It never opens trades.</p><h2>What it does</h2><ul><li>Adds a stop-loss (points or ATR) and a take-profit at x R to positions that have none</li><li>Break-even at x R with offset, one partial close at x R</li><li>ATR or points trailing stop that only moves in the direction of profit</li><li>Daily loss lock: closes managed positions and blocks new ones until the next trading day</li><li>On-chart panel: open risk at stop-loss, positions without stop, today&#x27;s result, lock status; alerts and push notifications</li><li>Scope: chart symbol or all symbols; manual trades, one magic number or all EAs</li></ul><h2>What you get</h2><ul><li>QuantCore_TradeManager Expert Advisor (.ex5)</li><li>3 preset profiles: Standard, Prop-firm, Swing</li><li>User guide (PDF)</li></ul><h2>Delivery and licence</h2><ul><li>Instant ZIP download inside your Whop account right after payment.</li><li>One-time purchase of version 1.0; no subscription, no updates or services included.</li><li>Licence: up to 3 trading accounts.</li><li>MetaTrader 5 programs are delivered compiled (.ex5); source code is not included.</li></ul>",
+ "product": {
+  "id": "qc-trade-manager-450",
+  "title": "QuantCore Trade Manager (MT5)",
+  "price": 450,
+  "url": "https://whop.com/checkout/plan_VpDvCLSFhm082",
+  "badge": "MT5 utility EA"
+ }
+}

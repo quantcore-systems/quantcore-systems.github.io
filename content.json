@@ -296,6 +296,35 @@
       "support": "Replacement of missing or damaged files"
     },
     {
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_VpDvCLSFhm082",
+      "currency": "USD",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files",
+      "id": "qc-trade-manager-450",
+      "title": "QuantCore Trade Manager (MT5)",
+      "category": "software",
+      "badge": "MT5 utility EA",
+      "version": "Version 1.0",
+      "price": 450,
+      "icon": "fa-shield-halved",
+      "shortDesc": "A utility Expert Advisor that manages your manual and EA positions: adds missing stops, moves to break-even, takes partial profit, trails with ATR and locks the account for the day at your loss limit. It never opens trades.",
+      "deliverables": [
+        "QuantCore_TradeManager Expert Advisor (.ex5)",
+        "3 preset profiles: Standard, Prop-firm, Swing",
+        "User guide (PDF)"
+      ],
+      "modules": [
+        "Adds a stop-loss (points or ATR) and a take-profit at x R to positions that have none",
+        "Break-even at x R with offset, one partial close at x R",
+        "ATR or points trailing stop that only moves in the direction of profit",
+        "Daily loss lock: closes managed positions and blocks new ones until the next trading day",
+        "On-chart panel: open risk at stop-loss, positions without stop, today's result, lock status; alerts and push notifications",
+        "Scope: chart symbol or all symbols; manual trades, one magic number or all EAs"
+      ],
+      "accessPeriod": "One-time purchase, no subscription"
+    },
+    {
       "id": "qc-prop-desk-3500",
       "status": "available",
       "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",
