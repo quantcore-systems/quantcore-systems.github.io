@@ -1,0 +1,47 @@
+{
+ "slug": "2026-10-30-new-exposure-monitor-380",
+ "type": "launch",
+ "title": "New: QuantCore Exposure & Correlation Monitor (MT5)",
+ "summary": "An MT5 indicator that adds up every open position into net exposure per currency and asset, shows a correlation matrix of the symbols you trade and warns when several positions are really one large bet in the same direction. Information only: it never trades.",
+ "published": "2026-10-30T09:46:05Z",
+ "cover": "news/img/2026-10-30-new-exposure-monitor-380-cover.png",
+ "coverAlt": "QuantCore Exposure & Correlation Monitor (MT5) release banner",
+ "price": 380,
+ "tags": [
+  "release"
+ ],
+ "html": "<p>An MT5 indicator that adds up every open position into net exposure per currency and asset, shows a correlation matrix of the symbols you trade and warns when several positions are really one large bet in the same direction. Information only: it never trades.</p><h2>What it does</h2><ul><li>Net exposure per currency and asset across all open positions (and optionally pending orders), in account currency and in x equity</li><li>Currency legs: long EURUSD counts as long EUR and short USD; gold as long XAU and short USD; indices and stocks as their own asset</li><li>Correlation matrix of returns (up to 10 symbols, any timeframe, time-aligned bars) with colour-coded cells</li><li>Direction-aware warnings: same-direction positions that are highly correlated are flagged; offsetting positions are shown separately</li><li>Limits for single-currency and gross exposure with pop-up alerts and push notifications</li><li>Works with manual trades and EAs (magic filter); never opens, modifies or closes trades</li></ul><h2>What you get</h2><ul><li>QuantCore_ExposureMonitor indicator (.ex5)</li><li>3 preset profiles: Default, FX Majors, Swing</li><li>User guide (PDF)</li></ul><h2>Delivery and licence</h2><ul><li>Instant ZIP download inside your Whop account right after payment.</li><li>One-time purchase of version 1.0; no subscription, no updates or services included.</li><li>Licence: up to 3 trading accounts.</li><li>MetaTrader 5 programs are delivered compiled (.ex5); source code is not included.</li></ul>",
+ "product": {
+  "id": "qc-exposure-monitor-380",
+  "title": "QuantCore Exposure & Correlation Monitor (MT5)",
+  "price": 380,
+  "url": "https://whop.com/checkout/plan_f7bUc72wBoLzk",
+  "badge": "MT5 risk indicator"
+ },
+ "i18n": {
+  "ru": {
+   "title": "Новинка: QuantCore Exposure & Correlation Monitor (MT5)",
+   "summary": "Индикатор MT5, который суммирует все открытые позиции в чистую экспозицию по каждой валюте и активу, показывает матрицу корреляций ваших символов и предупреждает, когда несколько позиций на деле — одна крупная ставка в одном направлении. Только информация: сам не торгует.",
+   "html": "<p>Индикатор MT5, который суммирует все открытые позиции в чистую экспозицию по каждой валюте и активу, показывает матрицу корреляций ваших символов и предупреждает, когда несколько позиций на деле — одна крупная ставка в одном направлении. Только информация: сам не торгует.</p><h2>Что делает</h2><ul><li>Чистая экспозиция по каждой валюте и активу по всем открытым позициям (и, по желанию, отложенным ордерам) — в валюте счёта и в кратных эквити</li><li>Валютные «ноги»: покупка EURUSD = длинная позиция по EUR и короткая по USD; золото — длинная по XAU и короткая по USD; индексы и акции — отдельный актив</li><li>Матрица корреляций доходностей (до 10 символов, любой таймфрейм, бары выровнены по времени) с цветовой разметкой</li><li>Предупреждения с учётом направления: сильно коррелированные позиции в одну сторону выделяются; взаимно компенсирующие показываются отдельно</li><li>Лимиты экспозиции по одной валюте и общей (gross) экспозиции, всплывающие оповещения и push-уведомления</li><li>Работает с ручными сделками и советниками (фильтр magic); никогда не открывает, не изменяет и не закрывает сделки</li></ul><h2>Что входит</h2><ul><li>Индикатор QuantCore_ExposureMonitor (.ex5)</li><li>3 профиля: Default, FX Majors, Swing</li><li>Руководство пользователя (PDF)</li></ul><h2>Доставка и лицензия</h2><ul><li>Мгновенная загрузка ZIP в аккаунте Whop сразу после оплаты.</li><li>Разовая покупка версии 1.0; без подписки, без обновлений и услуг.</li><li>Лицензия: до 3 торговых счетов.</li><li>Программы MetaTrader 5 поставляются в скомпилированном виде (.ex5); исходный код не входит.</li></ul>",
+   "product": {
+    "id": "qc-exposure-monitor-380",
+    "title": "QuantCore Exposure & Correlation Monitor (MT5)",
+    "price": 380,
+    "url": "https://whop.com/checkout/plan_f7bUc72wBoLzk",
+    "badge": "Риск-индикатор MT5"
+   }
+  },
+  "uz": {
+   "title": "Yangi: QuantCore Exposure & Correlation Monitor (MT5)",
+   "summary": "Barcha ochiq pozitsiyalarni har bir valyuta va aktiv bo'yicha sof ekspozitsiyaga jamlaydigan, savdo qilayotgan simvollaringiz korrelyatsiya matritsasini ko'rsatadigan va bir nechta pozitsiya aslida bir yo'nalishdagi bitta katta garov bo'lib qolganda ogohlantiradigan MT5 indikatori. Faqat ma'lumot beradi: o'zi savdo qilmaydi.",
+   "html": "<p>Barcha ochiq pozitsiyalarni har bir valyuta va aktiv bo&#x27;yicha sof ekspozitsiyaga jamlaydigan, savdo qilayotgan simvollaringiz korrelyatsiya matritsasini ko&#x27;rsatadigan va bir nechta pozitsiya aslida bir yo&#x27;nalishdagi bitta katta garov bo&#x27;lib qolganda ogohlantiradigan MT5 indikatori. Faqat ma&#x27;lumot beradi: o&#x27;zi savdo qilmaydi.</p><h2>Nima qiladi</h2><ul><li>Barcha ochiq pozitsiyalar (va xohishga ko&#x27;ra kutilayotgan orderlar) bo&#x27;yicha har bir valyuta va aktivning sof ekspozitsiyasi — hisob valyutasida va ekvitiga nisbatan karrada</li><li>Valyuta qismlari: EURUSD xaridi = EUR bo&#x27;yicha uzun va USD bo&#x27;yicha qisqa pozitsiya; oltin — XAU bo&#x27;yicha uzun va USD bo&#x27;yicha qisqa; indekslar va aksiyalar alohida aktiv sifatida</li><li>Daromadlilik korrelyatsiya matritsasi (10 tagacha simvol, istalgan taymfreym, barlar vaqt bo&#x27;yicha moslashtirilgan), rangli belgilash bilan</li><li>Yo&#x27;nalishni hisobga olgan ogohlantirishlar: bir tomonga qaragan kuchli korrelyatsiyalangan pozitsiyalar belgilanadi; bir-birini qoplaydiganlari alohida ko&#x27;rsatiladi</li><li>Bitta valyuta va umumiy (gross) ekspozitsiya limitlari, qalqib chiquvchi ogohlantirishlar va push-bildirishnomalar</li><li>Qo&#x27;lda bitimlar va EA&#x27;lar bilan ishlaydi (magic filtri); hech qachon bitim ochmaydi, o&#x27;zgartirmaydi va yopmaydi</li></ul><h2>Nimalar kiradi</h2><ul><li>QuantCore_ExposureMonitor indikatori (.ex5)</li><li>3 ta profil: Default, FX Majors, Swing</li><li>Foydalanuvchi qo&#x27;llanmasi (PDF)</li></ul><h2>Yetkazib berish va litsenziya</h2><ul><li>To&#x27;lovdan so&#x27;ng darhol Whop hisobingizda ZIP yuklab olish.</li><li>1.0 versiyasini bir martalik xarid; obunasiz, yangilanishlar va xizmatlarsiz.</li><li>Litsenziya: 3 tagacha savdo hisobi.</li><li>MetaTrader 5 dasturlari kompilyatsiya qilingan holda (.ex5) yetkaziladi; manba kodi kirmaydi.</li></ul>",
+   "product": {
+    "id": "qc-exposure-monitor-380",
+    "title": "QuantCore Exposure & Correlation Monitor (MT5)",
+    "price": 380,
+    "url": "https://whop.com/checkout/plan_f7bUc72wBoLzk",
+    "badge": "MT5 risk indikatori"
+   }
+  }
+ }
+}

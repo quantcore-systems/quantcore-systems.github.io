@@ -1,5 +1,27 @@
 [
  {
+  "slug": "2026-10-30-new-exposure-monitor-380",
+  "type": "launch",
+  "title": "New: QuantCore Exposure & Correlation Monitor (MT5)",
+  "summary": "An MT5 indicator that adds up every open position into net exposure per currency and asset, shows a correlation matrix of the symbols you trade and warns when several positions are really one large bet in the same direction. Information only: it never trades.",
+  "published": "2026-10-30T09:46:05Z",
+  "cover": "news/img/2026-10-30-new-exposure-monitor-380-cover.png",
+  "tags": [
+   "release"
+  ],
+  "price": 380,
+  "i18n": {
+   "ru": {
+    "title": "Новинка: QuantCore Exposure & Correlation Monitor (MT5)",
+    "summary": "Индикатор MT5, который суммирует все открытые позиции в чистую экспозицию по каждой валюте и активу, показывает матрицу корреляций ваших символов и предупреждает, когда несколько позиций на деле — одна крупная ставка в одном направлении. Только информация: сам не торгует."
+   },
+   "uz": {
+    "title": "Yangi: QuantCore Exposure & Correlation Monitor (MT5)",
+    "summary": "Barcha ochiq pozitsiyalarni har bir valyuta va aktiv bo'yicha sof ekspozitsiyaga jamlaydigan, savdo qilayotgan simvollaringiz korrelyatsiya matritsasini ko'rsatadigan va bir nechta pozitsiya aslida bir yo'nalishdagi bitta katta garov bo'lib qolganda ogohlantiradigan MT5 indikatori. Faqat ma'lumot beradi: o'zi savdo qilmaydi."
+   }
+  }
+ },
+ {
   "slug": "2026-10-30-big-tech-splits-ecb-boj-hold",
   "type": "analysis",
   "title": "Big Tech splits, ECB and BoJ hold: what it means for gold, oil, yields and the yen",

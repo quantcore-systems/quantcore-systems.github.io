@@ -325,6 +325,35 @@
       "accessPeriod": "One-time purchase, no subscription"
     },
     {
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_f7bUc72wBoLzk",
+      "currency": "USD",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files",
+      "id": "qc-exposure-monitor-380",
+      "title": "QuantCore Exposure & Correlation Monitor (MT5)",
+      "category": "software",
+      "badge": "MT5 risk indicator",
+      "version": "Version 1.0",
+      "price": 380,
+      "icon": "fa-diagram-project",
+      "shortDesc": "An MT5 indicator that adds up every open position into net exposure per currency and asset, shows a correlation matrix of the symbols you trade and warns when several positions are really one large bet in the same direction. Information only: it never trades.",
+      "deliverables": [
+        "QuantCore_ExposureMonitor indicator (.ex5)",
+        "3 preset profiles: Default, FX Majors, Swing",
+        "User guide (PDF)"
+      ],
+      "modules": [
+        "Net exposure per currency and asset across all open positions (and optionally pending orders), in account currency and in x equity",
+        "Currency legs: long EURUSD counts as long EUR and short USD; gold as long XAU and short USD; indices and stocks as their own asset",
+        "Correlation matrix of returns (up to 10 symbols, any timeframe, time-aligned bars) with colour-coded cells",
+        "Direction-aware warnings: same-direction positions that are highly correlated are flagged; offsetting positions are shown separately",
+        "Limits for single-currency and gross exposure with pop-up alerts and push notifications",
+        "Works with manual trades and EAs (magic filter); never opens, modifies or closes trades"
+      ],
+      "accessPeriod": "One-time purchase, no subscription"
+    },
+    {
       "id": "qc-prop-desk-3500",
       "status": "available",
       "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",

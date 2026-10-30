@@ -453,6 +453,24 @@
     "Tijorat litsenziyasi: o'z dasturlaringizni yarating va kompilyatsiya qilingan .ex5 versiyalarini litsenziya shartlari asosida tarqating",
     "Barcha qo'llanmalar, MQL5 EA arxitekturasi kursi va barcha kompilyatsiya qilingan dasturlar kiradi"
    ]
+  },
+  "qc-exposure-monitor-380": {
+   "title": "QuantCore Exposure & Correlation Monitor (MT5)",
+   "badge": "MT5 risk indikatori",
+   "shortDesc": "Barcha ochiq pozitsiyalarni har bir valyuta va aktiv bo'yicha sof ekspozitsiyaga jamlaydigan, savdo qilayotgan simvollaringiz korrelyatsiya matritsasini ko'rsatadigan va bir nechta pozitsiya aslida bir yo'nalishdagi bitta katta garov bo'lib qolganda ogohlantiradigan MT5 indikatori. Faqat ma'lumot beradi: o'zi savdo qilmaydi.",
+   "deliverables": [
+    "QuantCore_ExposureMonitor indikatori (.ex5)",
+    "3 ta profil: Default, FX Majors, Swing",
+    "Foydalanuvchi qo'llanmasi (PDF)"
+   ],
+   "modules": [
+    "Barcha ochiq pozitsiyalar (va xohishga ko'ra kutilayotgan orderlar) bo'yicha har bir valyuta va aktivning sof ekspozitsiyasi — hisob valyutasida va ekvitiga nisbatan karrada",
+    "Valyuta qismlari: EURUSD xaridi = EUR bo'yicha uzun va USD bo'yicha qisqa pozitsiya; oltin — XAU bo'yicha uzun va USD bo'yicha qisqa; indekslar va aksiyalar alohida aktiv sifatida",
+    "Daromadlilik korrelyatsiya matritsasi (10 tagacha simvol, istalgan taymfreym, barlar vaqt bo'yicha moslashtirilgan), rangli belgilash bilan",
+    "Yo'nalishni hisobga olgan ogohlantirishlar: bir tomonga qaragan kuchli korrelyatsiyalangan pozitsiyalar belgilanadi; bir-birini qoplaydiganlari alohida ko'rsatiladi",
+    "Bitta valyuta va umumiy (gross) ekspozitsiya limitlari, qalqib chiquvchi ogohlantirishlar va push-bildirishnomalar",
+    "Qo'lda bitimlar va EA'lar bilan ishlaydi (magic filtri); hech qachon bitim ochmaydi, o'zgartirmaydi va yopmaydi"
+   ]
   }
  },
  "productCommon": {
