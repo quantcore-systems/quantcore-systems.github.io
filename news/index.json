@@ -1,5 +1,30 @@
 [
  {
+  "slug": "2026-10-30-big-tech-splits-ecb-boj-hold",
+  "type": "analysis",
+  "title": "Big Tech splits, ECB and BoJ hold: what it means for gold, oil, yields and the yen",
+  "summary": "Alphabet fell about 12% and Amazon slid after hours, while Microsoft held up. The ECB kept its deposit rate at 2.50% and the Bank of Japan stayed at 1.25%. Gold slips to about $4,007, the 10-year yield eases below 5% and bitcoin drops 4.5%.",
+  "published": "2026-10-30T03:45:00Z",
+  "cover": "news/img/2026-10-30-cover.png",
+  "tags": [
+   "earnings",
+   "ECB",
+   "BoJ",
+   "gold",
+   "yields"
+  ],
+  "i18n": {
+   "ru": {
+    "title": "Бигтех разошёлся, ЕЦБ и Банк Японии взяли паузу: что это значит для золота, нефти, доходностей и иены",
+    "summary": "Alphabet упал примерно на 12%, Amazon подешевел после закрытия, а Microsoft удержался. ЕЦБ сохранил депозитную ставку 2,50%, Банк Японии — 1,25%. Золото снижается примерно до $4 007, доходность 10-летних опустилась ниже 5%, биткоин теряет 4,5%."
+   },
+   "uz": {
+    "title": "Bigtex ikkiga bo'lindi, YeMB va Yaponiya banki stavkani saqladi: oltin, neft, daromadlilik va iena uchun bu nimani anglatadi",
+    "summary": "Alphabet taxminan 12% tushdi, Amazon savdolardan keyin arzonlashdi, Microsoft esa barqaror qoldi. YeMB depozit stavkasini 2,50% da, Yaponiya banki 1,25% da saqladi. Oltin taxminan $4 007 gacha pasaymoqda, 10 yillik daromadlilik 5% dan pastga tushdi, bitkoin 4,5% yo'qotmoqda."
+   }
+  }
+ },
+ {
   "slug": "2026-10-29-new-trade-manager-450",
   "type": "launch",
   "title": "New: QuantCore Trade Manager (MT5)",
