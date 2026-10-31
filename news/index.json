@@ -1,5 +1,30 @@
 [
  {
+  "slug": "2026-10-31-tech-selloff-ends-october",
+  "type": "analysis",
+  "title": "October ends with a tech sell-off: what it means for gold, oil, yields and bitcoin",
+  "summary": "Intel fell about 28.6% and AI spending worries sent the Nasdaq 100 down 3.46%. Gold futures dropped 3.63% to $3,884.90 as hot PCE inflation kept a December Fed hike in play, while the 10-year yield eased to 4.93% and WTI held near $103.",
+  "published": "2026-10-31T03:39:45Z",
+  "cover": "news/img/2026-10-31-cover.png",
+  "tags": [
+   "earnings",
+   "Fed",
+   "gold",
+   "oil",
+   "yields"
+  ],
+  "i18n": {
+   "ru": {
+    "title": "Октябрь завершился распродажей в техсекторе: что это значит для золота, нефти, доходностей и биткоина",
+    "summary": "Intel подешевел примерно на 28,6%, а опасения по поводу расходов на ИИ опустили Nasdaq 100 на 3,46%. Фьючерсы на золото упали на 3,63% до $3 884,90: высокая инфляция PCE сохраняет шансы на повышение ставки ФРС в декабре. Доходность 10-летних снизилась до 4,93%, WTI держится около $103."
+   },
+   "uz": {
+    "title": "Oktabr texnologiya aksiyalari sotuvi bilan yakunlandi: oltin, neft, daromadlilik va bitkoin uchun bu nimani anglatadi",
+    "summary": "Intel taxminan 28.6% arzonladi, sun'iy intellekt xarajatlari bo'yicha xavotirlar Nasdaq 100 ni 3.46% ga tushirdi. Oltin fyuchersi 3.63% pasayib $3,884.90 ga tushdi: yuqori PCE inflyatsiyasi FRTning dekabrda stavka oshirish ehtimolini saqlamoqda. 10 yillik daromadlilik 4.93% gacha pasaydi, WTI esa $103 atrofida turibdi."
+   }
+  }
+ },
+ {
   "slug": "2026-10-30-new-exposure-monitor-380",
   "type": "launch",
   "title": "New: QuantCore Exposure & Correlation Monitor (MT5)",
