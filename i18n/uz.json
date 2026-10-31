@@ -471,6 +471,24 @@
     "Bitta valyuta va umumiy (gross) ekspozitsiya limitlari, qalqib chiquvchi ogohlantirishlar va push-bildirishnomalar",
     "Qo'lda bitimlar va EA'lar bilan ishlaydi (magic filtri); hech qachon bitim ochmaydi, o'zgartirmaydi va yopmaydi"
    ]
+  },
+  "qc-history-analyzer-340": {
+   "title": "QuantCore Trade History Analyzer (MT5)",
+   "badge": "MT5 tahlil skripti",
+   "shortDesc": "Hisob tarixidan har bir yopilgan pozitsiyani qayta tiklaydigan hamda HTML hisobot va CSV bitimlar ro'yxatini yaratadigan MT5 skripti: xarajatlardan keyingi sof natija, foydali bitimlar ulushi, profit-faktor, drawdown (pasayish), R'dagi natijalar va simvollar, hafta kunlari, soatlar, ushlab turish vaqti, oylar va magic raqamlari bo'yicha taqsimot. Faqat o'qiydi: o'zi savdo qilmaydi.",
+   "deliverables": [
+    "QuantCore_HistoryAnalyzer skripti (.ex5)",
+    "3 ta profil: Default, Last 30 Days, European Excel",
+    "Foydalanuvchi qo'llanmasi (PDF)"
+   ],
+   "modules": [
+    "MT5 deallaridan har bir pozitsiya uchun bitta bitimni qayta tiklaydi: qisman yopishlar, svop, komissiya va to'lovlar hisobga olinadi",
+    "Istalgan brauzer uchun HTML hisobot: umumiy ko'rsatkichlar, yopilgan bitimlar bo'yicha balans egri chizig'i, maksimal drawdown, eng yaxshi va eng yomon kun",
+    "Boshlang'ich stop-loss yoki belgilangan risk summasi bo'yicha R'dagi natijalar; stopsiz bitimlar va 1,5R dan katta zararlarni belgilaydi",
+    "Simvol, yo'nalish, kirish kuni va soati (vaqt zonasi siljishi bilan), ushlab turish vaqti, oy va magic raqami bo'yicha taqsimot",
+    "Excel yoki jurnalingiz uchun CSV bitimlar ro'yxati (vergul yoki nuqtali vergul, o'nlik nuqta yoki vergul)",
+    "Filtrlar: davr (butun tarix, bugun, 7/30/90 kun, oy, yil, o'z sanalaringiz), magic raqami va simvollar; hech qachon bitim ochmaydi, o'zgartirmaydi va yopmaydi"
+   ]
   }
  },
  "productCommon": {

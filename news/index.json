@@ -1,5 +1,27 @@
 [
  {
+  "slug": "2026-10-31-new-history-analyzer-340",
+  "type": "launch",
+  "title": "New: QuantCore Trade History Analyzer (MT5)",
+  "summary": "An MT5 script that rebuilds every closed position from your account history and writes an HTML report and a CSV trade list: net result after costs, win rate, profit factor, drawdown, results in R and breakdowns by symbol, weekday, hour, holding time, month and magic number. Read-only: it never trades.",
+  "published": "2026-10-31T09:46:40Z",
+  "cover": "news/img/2026-10-31-new-history-analyzer-340-cover.png",
+  "tags": [
+   "release"
+  ],
+  "price": 340,
+  "i18n": {
+   "ru": {
+    "title": "Новинка: QuantCore Trade History Analyzer (MT5)",
+    "summary": "Скрипт MT5, который восстанавливает каждую закрытую позицию из истории счёта и создаёт HTML-отчёт и CSV-список сделок: чистый результат с учётом издержек, доля прибыльных сделок, профит-фактор, просадка, результаты в R и разбивка по символам, дням недели, часам, времени удержания, месяцам и magic-номерам. Только чтение: сам не торгует."
+   },
+   "uz": {
+    "title": "Yangi: QuantCore Trade History Analyzer (MT5)",
+    "summary": "Hisob tarixidan har bir yopilgan pozitsiyani qayta tiklaydigan hamda HTML hisobot va CSV bitimlar ro'yxatini yaratadigan MT5 skripti: xarajatlardan keyingi sof natija, foydali bitimlar ulushi, profit-faktor, drawdown (pasayish), R'dagi natijalar va simvollar, hafta kunlari, soatlar, ushlab turish vaqti, oylar va magic raqamlari bo'yicha taqsimot. Faqat o'qiydi: o'zi savdo qilmaydi."
+   }
+  }
+ },
+ {
   "slug": "2026-10-31-tech-selloff-ends-october",
   "type": "analysis",
   "title": "October ends with a tech sell-off: what it means for gold, oil, yields and bitcoin",

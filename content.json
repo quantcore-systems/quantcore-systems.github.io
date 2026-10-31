@@ -354,6 +354,35 @@
       "accessPeriod": "One-time purchase, no subscription"
     },
     {
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_gPqg6SsiTIC2I",
+      "currency": "USD",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files",
+      "id": "qc-history-analyzer-340",
+      "title": "QuantCore Trade History Analyzer (MT5)",
+      "category": "software",
+      "badge": "MT5 analysis script",
+      "version": "Version 1.0",
+      "price": 340,
+      "icon": "fa-chart-column",
+      "shortDesc": "An MT5 script that rebuilds every closed position from your account history and writes an HTML report and a CSV trade list: net result after costs, win rate, profit factor, drawdown, results in R and breakdowns by symbol, weekday, hour, holding time, month and magic number. Read-only: it never trades.",
+      "deliverables": [
+        "QuantCore_HistoryAnalyzer script (.ex5)",
+        "3 preset profiles: Default, Last 30 Days, European Excel",
+        "User guide (PDF)"
+      ],
+      "modules": [
+        "Rebuilds one trade per position from MT5 deals: partial closes, swap, commission and fees included",
+        "HTML report for any browser: summary figures, closed-trade balance curve, maximum drawdown, best and worst day",
+        "Results in R from the initial stop-loss or a fixed money risk; flags trades without a stop and losses beyond 1.5R",
+        "Breakdowns by symbol, direction, weekday and hour of entry (with time-zone shift), holding time, month and magic number",
+        "CSV trade list for Excel or your journal (comma or semicolon, decimal point or comma)",
+        "Filters: period (all, today, 7/30/90 days, month, year, custom), magic number and symbols; never opens, modifies or closes trades"
+      ],
+      "accessPeriod": "One-time purchase, no subscription"
+    },
+    {
       "id": "qc-prop-desk-3500",
       "status": "available",
       "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",

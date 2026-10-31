@@ -1,0 +1,47 @@
+{
+ "slug": "2026-10-31-new-history-analyzer-340",
+ "type": "launch",
+ "title": "New: QuantCore Trade History Analyzer (MT5)",
+ "summary": "An MT5 script that rebuilds every closed position from your account history and writes an HTML report and a CSV trade list: net result after costs, win rate, profit factor, drawdown, results in R and breakdowns by symbol, weekday, hour, holding time, month and magic number. Read-only: it never trades.",
+ "published": "2026-10-31T09:46:40Z",
+ "cover": "news/img/2026-10-31-new-history-analyzer-340-cover.png",
+ "coverAlt": "QuantCore Trade History Analyzer (MT5) release banner",
+ "price": 340,
+ "tags": [
+  "release"
+ ],
+ "html": "<p>An MT5 script that rebuilds every closed position from your account history and writes an HTML report and a CSV trade list: net result after costs, win rate, profit factor, drawdown, results in R and breakdowns by symbol, weekday, hour, holding time, month and magic number. Read-only: it never trades.</p><h2>What it does</h2><ul><li>Rebuilds one trade per position from MT5 deals: partial closes, swap, commission and fees included</li><li>HTML report for any browser: summary figures, closed-trade balance curve, maximum drawdown, best and worst day</li><li>Results in R from the initial stop-loss or a fixed money risk; flags trades without a stop and losses beyond 1.5R</li><li>Breakdowns by symbol, direction, weekday and hour of entry (with time-zone shift), holding time, month and magic number</li><li>CSV trade list for Excel or your journal (comma or semicolon, decimal point or comma)</li><li>Filters: period (all, today, 7/30/90 days, month, year, custom), magic number and symbols; never opens, modifies or closes trades</li></ul><h2>What you get</h2><ul><li>QuantCore_HistoryAnalyzer script (.ex5)</li><li>3 preset profiles: Default, Last 30 Days, European Excel</li><li>User guide (PDF)</li></ul><h2>Delivery and licence</h2><ul><li>Instant ZIP download inside your Whop account right after payment.</li><li>One-time purchase of version 1.0; no subscription, no updates or services included.</li><li>Licence: up to 3 trading accounts.</li><li>MetaTrader 5 programs are delivered compiled (.ex5); source code is not included.</li></ul>",
+ "product": {
+  "id": "qc-history-analyzer-340",
+  "title": "QuantCore Trade History Analyzer (MT5)",
+  "price": 340,
+  "url": "https://whop.com/checkout/plan_gPqg6SsiTIC2I",
+  "badge": "MT5 analysis script"
+ },
+ "i18n": {
+  "ru": {
+   "title": "Новинка: QuantCore Trade History Analyzer (MT5)",
+   "summary": "Скрипт MT5, который восстанавливает каждую закрытую позицию из истории счёта и создаёт HTML-отчёт и CSV-список сделок: чистый результат с учётом издержек, доля прибыльных сделок, профит-фактор, просадка, результаты в R и разбивка по символам, дням недели, часам, времени удержания, месяцам и magic-номерам. Только чтение: сам не торгует.",
+   "html": "<p>Скрипт MT5, который восстанавливает каждую закрытую позицию из истории счёта и создаёт HTML-отчёт и CSV-список сделок: чистый результат с учётом издержек, доля прибыльных сделок, профит-фактор, просадка, результаты в R и разбивка по символам, дням недели, часам, времени удержания, месяцам и magic-номерам. Только чтение: сам не торгует.</p><h2>Что делает</h2><ul><li>Восстанавливает одну сделку на каждую позицию из сделок (deals) MT5: с учётом частичных закрытий, свопа, комиссии и сборов</li><li>HTML-отчёт для любого браузера: сводные показатели, кривая баланса по закрытым сделкам, максимальная просадка, лучший и худший день</li><li>Результаты в R от начального стоп-лосса или фиксированной суммы риска; отмечает сделки без стопа и убытки больше 1,5R</li><li>Разбивка по символам, направлению, дню недели и часу входа (со сдвигом часового пояса), времени удержания, месяцу и magic-номеру</li><li>CSV-список сделок для Excel или вашего журнала (запятая или точка с запятой, десятичная точка или запятая)</li><li>Фильтры: период (вся история, сегодня, 7/30/90 дней, месяц, год, свои даты), magic-номер и символы; никогда не открывает, не изменяет и не закрывает сделки</li></ul><h2>Что входит</h2><ul><li>Скрипт QuantCore_HistoryAnalyzer (.ex5)</li><li>3 профиля: Default, Last 30 Days, European Excel</li><li>Руководство пользователя (PDF)</li></ul><h2>Доставка и лицензия</h2><ul><li>Мгновенная загрузка ZIP в вашем аккаунте Whop сразу после оплаты.</li><li>Разовая покупка версии 1.0; без подписки, обновления и услуги не включены.</li><li>Лицензия: до 3 торговых счетов.</li><li>Программы MetaTrader 5 поставляются скомпилированными (.ex5); исходный код не входит.</li></ul>",
+   "product": {
+    "id": "qc-history-analyzer-340",
+    "title": "QuantCore Trade History Analyzer (MT5)",
+    "price": 340,
+    "url": "https://whop.com/checkout/plan_gPqg6SsiTIC2I",
+    "badge": "Аналитический скрипт MT5"
+   }
+  },
+  "uz": {
+   "title": "Yangi: QuantCore Trade History Analyzer (MT5)",
+   "summary": "Hisob tarixidan har bir yopilgan pozitsiyani qayta tiklaydigan hamda HTML hisobot va CSV bitimlar ro'yxatini yaratadigan MT5 skripti: xarajatlardan keyingi sof natija, foydali bitimlar ulushi, profit-faktor, drawdown (pasayish), R'dagi natijalar va simvollar, hafta kunlari, soatlar, ushlab turish vaqti, oylar va magic raqamlari bo'yicha taqsimot. Faqat o'qiydi: o'zi savdo qilmaydi.",
+   "html": "<p>Hisob tarixidan har bir yopilgan pozitsiyani qayta tiklaydigan hamda HTML hisobot va CSV bitimlar ro&#x27;yxatini yaratadigan MT5 skripti: xarajatlardan keyingi sof natija, foydali bitimlar ulushi, profit-faktor, drawdown (pasayish), R&#x27;dagi natijalar va simvollar, hafta kunlari, soatlar, ushlab turish vaqti, oylar va magic raqamlari bo&#x27;yicha taqsimot. Faqat o&#x27;qiydi: o&#x27;zi savdo qilmaydi.</p><h2>Nima qiladi</h2><ul><li>MT5 deallaridan har bir pozitsiya uchun bitta bitimni qayta tiklaydi: qisman yopishlar, svop, komissiya va to&#x27;lovlar hisobga olinadi</li><li>Istalgan brauzer uchun HTML hisobot: umumiy ko&#x27;rsatkichlar, yopilgan bitimlar bo&#x27;yicha balans egri chizig&#x27;i, maksimal drawdown, eng yaxshi va eng yomon kun</li><li>Boshlang&#x27;ich stop-loss yoki belgilangan risk summasi bo&#x27;yicha R&#x27;dagi natijalar; stopsiz bitimlar va 1,5R dan katta zararlarni belgilaydi</li><li>Simvol, yo&#x27;nalish, kirish kuni va soati (vaqt zonasi siljishi bilan), ushlab turish vaqti, oy va magic raqami bo&#x27;yicha taqsimot</li><li>Excel yoki jurnalingiz uchun CSV bitimlar ro&#x27;yxati (vergul yoki nuqtali vergul, o&#x27;nlik nuqta yoki vergul)</li><li>Filtrlar: davr (butun tarix, bugun, 7/30/90 kun, oy, yil, o&#x27;z sanalaringiz), magic raqami va simvollar; hech qachon bitim ochmaydi, o&#x27;zgartirmaydi va yopmaydi</li></ul><h2>Nimalar kiradi</h2><ul><li>QuantCore_HistoryAnalyzer skripti (.ex5)</li><li>3 ta profil: Default, Last 30 Days, European Excel</li><li>Foydalanuvchi qo&#x27;llanmasi (PDF)</li></ul><h2>Yetkazib berish va litsenziya</h2><ul><li>To&#x27;lovdan so&#x27;ng darhol Whop hisobingizda ZIP yuklab olish.</li><li>1.0 versiyasini bir martalik xarid; obunasiz, yangilanishlar va xizmatlarsiz.</li><li>Litsenziya: 3 tagacha savdo hisobi.</li><li>MetaTrader 5 dasturlari kompilyatsiya qilingan holda (.ex5) yetkaziladi; manba kodi kirmaydi.</li></ul>",
+   "product": {
+    "id": "qc-history-analyzer-340",
+    "title": "QuantCore Trade History Analyzer (MT5)",
+    "price": 340,
+    "url": "https://whop.com/checkout/plan_gPqg6SsiTIC2I",
+    "badge": "MT5 tahlil skripti"
+   }
+  }
+ }
+}
