@@ -1,5 +1,30 @@
 [
  {
+  "slug": "2026-11-01-hormuz-talks-heavy-week",
+  "type": "analysis",
+  "title": "Hormuz talks meet a heavy week: what to watch for oil, gold, yields and bitcoin",
+  "summary": "Iran says a plan to reopen the Strait of Hormuz within two days is on the table as tanker attacks hit a record in October. WTI settled at $104.12 and gold at a 52-week low of $3,898.90 ahead of the US midterms, RBA and BoE decisions and Friday's payrolls.",
+  "published": "2026-11-01T03:43:43Z",
+  "cover": "news/img/2026-11-01-cover.png",
+  "tags": [
+   "oil",
+   "gold",
+   "Hormuz",
+   "central banks",
+   "week ahead"
+  ],
+  "i18n": {
+   "ru": {
+    "title": "Переговоры по Ормузу и насыщенная неделя: на что смотреть в нефти, золоте, доходностях и биткоине",
+    "summary": "Иран заявляет о плане открыть Ормузский пролив в течение двух дней, а число атак на танкеры в октябре стало рекордным. WTI закрылась на $104,12, золото — на 52-недельном минимуме $3 898,90 накануне промежуточных выборов в США, решений РБА и Банка Англии и пятничных данных по занятости."
+   },
+   "uz": {
+    "title": "Hormuz muzokaralari va gavjum hafta: neft, oltin, daromadlilik va bitkoinda nimaga e'tibor berish kerak",
+    "summary": "Eron Hormuz bo'g'ozini ikki kun ichida ochish rejasi borligini aytmoqda, oktabrda esa tankerlarga hujumlar rekord darajaga yetdi. WTI $104.12 da, oltin esa 52 haftalik minimum — $3,898.90 da yopildi; oldinda AQSh oraliq saylovlari, Avstraliya Zaxira banki va Angliya Banki qarorlari hamda juma kungi bandlik hisoboti."
+   }
+  }
+ },
+ {
   "slug": "2026-10-31-new-history-analyzer-340",
   "type": "launch",
   "title": "New: QuantCore Trade History Analyzer (MT5)",
