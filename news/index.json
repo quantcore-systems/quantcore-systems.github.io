@@ -1,5 +1,27 @@
 [
  {
+  "slug": "2026-11-01-new-news-guard-360",
+  "type": "launch",
+  "title": "New: QuantCore News Calendar & Event Guard (MT5)",
+  "summary": "An MT5 indicator that brings the built-in economic calendar onto your chart: upcoming and released events for the currencies you trade with countdowns, forecast and actual values, alerts, shaded news windows that your own EAs can read through global variables, and the symbol's past range after previous releases. Information only: it never trades.",
+  "published": "2026-11-01T09:50:24Z",
+  "cover": "news/img/2026-11-01-new-news-guard-360-cover.png",
+  "tags": [
+   "release"
+  ],
+  "price": 360,
+  "i18n": {
+   "ru": {
+    "title": "Новинка: QuantCore News Calendar & Event Guard (MT5)",
+    "summary": "Индикатор MT5, который выводит встроенный экономический календарь прямо на график: предстоящие и вышедшие события по валютам, которыми вы торгуете, с обратным отсчётом, прогнозом и фактом, оповещения, заштрихованные новостные окна, которые ваши собственные советники могут читать через глобальные переменные, и прошлый диапазон символа после предыдущих публикаций. Только информация: сам не торгует."
+   },
+   "uz": {
+    "title": "Yangi: QuantCore News Calendar & Event Guard (MT5)",
+    "summary": "O'rnatilgan iqtisodiy kalendarni to'g'ridan-to'g'ri grafikka chiqaradigan MT5 indikatori: savdo qilayotgan valyutalaringiz bo'yicha kutilayotgan va e'lon qilingan voqealar — teskari sanoq, prognoz va haqiqiy qiymatlar bilan, ogohlantirishlar, o'zingizning EA'laringiz global o'zgaruvchilar orqali o'qiy oladigan bo'yalgan yangilik oynalari hamda oldingi e'lonlardan keyingi simvolning o'tgan diapazoni. Faqat ma'lumot beradi: o'zi savdo qilmaydi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-01-hormuz-talks-heavy-week",
   "type": "analysis",
   "title": "Hormuz talks meet a heavy week: what to watch for oil, gold, yields and bitcoin",

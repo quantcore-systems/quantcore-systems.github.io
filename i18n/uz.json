@@ -489,6 +489,25 @@
     "Excel yoki jurnalingiz uchun CSV bitimlar ro'yxati (vergul yoki nuqtali vergul, o'nlik nuqta yoki vergul)",
     "Filtrlar: davr (butun tarix, bugun, 7/30/90 kun, oy, yil, o'z sanalaringiz), magic raqami va simvollar; hech qachon bitim ochmaydi, o'zgartirmaydi va yopmaydi"
    ]
+  },
+  "qc-news-guard-360": {
+   "title": "QuantCore News Calendar & Event Guard (MT5)",
+   "badge": "MT5 iqtisodiy kalendar indikatori",
+   "shortDesc": "O'rnatilgan iqtisodiy kalendarni to'g'ridan-to'g'ri grafikka chiqaradigan MT5 indikatori: savdo qilayotgan valyutalaringiz bo'yicha kutilayotgan va e'lon qilingan voqealar — teskari sanoq, prognoz va haqiqiy qiymatlar bilan, ogohlantirishlar, o'zingizning EA'laringiz global o'zgaruvchilar orqali o'qiy oladigan bo'yalgan yangilik oynalari hamda oldingi e'lonlardan keyingi simvolning o'tgan diapazoni. Faqat ma'lumot beradi: o'zi savdo qilmaydi.",
+   "deliverables": [
+    "QuantCore_NewsGuard indikatori (.ex5)",
+    "3 ta profil: Default, Prop-firm, USD Focus",
+    "Foydalanuvchi qo'llanmasi (PDF)"
+   ],
+   "modules": [
+    "Grafik simvoli valyutalari (yoki o'z ro'yxatingiz) bo'yicha o'rnatilgan MT5 iqtisodiy kalendaridan kutilayotgan voqealar: vaqt, teskari sanoq, muhimlik, mamlakat, prognoz va oldingi qiymat",
+    "E'lon qilingan voqealar: haqiqiy qiymat prognozga nisbatan, prognozdan yuqori/past rang bilan",
+    "Yangilik oynalari (yuqori muhimlikdagi e'lonlardan oldingi va keyingi daqiqalar) grafikda bo'yalgan, «bo'sh / oyna faol» holat qatori bilan",
+    "Oyna holati terminal global o'zgaruvchilari sifatida e'lon qilinadi (prefiks + simvol va prefiks + simvol + _NEXT), shunda o'z EA'laringiz yangiliklar paytida to'xtab turishi mumkin",
+    "E'londan N daqiqa oldin va haqiqiy qiymat chiqqanda qalqib chiquvchi ogohlantirishlar va push-bildirishnomalar",
+    "O'tgan e'lonlar statistikasi: navbatdagi muhim voqeaning oldingi e'lonlaridan keyingi birinchi daqiqalarda grafik simvolining mediana va eng katta diapazoni, oldingi kunning xuddi shu daqiqalari bilan taqqoslanadi",
+    "Hech qachon bitim ochmaydi, o'zgartirmaydi va yopmaydi; DLL va veb-so'rovlar kerak emas"
+   ]
   }
  },
  "productCommon": {

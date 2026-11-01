@@ -383,6 +383,36 @@
       "accessPeriod": "One-time purchase, no subscription"
     },
     {
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_WASw5mZiFdhuR",
+      "currency": "USD",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files",
+      "id": "qc-news-guard-360",
+      "title": "QuantCore News Calendar & Event Guard (MT5)",
+      "category": "software",
+      "badge": "MT5 news calendar indicator",
+      "version": "Version 1.0",
+      "price": 360,
+      "icon": "fa-calendar-days",
+      "shortDesc": "An MT5 indicator that brings the built-in economic calendar onto your chart: upcoming and released events for the currencies you trade with countdowns, forecast and actual values, alerts, shaded news windows that your own EAs can read through global variables, and the symbol's past range after previous releases. Information only: it never trades.",
+      "deliverables": [
+        "QuantCore_NewsGuard indicator (.ex5)",
+        "3 preset profiles: Default, Prop-firm, USD Focus",
+        "User guide (PDF)"
+      ],
+      "modules": [
+        "Upcoming events from the built-in MT5 economic calendar for the chart symbol's currencies (or your own list): time, countdown, importance, country, forecast and previous value",
+        "Released events with actual vs forecast, coloured above/below forecast",
+        "News windows (minutes before and after high-importance releases) shaded on the chart, with a clear/active status line",
+        "Window state published as terminal global variables (prefix + symbol, and prefix + symbol + _NEXT) so your own Expert Advisors can pause around news",
+        "Alerts and push notifications N minutes before a release and when the actual value is published",
+        "Past-release statistics: median and largest range of the chart symbol in the first minutes after earlier releases of the next major event, compared with the same minutes on the previous day",
+        "Never opens, modifies or closes trades; no DLLs or web requests needed"
+      ],
+      "accessPeriod": "One-time purchase, no subscription"
+    },
+    {
       "id": "qc-prop-desk-3500",
       "status": "available",
       "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",
