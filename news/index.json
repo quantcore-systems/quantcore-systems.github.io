@@ -1,5 +1,31 @@
 [
  {
+  "slug": "2026-11-02-diplomacy-first-oil-slips",
+  "type": "analysis",
+  "title": "Diplomacy first: oil slips into election week as gold holds above its low",
+  "summary": "WTI fell 3% to about $101 after reports that Washington wants to give Iran talks more time, and OPEC+ kept December output unchanged. Gold is just above Friday's 52-week low at $3,908 ahead of Apple's results, the US midterms, the BoE decision and Friday's payrolls.",
+  "published": "2026-11-02T03:41:12Z",
+  "cover": "news/img/2026-11-02-cover.png",
+  "tags": [
+   "oil",
+   "gold",
+   "Iran",
+   "OPEC+",
+   "elections",
+   "week ahead"
+  ],
+  "i18n": {
+   "ru": {
+    "title": "Сначала дипломатия: нефть дешевеет в неделю выборов, золото держится выше минимума",
+    "summary": "WTI подешевела на 3% примерно до $101 после сообщений о том, что Вашингтон хочет дать переговорам с Ираном больше времени, а ОПЕК+ сохранила добычу на декабрь. Золото — чуть выше пятничного 52-недельного минимума, на $3 908, перед отчётом Apple, промежуточными выборами в США, решением Банка Англии и пятничными данными по занятости."
+   },
+   "uz": {
+    "title": "Avval diplomatiya: saylov haftasida neft arzonlamoqda, oltin minimumdan yuqorida turibdi",
+    "summary": "Vashington Eron bilan muzokaralarga ko'proq vaqt bermoqchi ekani haqidagi xabarlardan so'ng WTI 3% arzonlashib, taxminan $101 ga tushdi, OPEK+ esa dekabr qazib olish hajmini o'zgarishsiz qoldirdi. Oltin juma kungi 52 haftalik minimumdan biroz yuqorida — $3,908 da; oldinda Apple hisoboti, AQSh oraliq saylovlari, Angliya Banki qarori va juma kungi bandlik hisoboti."
+   }
+  }
+ },
+ {
   "slug": "2026-11-01-new-news-guard-360",
   "type": "launch",
   "title": "New: QuantCore News Calendar & Event Guard (MT5)",
