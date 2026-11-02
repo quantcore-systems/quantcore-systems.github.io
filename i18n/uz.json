@@ -508,6 +508,25 @@
     "O'tgan e'lonlar statistikasi: navbatdagi muhim voqeaning oldingi e'lonlaridan keyingi birinchi daqiqalarda grafik simvolining mediana va eng katta diapazoni, oldingi kunning xuddi shu daqiqalari bilan taqqoslanadi",
     "Hech qachon bitim ochmaydi, o'zgartirmaydi va yopmaydi; DLL va veb-so'rovlar kerak emas"
    ]
+  },
+  "qc-spread-monitor-320": {
+   "title": "QuantCore Spread & Trading Cost Monitor (MT5)",
+   "badge": "MT5 spred va savdo xarajatlari indikatori",
+   "shortDesc": "12 tagacha simvolning joriy spredini kuzatadigan va uni brokeringizning o'z M5 tarixi asosida hisoblangan, sutkaning xuddi shu soatidagi odatiy spred bilan taqqoslaydigan MT5 indikatori. To'liq aylanma bitim narxi va tungi svopni hisob valyutasida, soatlar bo'yicha spred profilini, keng spred haqida ogohlantirishlarni, CSV jurnalini hamda o'z EA'laringiz o'qiy oladigan global o'zgaruvchilarni ko'rsatadi. Faqat ma'lumot beradi: o'zi savdo qilmaydi.",
+   "deliverables": [
+    "QuantCore_SpreadMonitor indikatori (.ex5)",
+    "3 ta profil: Default, Prop-firm, Multi-symbol",
+    "Foydalanuvchi qo'llanmasi (PDF)"
+   ],
+   "modules": [
+    "Grafik simvoli yoki 12 tagacha simvolning (o'z ro'yxatingiz yoki Market Watch) joriy spredi, har 0,5 soniyada o'lchanadi",
+    "Server joriy soati uchun odatiy spred: brokeringizning so'nggi 5-60 kunlik M5 barlari spredining medianasi hamda joriy spredning odatiyga nisbati",
+    "Har bir simvol bo'yicha bugungi minimal, o'rtacha va maksimal joriy spred",
+    "To'liq aylanma bitim narxi (spred va sizning komissiyangiz) hamda xarid va sotuv uchun tungi svop hisob valyutasida, uch karra svop kuni bilan",
+    "Grafik simvolining sutka soatlari bo'yicha spred profili, eng arzon va eng qimmat soatlar bilan",
+    "Keng spred haqida ogohlantirishlar va push-bildirishnomalar (koeffitsiyent, qo'shimcha punktlar, tasdiqlash vaqti, ogohlantirishlar orasidagi tanaffus) hamda har bir simvol uchun ixtiyoriy punktlardagi limitlar",
+    "Spred holati o'z EA'laringiz uchun terminal global o'zgaruvchilari sifatida e'lon qilinadi; ixtiyoriy daqiqalik CSV jurnali; hech qachon bitim ochmaydi, o'zgartirmaydi va yopmaydi"
+   ]
   }
  },
  "productCommon": {

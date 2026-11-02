@@ -1,5 +1,27 @@
 [
  {
+  "slug": "2026-11-02-new-spread-monitor-320",
+  "type": "launch",
+  "title": "New: QuantCore Spread & Trading Cost Monitor (MT5)",
+  "summary": "An MT5 indicator that watches the live spread of up to 12 symbols and compares it with the typical spread for the same hour of the day, built from your broker's own M5 history. It shows the cost of a round turn and the overnight swap in your account currency, an hour-of-day spread profile, wide-spread alerts, a CSV log and global variables your own EAs can read. Information only: it never trades.",
+  "published": "2026-11-02T09:46:09Z",
+  "cover": "news/img/2026-11-02-new-spread-monitor-320-cover.png",
+  "tags": [
+   "release"
+  ],
+  "price": 320,
+  "i18n": {
+   "ru": {
+    "title": "Новинка: QuantCore Spread & Trading Cost Monitor (MT5)",
+    "summary": "Индикатор MT5, который следит за текущим спредом до 12 символов и сравнивает его с типичным спредом в тот же час суток, рассчитанным по собственной истории M5 вашего брокера. Показывает стоимость полного круга сделки и ночной своп в валюте счёта, профиль спреда по часам суток, оповещения о широком спреде, CSV-журнал и глобальные переменные, которые могут читать ваши советники. Только информация: сам не торгует."
+   },
+   "uz": {
+    "title": "Yangi: QuantCore Spread & Trading Cost Monitor (MT5)",
+    "summary": "12 tagacha simvolning joriy spredini kuzatadigan va uni brokeringizning o'z M5 tarixi asosida hisoblangan, sutkaning xuddi shu soatidagi odatiy spred bilan taqqoslaydigan MT5 indikatori. To'liq aylanma bitim narxi va tungi svopni hisob valyutasida, soatlar bo'yicha spred profilini, keng spred haqida ogohlantirishlarni, CSV jurnalini hamda o'z EA'laringiz o'qiy oladigan global o'zgaruvchilarni ko'rsatadi. Faqat ma'lumot beradi: o'zi savdo qilmaydi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-02-diplomacy-first-oil-slips",
   "type": "analysis",
   "title": "Diplomacy first: oil slips into election week as gold holds above its low",

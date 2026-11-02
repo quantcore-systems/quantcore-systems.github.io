@@ -413,6 +413,36 @@
       "accessPeriod": "One-time purchase, no subscription"
     },
     {
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_OeAm96cZA3pdp",
+      "currency": "USD",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files",
+      "id": "qc-spread-monitor-320",
+      "title": "QuantCore Spread & Trading Cost Monitor (MT5)",
+      "category": "software",
+      "badge": "MT5 spread & cost indicator",
+      "version": "Version 1.0",
+      "price": 320,
+      "icon": "fa-scale-balanced",
+      "shortDesc": "An MT5 indicator that watches the live spread of up to 12 symbols and compares it with the typical spread for the same hour of the day, built from your broker's own M5 history. It shows the cost of a round turn and the overnight swap in your account currency, an hour-of-day spread profile, wide-spread alerts, a CSV log and global variables your own EAs can read. Information only: it never trades.",
+      "deliverables": [
+        "QuantCore_SpreadMonitor indicator (.ex5)",
+        "3 preset profiles: Default, Prop-firm, Multi-symbol",
+        "User guide (PDF)"
+      ],
+      "modules": [
+        "Live spread of the chart symbol or up to 12 symbols (your list or Market Watch), sampled every 0.5 s",
+        "Typical spread for the current server hour: median of your broker's M5 bar spreads over the last 5-60 days, with the ratio of live to typical",
+        "Today's minimum, average and maximum live spread for each symbol",
+        "Cost of a round turn (spread plus your commission) and the overnight swap for long and short in account currency, with the triple-swap day",
+        "Hour-of-day spread profile of the chart symbol, with the cheapest and most expensive hours",
+        "Wide-spread alerts and push notifications (ratio, extra points, confirmation time, cooldown) and optional per-symbol limits in points",
+        "Spread state published as terminal global variables for your own EAs; optional per-minute CSV log; never opens, modifies or closes trades"
+      ],
+      "accessPeriod": "One-time purchase, no subscription"
+    },
+    {
       "id": "qc-prop-desk-3500",
       "status": "available",
       "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",
