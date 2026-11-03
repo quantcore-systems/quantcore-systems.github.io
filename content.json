@@ -443,6 +443,35 @@
       "accessPeriod": "One-time purchase, no subscription"
     },
     {
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_ytXf3Qr8q2Ojk",
+      "currency": "USD",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files",
+      "id": "qc-position-sizer-450",
+      "title": "QuantCore Position Size & Risk Calculator (MT5)",
+      "category": "software",
+      "badge": "MT5 utility EA",
+      "version": "Version 1.0",
+      "price": 450,
+      "icon": "fa-calculator",
+      "shortDesc": "A utility Expert Advisor that sizes every trade from lines you drag on the chart: lot size for your risk, real money at the stop including commission, reward:risk, margin and your total account risk. Orders go out only when you press PLACE and confirm.",
+      "deliverables": [
+        "QuantCore_PositionSizer Expert Advisor (.ex5)",
+        "3 preset profiles: Default, Prop-firm, Calculator only",
+        "User guide (PDF)"
+      ],
+      "modules": [
+        "Entry, stop-loss and take-profit lines you drag on the chart; market or pending orders",
+        "Lot size from % of balance, % of equity or a fixed amount, rounded down to the broker's lot step",
+        "Real risk at the stop including commission, reward at target, reward:risk, value of 1 point",
+        "Margin required and free margin after the trade",
+        "Total open risk of all positions and pending orders plus the new trade, checked against your limit",
+        "PLACE button with confirmation and broker checks, or calculator-only mode; it never trades on its own"
+      ],
+      "accessPeriod": "One-time purchase, no subscription"
+    },
+    {
       "id": "qc-prop-desk-3500",
       "status": "available",
       "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",

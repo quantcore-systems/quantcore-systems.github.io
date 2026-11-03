@@ -1,5 +1,27 @@
 [
  {
+  "slug": "2026-11-03-new-position-sizer-450",
+  "type": "launch",
+  "title": "New: QuantCore Position Size & Risk Calculator (MT5)",
+  "summary": "A utility Expert Advisor that sizes every trade from lines you drag on the chart: lot size for your risk, real money at the stop including commission, reward:risk, margin and your total account risk. Orders go out only when you press PLACE and confirm.",
+  "published": "2026-11-03T09:45:53Z",
+  "cover": "news/img/2026-11-03-new-position-sizer-450-cover.png",
+  "tags": [
+   "release"
+  ],
+  "price": 450,
+  "i18n": {
+   "ru": {
+    "title": "Новинка: QuantCore Position Size & Risk Calculator (MT5)",
+    "summary": "Служебный советник, который рассчитывает каждую сделку по линиям, которые вы перетаскиваете на графике: размер лота под ваш риск, реальную сумму под риском на стоп-лоссе с учётом комиссии, соотношение прибыль:риск, маржу и общий риск счёта. Ордер отправляется только после нажатия PLACE и подтверждения."
+   },
+   "uz": {
+    "title": "Yangi: QuantCore Position Size & Risk Calculator (MT5)",
+    "summary": "Grafikda siz suradigan chiziqlar asosida har bir bitimni hisoblaydigan yordamchi EA: riskingizga mos lot hajmi, komissiya bilan birga stop-lossdagi haqiqiy risk summasi, foyda:risk nisbati, marja va hisobning umumiy riski. Buyurtma faqat PLACE tugmasini bosib, tasdiqlaganingizdan keyin yuboriladi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-03-oil-sheds-war-premium",
   "type": "analysis",
   "title": "Oil sheds its war premium: WTI and Brent fall more than 7% as Iran backs talks",

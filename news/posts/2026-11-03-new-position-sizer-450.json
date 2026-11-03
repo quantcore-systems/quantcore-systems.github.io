@@ -1,0 +1,33 @@
+{
+ "slug": "2026-11-03-new-position-sizer-450",
+ "type": "launch",
+ "title": "New: QuantCore Position Size & Risk Calculator (MT5)",
+ "summary": "A utility Expert Advisor that sizes every trade from lines you drag on the chart: lot size for your risk, real money at the stop including commission, reward:risk, margin and your total account risk. Orders go out only when you press PLACE and confirm.",
+ "published": "2026-11-03T09:45:53Z",
+ "cover": "news/img/2026-11-03-new-position-sizer-450-cover.png",
+ "coverAlt": "QuantCore Position Size & Risk Calculator (MT5) release banner",
+ "price": 450,
+ "tags": [
+  "release"
+ ],
+ "html": "<p>A utility Expert Advisor that sizes every trade from lines you drag on the chart: lot size for your risk, real money at the stop including commission, reward:risk, margin and your total account risk. Orders go out only when you press PLACE and confirm.</p><h2>What it does</h2><ul><li>Entry, stop-loss and take-profit lines you drag on the chart; market or pending orders</li><li>Lot size from % of balance, % of equity or a fixed amount, rounded down to the broker&#x27;s lot step</li><li>Real risk at the stop including commission, reward at target, reward:risk, value of 1 point</li><li>Margin required and free margin after the trade</li><li>Total open risk of all positions and pending orders plus the new trade, checked against your limit</li><li>PLACE button with confirmation and broker checks, or calculator-only mode; it never trades on its own</li></ul><h2>What you get</h2><ul><li>QuantCore_PositionSizer Expert Advisor (.ex5)</li><li>3 preset profiles: Default, Prop-firm, Calculator only</li><li>User guide (PDF)</li></ul><h2>Delivery and licence</h2><ul><li>Instant ZIP download inside your Whop account right after payment.</li><li>One-time purchase of version 1.0; no subscription, no updates or services included.</li><li>Licence: up to 3 trading accounts.</li><li>MetaTrader 5 programs are delivered compiled (.ex5); source code is not included.</li></ul>",
+ "product": {
+  "id": "qc-position-sizer-450",
+  "title": "QuantCore Position Size & Risk Calculator (MT5)",
+  "price": 450,
+  "url": "https://whop.com/checkout/plan_ytXf3Qr8q2Ojk",
+  "badge": "MT5 utility EA"
+ },
+ "i18n": {
+  "ru": {
+   "title": "Новинка: QuantCore Position Size & Risk Calculator (MT5)",
+   "summary": "Служебный советник, который рассчитывает каждую сделку по линиям, которые вы перетаскиваете на графике: размер лота под ваш риск, реальную сумму под риском на стоп-лоссе с учётом комиссии, соотношение прибыль:риск, маржу и общий риск счёта. Ордер отправляется только после нажатия PLACE и подтверждения.",
+   "html": "<p>Служебный советник, который рассчитывает каждую сделку по линиям, которые вы перетаскиваете на графике: размер лота под ваш риск, реальную сумму под риском на стоп-лоссе с учётом комиссии, соотношение прибыль:риск, маржу и общий риск счёта. Ордер отправляется только после нажатия PLACE и подтверждения.</p><h2>Что делает</h2><ul><li>Линии входа, стоп-лосса и тейк-профита, которые вы перетаскиваете на графике; рыночные или отложенные ордера</li><li>Размер лота от % баланса, % средств или фиксированной суммы, округлённый вниз до шага лота брокера</li><li>Реальный риск на стопе с учётом комиссии, прибыль на цели, соотношение прибыль:риск, стоимость 1 пункта</li><li>Требуемая маржа и свободная маржа после сделки</li><li>Общий открытый риск всех позиций и отложенных ордеров плюс новая сделка, проверка по вашему лимиту</li><li>Кнопка PLACE с подтверждением и проверками брокера или режим «только калькулятор»; сам никогда не торгует</li></ul><h2>Что входит</h2><ul><li>Советник QuantCore_PositionSizer (.ex5)</li><li>3 профиля: Default, Prop-firm, Calculator only</li><li>Руководство пользователя (PDF)</li></ul><h2>Доставка и лицензия</h2><ul><li>Мгновенная загрузка ZIP в вашем аккаунте Whop сразу после оплаты.</li><li>Разовая покупка версии 1.0; без подписки, без обновлений и услуг.</li><li>Лицензия: до 3 торговых счетов.</li><li>Программы MetaTrader 5 поставляются скомпилированными (.ex5); исходный код не входит.</li></ul>"
+  },
+  "uz": {
+   "title": "Yangi: QuantCore Position Size & Risk Calculator (MT5)",
+   "summary": "Grafikda siz suradigan chiziqlar asosida har bir bitimni hisoblaydigan yordamchi EA: riskingizga mos lot hajmi, komissiya bilan birga stop-lossdagi haqiqiy risk summasi, foyda:risk nisbati, marja va hisobning umumiy riski. Buyurtma faqat PLACE tugmasini bosib, tasdiqlaganingizdan keyin yuboriladi.",
+   "html": "<p>Grafikda siz suradigan chiziqlar asosida har bir bitimni hisoblaydigan yordamchi EA: riskingizga mos lot hajmi, komissiya bilan birga stop-lossdagi haqiqiy risk summasi, foyda:risk nisbati, marja va hisobning umumiy riski. Buyurtma faqat PLACE tugmasini bosib, tasdiqlaganingizdan keyin yuboriladi.</p><h2>Nima qiladi</h2><ul><li>Grafikda suriladigan kirish, stop-loss va take-profit chiziqlari; bozor yoki kutilayotgan buyurtmalar</li><li>Lot hajmi balansning %, mablag&#x27;ning (equity) % yoki qat&#x27;iy summadan, brokerning lot qadamiga qadar pastga yaxlitlanadi</li><li>Komissiya bilan birga stopdagi haqiqiy risk, maqsaddagi foyda, foyda:risk nisbati, 1 punkt qiymati</li><li>Talab qilinadigan marja va bitimdan keyingi bo&#x27;sh marja</li><li>Barcha pozitsiyalar va kutilayotgan buyurtmalarning umumiy ochiq riski hamda yangi bitim, sizning limitingiz bo&#x27;yicha tekshiriladi</li><li>Tasdiqlash va broker tekshiruvlari bilan PLACE tugmasi yoki «faqat kalkulyator» rejimi; o&#x27;zi hech qachon savdo qilmaydi</li></ul><h2>Nimalar kiradi</h2><ul><li>QuantCore_PositionSizer EA (.ex5)</li><li>3 ta profil: Default, Prop-firm, Calculator only</li><li>Foydalanuvchi qo&#x27;llanmasi (PDF)</li></ul><h2>Yetkazib berish va litsenziya</h2><ul><li>To&#x27;lovdan so&#x27;ng darhol Whop akkauntingizda ZIP yuklab olish.</li><li>1.0 versiyasini bir martalik xarid; obunasiz, yangilanishlar va xizmatlarsiz.</li><li>Litsenziya: 3 tagacha savdo hisobi.</li><li>MetaTrader 5 dasturlari kompilyatsiya qilingan (.ex5) holda yetkaziladi; manba kodi kirmaydi.</li></ul>"
+  }
+ }
+}
