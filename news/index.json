@@ -1,5 +1,31 @@
 [
  {
+  "slug": "2026-11-03-oil-sheds-war-premium",
+  "type": "analysis",
+  "title": "Oil sheds its war premium: WTI and Brent fall more than 7% as Iran backs talks",
+  "summary": "Crude had its biggest one-day drop in three months after Iran's supreme leader approved negotiations and President Trump said he would not resume strikes after the vote. WTI settled at $96.46 and Brent at $104.77. Apple beat estimates but guided margins lower, the Nasdaq 100 is now in a correction, and the RBA raised rates to 4.85% as Americans vote in the midterms.",
+  "published": "2026-11-03T03:45:03Z",
+  "cover": "news/img/2026-11-03-cover.png",
+  "tags": [
+   "oil",
+   "gold",
+   "Iran",
+   "Apple",
+   "RBA",
+   "elections"
+  ],
+  "i18n": {
+   "ru": {
+    "title": "Нефть теряет военную премию: WTI и Brent подешевели более чем на 7% после согласия Ирана на переговоры",
+    "summary": "Нефть показала крупнейшее однодневное падение за три месяца после того, как верховный лидер Ирана одобрил переговоры, а президент Трамп сказал, что не возобновит удары после выборов. WTI завершила день на $96.46, Brent — на $104.77. Apple превзошла прогнозы, но ожидает более низкую маржу, Nasdaq 100 вошёл в коррекцию, а РБА повысил ставку до 4.85% в день промежуточных выборов в США."
+   },
+   "uz": {
+    "title": "Neft urush mukofotini yo'qotmoqda: Eron muzokaralarni qo'llab-quvvatlagach, WTI va Brent 7% dan ko'proq arzonladi",
+    "summary": "Eron oliy rahbari muzokaralarni ma'qullagani va Prezident Tramp saylovdan keyin zarbalarni qayta boshlamasligini aytganidan so'ng neft so'nggi uch oydagi eng katta bir kunlik pasayishni qayd etdi. WTI $96.46 da, Brent $104.77 da yopildi. Apple kutilganidan yaxshi natija ko'rsatdi, ammo marja prognozini pasaytirdi, Nasdaq 100 korreksiyaga kirdi, AQShda oraliq saylovlar kuni esa Avstraliya zaxira banki stavkani 4.85% gacha oshirdi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-02-new-spread-monitor-320",
   "type": "launch",
   "title": "New: QuantCore Spread & Trading Cost Monitor (MT5)",
