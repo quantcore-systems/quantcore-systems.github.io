@@ -472,6 +472,36 @@
       "accessPeriod": "One-time purchase, no subscription"
     },
     {
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_t0IFWwuhLtaPm",
+      "currency": "USD",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files",
+      "id": "qc-volatility-monitor-350",
+      "title": "QuantCore Volatility & Daily Range Monitor (MT5)",
+      "category": "software",
+      "badge": "MT5 volatility & range indicator",
+      "version": "Version 1.0",
+      "price": 350,
+      "icon": "fa-wave-square",
+      "shortDesc": "An MT5 indicator that measures the average daily range (ADR) of up to 12 symbols from your broker's history and shows how much of it has been covered today. It ranks the daily ATR against the last 250 days (low, normal, high or extreme volatility), compares this hour's range with the typical range for the same hour, plots ADR projection lines and yesterday's levels, and sends range and spike alerts. Global variables for your own EAs. Information only: it never trades.",
+      "deliverables": [
+        "QuantCore_VolatilityMonitor indicator (.ex5)",
+        "3 preset profiles: Default, Intraday, Multi-symbol",
+        "User guide (PDF)"
+      ],
+      "modules": [
+        "Average daily range (mean or median of 5-100 completed days, weekend bars optionally skipped) for the chart symbol or up to 12 symbols",
+        "Today's range, % of ADR used and the distance left to the average, updated every second",
+        "Daily ATR ranked against up to 1,000 days of history: percentile and regime (low, normal, high, extreme)",
+        "Hour-of-day range profile from H1 history and the current hour's range against the typical range for that hour",
+        "ADR projection lines on intraday charts (day low + ADR, day high - ADR) plus yesterday's high/low and today's open",
+        "Value of one daily ATR in account currency for your lot size, to put stop distances in context",
+        "Alerts and push notifications at % of ADR levels, hour spikes and regime changes; values published as global variables for your own EAs; never opens, modifies or closes trades"
+      ],
+      "accessPeriod": "One-time purchase, no subscription"
+    },
+    {
       "id": "qc-prop-desk-3500",
       "status": "available",
       "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",

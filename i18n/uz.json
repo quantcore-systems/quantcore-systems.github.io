@@ -545,6 +545,25 @@
     "Barcha pozitsiyalar va kutilayotgan buyurtmalarning umumiy ochiq riski hamda yangi bitim, sizning limitingiz bo'yicha tekshiriladi",
     "Tasdiqlash va broker tekshiruvlari bilan PLACE tugmasi yoki «faqat kalkulyator» rejimi; o'zi hech qachon savdo qilmaydi"
    ]
+  },
+  "qc-volatility-monitor-350": {
+   "title": "QuantCore Volatility & Daily Range Monitor (MT5)",
+   "badge": "MT5 volatillik va kunlik diapazon indikatori",
+   "shortDesc": "12 tagacha simvolning o'rtacha kunlik diapazonini (ADR) brokeringiz tarixi asosida hisoblaydigan va uning bugun qancha qismi o'tilganini ko'rsatadigan MT5 indikatori. U kunlik ATR'ni so'nggi 250 kunga nisbatan tartiblaydi (past, normal, yuqori yoki ekstremal volatillik), joriy soat diapazonini xuddi shu soatning odatiy diapazoni bilan taqqoslaydi, ADR proyeksiya chiziqlari va kechagi kun darajalarini chizadi hamda diapazon va keskin harakatlar haqida ogohlantiradi. O'z EA'laringiz uchun global o'zgaruvchilar. Faqat ma'lumot beradi: o'zi savdo qilmaydi.",
+   "deliverables": [
+    "QuantCore_VolatilityMonitor indikatori (.ex5)",
+    "3 ta profil: Default, Intraday, Multi-symbol",
+    "Foydalanuvchi qo'llanmasi (PDF)"
+   ],
+   "modules": [
+    "Grafik simvoli yoki 12 tagacha simvol uchun o'rtacha kunlik diapazon (5-100 ta yakunlangan kunning o'rtachasi yoki medianasi, dam olish kunlari barlarini chiqarib tashlash mumkin)",
+    "Bugungi diapazon, o'tilgan ADR foizi va o'rtachagacha qolgan masofa, har soniyada yangilanadi",
+    "Kunlik ATR 1 000 kungacha bo'lgan tarixga nisbatan tartiblanadi: persentil va rejim (past, normal, yuqori, ekstremal)",
+    "H1 tarixidan sutka soatlari bo'yicha diapazon profili va joriy soat diapazonining shu soat uchun odatiy diapazonga nisbati",
+    "Kun ichidagi grafiklarda ADR proyeksiya chiziqlari (kun minimumi + ADR, kun maksimumi - ADR), shuningdek kechagi maksimum/minimum va bugungi ochilish narxi",
+    "Lotingiz uchun bitta kunlik ATR'ning hisob valyutasidagi qiymati, stop masofasini baholash uchun",
+    "ADR foizi darajalarida, soatlik keskin harakatlarda va rejim o'zgarganda ogohlantirishlar va push-bildirishnomalar; qiymatlar o'z EA'laringiz uchun global o'zgaruvchilar sifatida e'lon qilinadi; hech qachon bitim ochmaydi, o'zgartirmaydi va yopmaydi"
+   ]
   }
  },
  "productCommon": {

@@ -1,5 +1,27 @@
 [
  {
+  "slug": "2026-11-04-new-volatility-monitor-350",
+  "type": "launch",
+  "title": "New: QuantCore Volatility & Daily Range Monitor (MT5)",
+  "summary": "An MT5 indicator that measures the average daily range (ADR) of up to 12 symbols from your broker's history and shows how much of it has been covered today. It ranks the daily ATR against the last 250 days (low, normal, high or extreme volatility), compares this hour's range with the typical range for the same hour, plots ADR projection lines and yesterday's levels, and sends range and spike alerts. Global variables for your own EAs. Information only: it never trades.",
+  "published": "2026-11-04T09:46:42Z",
+  "cover": "news/img/2026-11-04-new-volatility-monitor-350-cover.png",
+  "tags": [
+   "release"
+  ],
+  "price": 350,
+  "i18n": {
+   "ru": {
+    "title": "Новинка: QuantCore Volatility & Daily Range Monitor (MT5)",
+    "summary": "Индикатор MT5, который рассчитывает средний дневной диапазон (ADR) до 12 символов по истории вашего брокера и показывает, какая его часть уже пройдена сегодня. Он ранжирует дневной ATR относительно последних 250 дней (низкая, нормальная, высокая или экстремальная волатильность), сравнивает диапазон текущего часа с типичным диапазоном того же часа, рисует проекционные линии ADR и уровни вчерашнего дня и присылает оповещения о диапазоне и всплесках. Глобальные переменные для ваших советников. Только информация: сам не торгует."
+   },
+   "uz": {
+    "title": "Yangi: QuantCore Volatility & Daily Range Monitor (MT5)",
+    "summary": "12 tagacha simvolning o'rtacha kunlik diapazonini (ADR) brokeringiz tarixi asosida hisoblaydigan va uning bugun qancha qismi o'tilganini ko'rsatadigan MT5 indikatori. U kunlik ATR'ni so'nggi 250 kunga nisbatan tartiblaydi (past, normal, yuqori yoki ekstremal volatillik), joriy soat diapazonini xuddi shu soatning odatiy diapazoni bilan taqqoslaydi, ADR proyeksiya chiziqlari va kechagi kun darajalarini chizadi hamda diapazon va keskin harakatlar haqida ogohlantiradi. O'z EA'laringiz uchun global o'zgaruvchilar. Faqat ma'lumot beradi: o'zi savdo qilmaydi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-04-midterms-jolt-ai-trade",
   "type": "analysis",
   "title": "Midterms jolt the AI trade: Nikkei falls 3.6% as Democrats are projected to win the House",
