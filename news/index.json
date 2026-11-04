@@ -1,5 +1,31 @@
 [
  {
+  "slug": "2026-11-04-midterms-jolt-ai-trade",
+  "type": "analysis",
+  "title": "Midterms jolt the AI trade: Nikkei falls 3.6% as Democrats are projected to win the House",
+  "summary": "Democrats were projected to win the US House, while Senate control was still open early on Wednesday. Asian chip and AI stocks fell on fears of tighter rules for data centres, sending the Nikkei 225 down 3.56%. On Tuesday AMD's record quarter lifted the Nasdaq, Apple slipped, oil fell to a near four-week low and gold held near $3,950.",
+  "published": "2026-11-04T03:39:59Z",
+  "cover": "news/img/2026-11-04-cover.png",
+  "tags": [
+   "elections",
+   "equities",
+   "AI",
+   "oil",
+   "gold",
+   "Fed"
+  ],
+  "i18n": {
+   "ru": {
+    "title": "Промежуточные выборы ударили по ИИ-сектору: Nikkei упал на 3.6%, демократы, по прогнозам, получают Палату представителей",
+    "summary": "По прогнозам, демократы выигрывают Палату представителей США, а контроль над Сенатом утром в среду ещё не определён. Акции производителей чипов и ИИ-компаний в Азии упали на опасениях более жёсткого регулирования дата-центров, Nikkei 225 снизился на 3.56%. Во вторник рекордный квартал AMD поддержал Nasdaq, Apple подешевела, нефть опустилась к минимуму почти за четыре недели, а золото удержалось около $3,950."
+   },
+   "uz": {
+    "title": "Oraliq saylovlar sun'iy intellekt savdosini silkitdi: prognozlarga ko'ra demokratlar Vakillar palatasini olmoqda, Nikkei 3.6% tushdi",
+    "summary": "Prognozlarga ko'ra, demokratlar AQSh Vakillar palatasida g'alaba qozonmoqda, Senat nazorati esa chorshanba tongida hali aniq emas edi. Ma'lumotlar markazlari uchun qoidalar qattiqlashishi xavotiri sabab Osiyodagi chip va sun'iy intellekt aksiyalari arzonlashdi, Nikkei 225 3.56% tushdi. Seshanba kuni AMD ning rekord choragi Nasdaq ni qo'llab-quvvatladi, Apple arzonlashdi, neft deyarli to'rt haftalik minimumgacha tushdi, oltin esa $3,950 atrofida saqlandi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-03-new-position-sizer-450",
   "type": "launch",
   "title": "New: QuantCore Position Size & Risk Calculator (MT5)",
