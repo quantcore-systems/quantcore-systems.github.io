@@ -1,5 +1,31 @@
 [
  {
+  "slug": "2026-11-05-democrats-sweep-oil-sinks",
+  "type": "analysis",
+  "title": "Democrats sweep Congress: oil sinks 8%, the Dow jumps 3% and gold reclaims $4,000",
+  "summary": "Democrats won both chambers of the US Congress, and markets priced a faster end to the US–Iran war: WTI fell 8.29% and Brent 8.67% on Wednesday, the Dow gained 3.03% in its biggest post-midterm rally in 44 years, and gold rose 3.37% back above $4,000. The Bank of England is expected to raise rates today; US payrolls follow on Friday.",
+  "published": "2026-11-05T03:40:47Z",
+  "cover": "news/img/2026-11-05-cover.png",
+  "tags": [
+   "elections",
+   "oil",
+   "gold",
+   "equities",
+   "Iran",
+   "Bank of England"
+  ],
+  "i18n": {
+   "ru": {
+    "title": "Демократы взяли Конгресс: нефть упала на 8%, Dow вырос на 3%, золото вернулось выше $4,000",
+    "summary": "Демократы получили обе палаты Конгресса США, и рынки заложили более быстрое завершение войны США с Ираном: в среду WTI упала на 8.29%, Brent — на 8.67%, Dow вырос на 3.03% — крупнейшее ралли после промежуточных выборов за 44 года, — а золото подорожало на 3.37% и вернулось выше $4,000. Сегодня ожидается повышение ставки Банком Англии, в пятницу — данные по занятости в США."
+   },
+   "uz": {
+    "title": "Demokratlar Kongressni egalladi: neft 8% tushdi, Dow 3% ko'tarildi, oltin yana $4,000 dan oshdi",
+    "summary": "Demokratlar AQSh Kongressining ikkala palatasini qo'lga kiritdi va bozorlar AQSh–Eron urushining tezroq tugashini narxlarga kiritdi: chorshanba kuni WTI 8.29%, Brent 8.67% tushdi, Dow 3.03% oshdi — bu 44 yildagi oraliq saylovlardan keyingi eng katta ralli — oltin esa 3.37% qimmatlab, yana $4,000 dan yuqoriga qaytdi. Bugun Angliya banki stavkani oshirishi kutilmoqda, juma kuni AQSh bandlik ma'lumotlari e'lon qilinadi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-04-new-volatility-monitor-350",
   "type": "launch",
   "title": "New: QuantCore Volatility & Daily Range Monitor (MT5)",
