@@ -502,6 +502,37 @@
       "accessPeriod": "One-time purchase, no subscription"
     },
     {
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_KU9uHmNSn0yIa",
+      "currency": "USD",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files",
+      "id": "qc-session-map-330",
+      "title": "QuantCore Trading Sessions & Opening Range (MT5)",
+      "category": "software",
+      "badge": "MT5 sessions & opening range indicator",
+      "version": "Version 1.0",
+      "price": 330,
+      "icon": "fa-clock",
+      "shortDesc": "An MT5 indicator that draws the Sydney, Tokyo, London and New York sessions (or your own) as boxes in your broker's server time, with daylight-saving changes in each city handled automatically. A panel shows which sessions are open, countdowns, each session's high, low and range against its typical range, how often a session traded beyond the previous session's high or low, and an opening range with breakout statistics. Alerts and global variables for your own EAs. Information only: it never trades.",
+      "deliverables": [
+        "QuantCore_SessionMap indicator (.ex5)",
+        "3 preset profiles: Default (FX), Indices (cash open), All sessions",
+        "User guide (PDF)"
+      ],
+      "modules": [
+        "Up to 4 sessions defined in local city time (Sydney, Tokyo, London, New York, UTC or server time); US, EU and Australian daylight-saving rules applied automatically",
+        "Broker server offset detected from the terminal clock or set manually, with the broker's own US or EU daylight-saving rule",
+        "Session boxes with name and range on intraday charts for the last 0-60 days",
+        "Panel: clock for server time, UTC and the four cities; open/closed status and countdown for every session",
+        "Today's session high, low and range against the typical (median or mean) range of the last 5-120 sessions",
+        "How often each session traded above the previous session's high or below its low",
+        "Opening range of the first 5-240 minutes of a chosen session: levels on the chart and how often price later went above, below, both or stayed inside",
+        "Alerts and push notifications for session open/close, minutes before open, % of typical range and opening range breaks; global variables for your own EAs; never opens, modifies or closes trades"
+      ],
+      "accessPeriod": "One-time purchase, no subscription"
+    },
+    {
       "id": "qc-prop-desk-3500",
       "status": "available",
       "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",

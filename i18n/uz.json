@@ -564,6 +564,26 @@
     "Lotingiz uchun bitta kunlik ATR'ning hisob valyutasidagi qiymati, stop masofasini baholash uchun",
     "ADR foizi darajalarida, soatlik keskin harakatlarda va rejim o'zgarganda ogohlantirishlar va push-bildirishnomalar; qiymatlar o'z EA'laringiz uchun global o'zgaruvchilar sifatida e'lon qilinadi; hech qachon bitim ochmaydi, o'zgartirmaydi va yopmaydi"
    ]
+  },
+  "qc-session-map-330": {
+   "title": "QuantCore Trading Sessions & Opening Range (MT5)",
+   "badge": "MT5 savdo sessiyalari va ochilish diapazoni indikatori",
+   "shortDesc": "Sidney, Tokio, London va Nyu-York sessiyalarini (yoki o'zingiznikini) brokeringiz server vaqtida to'rtburchaklar ko'rinishida chizadigan va har bir shahardagi yozgi vaqtga o'tishni avtomatik hisobga oladigan MT5 indikatori. Panel qaysi sessiyalar ochiq ekanini, teskari hisobni, har bir sessiyaning maksimumi, minimumi va diapazonini uning odatiy diapazoniga nisbatan, sessiya oldingi sessiyaning maksimumi yoki minimumidan qanchalik tez-tez chiqqanini hamda yorib o'tish statistikasi bilan ochilish diapazonini ko'rsatadi. O'z EA'laringiz uchun ogohlantirishlar va global o'zgaruvchilar. Faqat ma'lumot beradi: o'zi savdo qilmaydi.",
+   "deliverables": [
+    "QuantCore_SessionMap indikatori (.ex5)",
+    "3 ta profil: Default (FX), Indices (kassa sessiyasi ochilishi), All sessions",
+    "Foydalanuvchi qo'llanmasi (PDF)"
+   ],
+   "modules": [
+    "Shaharning mahalliy vaqtida belgilanadigan 4 tagacha sessiya (Sidney, Tokio, London, Nyu-York, UTC yoki server vaqti); AQSh, YeI va Avstraliya yozgi vaqt qoidalari avtomatik qo'llaniladi",
+    "Broker server vaqtining siljishi terminal soati bo'yicha aniqlanadi yoki qo'lda kiritiladi, brokerning o'z yozgi vaqt qoidasi (AQSh yoki YeI) bilan",
+    "Kun ichidagi grafiklarda so'nggi 0-60 kun uchun nomi va diapazoni ko'rsatilgan sessiya to'rtburchaklari",
+    "Panel: server vaqti, UTC va to'rt shahar uchun soat; har bir sessiya uchun ochiq/yopiq holati va teskari hisob",
+    "Joriy sessiyaning maksimumi, minimumi va diapazoni so'nggi 5-120 sessiyaning odatiy (mediana yoki o'rtacha) diapazoniga nisbatan",
+    "Har bir sessiya oldingi sessiya maksimumidan yuqori yoki minimumidan past savdo qilgan kunlar ulushi",
+    "Tanlangan sessiyaning birinchi 5-240 daqiqasidagi ochilish diapazoni: grafikdagi darajalar va narx keyin qanchalik tez-tez yuqoriga, pastga, ikkala tomonga chiqqani yoki ichida qolgani",
+    "Sessiya ochilishi/yopilishi, ochilishdan N daqiqa oldin, odatiy diapazonning % ga yetganda va ochilish diapazonidan chiqqanda ogohlantirishlar va push-bildirishnomalar; o'z EA'laringiz uchun global o'zgaruvchilar; hech qachon bitim ochmaydi, o'zgartirmaydi va yopmaydi"
+   ]
   }
  },
  "productCommon": {

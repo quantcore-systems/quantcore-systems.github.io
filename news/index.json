@@ -1,5 +1,27 @@
 [
  {
+  "slug": "2026-11-05-new-session-map-330",
+  "type": "launch",
+  "title": "New: QuantCore Trading Sessions & Opening Range (MT5)",
+  "summary": "An MT5 indicator that draws the Sydney, Tokyo, London and New York sessions (or your own) as boxes in your broker's server time, with daylight-saving changes in each city handled automatically. A panel shows which sessions are open, countdowns, each session's high, low and range against its typical range, how often a session traded beyond the previous session's high or low, and an opening range with breakout statistics. Alerts and global variables for your own EAs. Information only: it never trades.",
+  "published": "2026-11-05T09:48:46Z",
+  "cover": "news/img/2026-11-05-new-session-map-330-cover.png",
+  "tags": [
+   "release"
+  ],
+  "price": 330,
+  "i18n": {
+   "ru": {
+    "title": "Новинка: QuantCore Trading Sessions & Opening Range (MT5)",
+    "summary": "Индикатор MT5, который рисует сессии Сиднея, Токио, Лондона и Нью-Йорка (или ваши собственные) в виде прямоугольников во времени сервера вашего брокера и автоматически учитывает переход на летнее время в каждом городе. Панель показывает, какие сессии открыты, обратный отсчёт, максимум, минимум и диапазон каждой сессии относительно её типичного диапазона, как часто сессия выходила за максимум или минимум предыдущей сессии, а также диапазон открытия со статистикой пробоев. Оповещения и глобальные переменные для ваших советников. Только информация: сам не торгует."
+   },
+   "uz": {
+    "title": "Yangi: QuantCore Trading Sessions & Opening Range (MT5)",
+    "summary": "Sidney, Tokio, London va Nyu-York sessiyalarini (yoki o'zingiznikini) brokeringiz server vaqtida to'rtburchaklar ko'rinishida chizadigan va har bir shahardagi yozgi vaqtga o'tishni avtomatik hisobga oladigan MT5 indikatori. Panel qaysi sessiyalar ochiq ekanini, teskari hisobni, har bir sessiyaning maksimumi, minimumi va diapazonini uning odatiy diapazoniga nisbatan, sessiya oldingi sessiyaning maksimumi yoki minimumidan qanchalik tez-tez chiqqanini hamda yorib o'tish statistikasi bilan ochilish diapazonini ko'rsatadi. O'z EA'laringiz uchun ogohlantirishlar va global o'zgaruvchilar. Faqat ma'lumot beradi: o'zi savdo qilmaydi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-05-democrats-sweep-oil-sinks",
   "type": "analysis",
   "title": "Democrats sweep Congress: oil sinks 8%, the Dow jumps 3% and gold reclaims $4,000",
