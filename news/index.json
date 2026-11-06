@@ -1,5 +1,31 @@
 [
  {
+  "slug": "2026-11-06-ai-chip-rout",
+  "type": "analysis",
+  "title": "AI chip rout: the Nasdaq's worst day in 18 months, Nikkei drops 5% and Brent rebounds on tanker attacks",
+  "summary": "Fears that the new Democratic majorities could slow AI data-centre construction hit chipmakers on Thursday: Micron and AMD fell more than 17%, the Nasdaq Composite lost 5.52% and the S&P 500 4.36%, and the VIX jumped to 28.18. The Nikkei is down 5.27% on Friday. Brent rose 3.88% after new tanker attacks in the Gulf, the Bank of England raised rates to 4%, and US payrolls are due at 13:30 UTC.",
+  "published": "2026-11-06T03:39:56Z",
+  "cover": "news/img/2026-11-06-cover.png",
+  "tags": [
+   "equities",
+   "AI",
+   "semiconductors",
+   "oil",
+   "gold",
+   "Bank of England"
+  ],
+  "i18n": {
+   "ru": {
+    "title": "Обвал акций чипмейкеров: худший день Nasdaq за 18 месяцев, Nikkei падает на 5%, Brent отскочила после атак на танкеры",
+    "summary": "Опасения, что новое демократическое большинство замедлит строительство дата-центров для ИИ, ударили по производителям чипов в четверг: Micron и AMD упали более чем на 17%, Nasdaq Composite потерял 5.52%, S&P 500 — 4.36%, VIX подскочил до 28.18. В пятницу Nikkei снижается на 5.27%. Brent выросла на 3.88% после новых атак на танкеры в Заливе, Банк Англии повысил ставку до 4%, данные о занятости в США выйдут в 13:30 UTC."
+   },
+   "uz": {
+    "title": "Chip aksiyalari qulashi: Nasdaqning 18 oydagi eng yomon kuni, Nikkei 5% tushdi, Brent tankerlarga hujumlardan keyin ko'tarildi",
+    "summary": "Yangi demokratlar ko'pchiligi sun'iy intellekt data-markazlari qurilishini sekinlashtirishi mumkinligi haqidagi xavotirlar payshanba kuni chip ishlab chiqaruvchilarga zarba berdi: Micron va AMD 17% dan ko'proq tushdi, Nasdaq Composite 5.52%, S&P 500 4.36% yo'qotdi, VIX 28.18 ga sakradi. Juma kuni Nikkei 5.27% pastda. Ko'rfazda tankerlarga yangi hujumlardan keyin Brent 3.88% o'sdi, Angliya banki stavkani 4% ga oshirdi, AQSh bandlik ma'lumotlari 13:30 UTC da chiqadi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-05-new-session-map-330",
   "type": "launch",
   "title": "New: QuantCore Trading Sessions & Opening Range (MT5)",
