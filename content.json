@@ -533,6 +533,35 @@
       "accessPeriod": "One-time purchase, no subscription"
     },
     {
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_DLGH1K82zwOjv",
+      "currency": "USD",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files",
+      "id": "qc-trade-journal-390",
+      "title": "QuantCore Trade Journal & Screenshot Recorder (MT5)",
+      "category": "software",
+      "badge": "MT5 journal EA",
+      "version": "Version 1.0",
+      "price": 390,
+      "icon": "fa-book-open",
+      "shortDesc": "A utility Expert Advisor that journals every position for you: chart screenshots at entry and exit, net result after costs, R-multiple, MAE/MFE, one-click setup tags, plan-followed marks and notes, written to a CSV journal and an HTML review page. It never opens, modifies or closes trades.",
+      "deliverables": [
+        "QuantCore_TradeJournal Expert Advisor (.ex5)",
+        "3 preset profiles: Default, Intraday, Swing",
+        "User guide (PDF)"
+      ],
+      "modules": [
+        "Records every position automatically (manual trades, one EA or all) for the symbols you choose",
+        "Chart screenshot at entry and at exit with entry/exit marks and the result, from an open chart or a temporary one",
+        "Rebuilds each closed position from MT5 deals: average entry and exit, swap, commission, fees and net result",
+        "Result in R from the initial stop-loss, plus MAE and MFE from M1 history",
+        "On-chart panel: one-click setup tags, plan followed / not followed, notes, today's result and untagged trades",
+        "HTML review page with screenshots and results by setup and plan discipline; CSV journal for Excel; catch-up of trades closed while offline"
+      ],
+      "accessPeriod": "One-time purchase, no subscription"
+    },
+    {
       "id": "qc-prop-desk-3500",
       "status": "available",
       "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",

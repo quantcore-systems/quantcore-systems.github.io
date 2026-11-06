@@ -584,6 +584,24 @@
     "Tanlangan sessiyaning birinchi 5-240 daqiqasidagi ochilish diapazoni: grafikdagi darajalar va narx keyin qanchalik tez-tez yuqoriga, pastga, ikkala tomonga chiqqani yoki ichida qolgani",
     "Sessiya ochilishi/yopilishi, ochilishdan N daqiqa oldin, odatiy diapazonning % ga yetganda va ochilish diapazonidan chiqqanda ogohlantirishlar va push-bildirishnomalar; o'z EA'laringiz uchun global o'zgaruvchilar; hech qachon bitim ochmaydi, o'zgartirmaydi va yopmaydi"
    ]
+  },
+  "qc-trade-journal-390": {
+   "title": "QuantCore Trade Journal & Screenshot Recorder (MT5)",
+   "badge": "MT5 savdo jurnali va skrinshot yozuvchi (yordamchi EA)",
+   "shortDesc": "Har bir pozitsiya bo'yicha jurnalni siz uchun yuritadigan yordamchi Expert Advisor: kirish va chiqishdagi grafik skrinshotlari, xarajatlardan keyingi sof natija, R-ko'rsatkich, MAE/MFE, bir bosishda setap teglari, «reja bajarildi» belgilari va izohlar — barchasi CSV jurnal va tahlil uchun HTML sahifaga yoziladi. Hech qachon savdo ochmaydi, o'zgartirmaydi yoki yopmaydi.",
+   "deliverables": [
+    "QuantCore_TradeJournal Expert Advisor (.ex5)",
+    "3 ta profil: Default, Intraday, Swing",
+    "Foydalanuvchi qo'llanmasi (PDF)"
+   ],
+   "modules": [
+    "Har bir pozitsiyani avtomatik yozib boradi (qo'lda ochilgan savdolar, bitta EA yoki barchasi), siz tanlagan simvollar bo'yicha",
+    "Kirish va chiqishda grafik skrinshoti: kirish/chiqish belgilari va natija bilan — ochiq grafikdan yoki vaqtinchalik grafikdan",
+    "Har bir yopilgan pozitsiyani MT5 bitimlaridan qayta tiklaydi: o'rtacha kirish va chiqish narxi, svop, komissiya, to'lovlar va sof natija",
+    "Boshlang'ich stop-lossdan R bo'yicha natija, shuningdek M1 tarixidan MAE va MFE",
+    "Grafikdagi panel: bir bosishda setap teglari, reja bajarildi / bajarilmadi, izohlar, bugungi natija va tegsiz savdolar",
+    "Skrinshotlar va setaplar hamda reja intizomi bo'yicha natijalar bilan HTML tahlil sahifasi; Excel uchun CSV jurnal; terminal o'chiq paytda yopilgan savdolarni qo'shish"
+   ]
   }
  },
  "productCommon": {

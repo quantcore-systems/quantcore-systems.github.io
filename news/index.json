@@ -1,5 +1,27 @@
 [
  {
+  "slug": "2026-11-06-new-trade-journal-390",
+  "type": "launch",
+  "title": "New: QuantCore Trade Journal & Screenshot Recorder (MT5)",
+  "summary": "A utility Expert Advisor that journals every position for you: chart screenshots at entry and exit, net result after costs, R-multiple, MAE/MFE, one-click setup tags, plan-followed marks and notes, written to a CSV journal and an HTML review page. It never opens, modifies or closes trades.",
+  "published": "2026-11-06T09:48:07Z",
+  "cover": "news/img/2026-11-06-new-trade-journal-390-cover.png",
+  "tags": [
+   "release"
+  ],
+  "price": 390,
+  "i18n": {
+   "ru": {
+    "title": "Новинка: QuantCore Trade Journal & Screenshot Recorder (MT5)",
+    "summary": "Советник-утилита, который ведёт журнал по каждой позиции за вас: скриншоты графика при входе и выходе, чистый результат с учётом издержек, результат в R, MAE/MFE, теги сетапа в один клик, отметки «план соблюдён» и заметки — всё записывается в CSV-журнал и HTML-страницу для разбора. Никогда не открывает, не изменяет и не закрывает сделки."
+   },
+   "uz": {
+    "title": "Yangi: QuantCore Trade Journal & Screenshot Recorder (MT5)",
+    "summary": "Har bir pozitsiya bo'yicha jurnalni siz uchun yuritadigan yordamchi Expert Advisor: kirish va chiqishdagi grafik skrinshotlari, xarajatlardan keyingi sof natija, R-ko'rsatkich, MAE/MFE, bir bosishda setap teglari, «reja bajarildi» belgilari va izohlar — barchasi CSV jurnal va tahlil uchun HTML sahifaga yoziladi. Hech qachon savdo ochmaydi, o'zgartirmaydi yoki yopmaydi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-06-ai-chip-rout",
   "type": "analysis",
   "title": "AI chip rout: the Nasdaq's worst day in 18 months, Nikkei drops 5% and Brent rebounds on tanker attacks",
