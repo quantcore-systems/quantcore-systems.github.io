@@ -1,5 +1,31 @@
 [
  {
+  "slug": "2026-11-07-payrolls-beat-hike-bets",
+  "type": "analysis",
+  "title": "Payrolls beat, December hike bets jump; Nasdaq rebounds and Brent posts its worst week since 2020",
+  "summary": "US payrolls rose 165,000 in October against forecasts near 60,000–70,000, unemployment fell to 4.1% and markets lifted the odds of a December Fed hike to about 78%. The S&P 500 rose 0.31% and the Nasdaq 100 1.35% after Thursday's AI rout, while the Nikkei fell 5.96%. Brent settled at $97.76 after its steepest weekly fall since March 2020 on US–Iran de-escalation hopes. US CPI is due on Tuesday at 13:30 UTC.",
+  "published": "2026-11-07T03:40:02Z",
+  "cover": "news/img/2026-11-07-cover.png",
+  "tags": [
+   "jobs",
+   "Fed",
+   "equities",
+   "oil",
+   "gold",
+   "Iran"
+  ],
+  "i18n": {
+   "ru": {
+    "title": "Занятость превзошла прогнозы, ставки на повышение ставки ФРС в декабре выросли; Nasdaq отскочил, Brent — худшая неделя с 2020 года",
+    "summary": "Число рабочих мест в США выросло в октябре на 165,000 при прогнозах около 60,000–70,000, безработица снизилась до 4.1%, а рынки повысили вероятность повышения ставки ФРС в декабре примерно до 78%. После обвала ИИ-сектора в четверг S&P 500 вырос на 0.31%, Nasdaq 100 — на 1.35%, а Nikkei упал на 5.96%. Brent завершила торги на $97.76 после самого резкого недельного падения с марта 2020 года на надеждах на деэскалацию между США и Ираном. Данные CPI в США выйдут во вторник в 13:30 UTC."
+   },
+   "uz": {
+    "title": "Bandlik prognozlardan oshdi, dekabrda Fed stavkasi oshirilishiga tikishlar ko'paydi; Nasdaq ko'tarildi, Brent 2020 yildan beri eng yomon haftani qayd etdi",
+    "summary": "AQShda oktyabrda ish o'rinlari taxminan 60,000–70,000 prognoziga qarshi 165,000 ga oshdi, ishsizlik 4.1% gacha tushdi va bozorlar dekabrda Fed stavkasi oshirilishi ehtimolini taxminan 78% gacha ko'tardi. Payshanbadagi sun'iy intellekt aksiyalari qulashidan keyin S&P 500 0.31%, Nasdaq 100 1.35% oshdi, Nikkei esa 5.96% tushdi. AQSh va Eron o'rtasidagi keskinlik yumshashi umidlarida 2020 yil martidan beri eng keskin haftalik tushishdan so'ng Brent $97.76 da yopildi. AQSh CPI ma'lumotlari seshanba kuni 13:30 UTC da e'lon qilinadi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-06-new-trade-journal-390",
   "type": "launch",
   "title": "New: QuantCore Trade Journal & Screenshot Recorder (MT5)",
