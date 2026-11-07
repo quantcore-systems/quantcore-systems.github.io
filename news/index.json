@@ -1,5 +1,27 @@
 [
  {
+  "slug": "2026-11-07-new-line-alerts-310",
+  "type": "launch",
+  "title": "New: QuantCore Line & Zone Alerts (MT5)",
+  "summary": "An MT5 indicator that turns the lines you already draw into alerts: price crossing or touching a horizontal or trend line, a bar closing beyond it, price entering or leaving a rectangle zone, or a vertical line's time arriving. Pop-up, sound, push, e-mail, chart screenshot and CSV log. Arm any object with one click. Information only: it never trades.",
+  "published": "2026-11-07T09:49:13Z",
+  "cover": "news/img/2026-11-07-new-line-alerts-310-cover.png",
+  "tags": [
+   "release"
+  ],
+  "price": 310,
+  "i18n": {
+   "ru": {
+    "title": "Новинка: QuantCore Line & Zone Alerts (MT5)",
+    "summary": "Индикатор MT5, который превращает уже нарисованные вами линии в алерты: цена пересекает горизонтальную или трендовую линию или подходит к ней, бар закрывается за линией, цена входит в зону-прямоугольник или выходит из неё, наступает время вертикальной линии. Всплывающее окно, звук, push, e-mail, скриншот графика и CSV-журнал. Любой объект включается в один клик. Только информация: никогда не торгует."
+   },
+   "uz": {
+    "title": "Yangi: QuantCore Line & Zone Alerts (MT5)",
+    "summary": "Siz allaqachon chizgan chiziqlarni ogohlantirishlarga aylantiradigan MT5 indikatori: narx gorizontal yoki trend chizig'ini kesib o'tadi yoki unga yaqinlashadi, bar chiziq ortida yopiladi, narx to'rtburchak zonaga kiradi yoki undan chiqadi, vertikal chiziq vaqti keladi. Qalqib chiquvchi oyna, ovoz, push, e-mail, grafik skrinshoti va CSV jurnal. Istalgan obyekt bir bosishda yoqiladi. Faqat ma'lumot: hech qachon savdo qilmaydi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-07-payrolls-beat-hike-bets",
   "type": "analysis",
   "title": "Payrolls beat, December hike bets jump; Nasdaq rebounds and Brent posts its worst week since 2020",

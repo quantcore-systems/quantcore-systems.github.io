@@ -602,6 +602,24 @@
     "Grafikdagi panel: bir bosishda setap teglari, reja bajarildi / bajarilmadi, izohlar, bugungi natija va tegsiz savdolar",
     "Skrinshotlar va setaplar hamda reja intizomi bo'yicha natijalar bilan HTML tahlil sahifasi; Excel uchun CSV jurnal; terminal o'chiq paytda yopilgan savdolarni qo'shish"
    ]
+  },
+  "qc-line-alerts-310": {
+   "title": "QuantCore Line & Zone Alerts (MT5)",
+   "badge": "MT5 ogohlantirish indikatori",
+   "shortDesc": "Siz allaqachon chizgan chiziqlarni ogohlantirishlarga aylantiradigan MT5 indikatori: narx gorizontal yoki trend chizig'ini kesib o'tadi yoki unga yaqinlashadi, bar chiziq ortida yopiladi, narx to'rtburchak zonaga kiradi yoki undan chiqadi, vertikal chiziq vaqti keladi. Qalqib chiquvchi oyna, ovoz, push, e-mail, grafik skrinshoti va CSV jurnal. Istalgan obyekt bir bosishda yoqiladi. Faqat ma'lumot: hech qachon savdo qilmaydi.",
+   "deliverables": [
+    "QuantCore_LineAlerts indikatori (.ex5)",
+    "3 ta profil: Default, Intraday, Swing",
+    "Foydalanuvchi qo'llanmasi (PDF)"
+   ],
+   "modules": [
+    "Siz chizgan gorizontal chiziqlar, trend chiziqlari (nurlar va burchakli chiziqlar ham), to'rtburchaklar va vertikal chiziqlarni kuzatadi",
+    "Chiziq ogohlantirishlari: jonli narx bilan kesib o'tish (yuqoriga, pastga yoki ikkalasi), N punkt ichida tegish yoki istalgan taymfreymda barning chiziq ortida yopilishi",
+    "Zona ogohlantirishlari: narx to'rtburchakka kiradi yoki undan chiqadi, chiqish yo'nalishi bilan; zonalar o'ng chetdan keyin ham faol qolishi mumkin",
+    "Vertikal chiziqlardan vaqt ogohlantirishlari, panelda teskari sanoq bilan",
+    "Obyektlar bir bosishda yoki tavsifga «alert» so'zini yozib yoqiladi; bir martalik ogohlantirishlar ishlagan deb belgilanadi va bitta tugma bilan qayta yoqiladi",
+    "Har bir ogohlantirish uchun qalqib chiquvchi oyna, ovoz, push, e-mail, grafik skrinshoti va CSV jurnal; o'z EA'laringiz uchun global o'zgaruvchilar; hech qachon savdo ochmaydi, o'zgartirmaydi yoki yopmaydi"
+   ]
   }
  },
  "productCommon": {

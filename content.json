@@ -562,6 +562,35 @@
       "accessPeriod": "One-time purchase, no subscription"
     },
     {
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_wL0EDtBn5KKQ4",
+      "currency": "USD",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files",
+      "id": "qc-line-alerts-310",
+      "title": "QuantCore Line & Zone Alerts (MT5)",
+      "category": "software",
+      "badge": "MT5 alert indicator",
+      "version": "Version 1.0",
+      "price": 310,
+      "icon": "fa-bell",
+      "shortDesc": "An MT5 indicator that turns the lines you already draw into alerts: price crossing or touching a horizontal or trend line, a bar closing beyond it, price entering or leaving a rectangle zone, or a vertical line's time arriving. Pop-up, sound, push, e-mail, chart screenshot and CSV log. Arm any object with one click. Information only: it never trades.",
+      "deliverables": [
+        "QuantCore_LineAlerts indicator (.ex5)",
+        "3 preset profiles: Default, Intraday, Swing",
+        "User guide (PDF)"
+      ],
+      "modules": [
+        "Watches horizontal lines, trend lines (including rays and angle lines), rectangles and vertical lines that you draw",
+        "Line alerts: live cross (up, down or both), touch within N points, or a bar close beyond the line on any timeframe",
+        "Zone alerts: price enters or leaves a rectangle, with direction on exit; zones can stay active past the right edge",
+        "Time alerts from vertical lines, with a countdown on the panel",
+        "Arm objects with one click or by writing 'alert' in the description; one-time alerts are marked fired and re-armed with one click",
+        "Pop-up, sound, push, e-mail, chart screenshot and CSV log for every alert; global variables for your own EAs; never opens, modifies or closes trades"
+      ],
+      "accessPeriod": "One-time purchase, no subscription"
+    },
+    {
       "id": "qc-prop-desk-3500",
       "status": "available",
       "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",
