@@ -6,8 +6,12 @@
 - `index.html` — витрина. Весь текст и товары берутся из `content.json`.
 - `content.json` — контент сайта (товары, цены, ссылки Whop, тексты, FAQ, контакты, правовые документы).
 - `admin/` — админ-панель: https://quantcore-systems.github.io/admin/
-- `assets/site.css` — собранный Tailwind CSS.
-- `tools/` — конфиг для пересборки CSS.
+- `news.html` — Market Desk (ежедневные обзоры и анонсы новых продуктов), данные в `news/`.
+- `assets/qc.css` — все стили сайта (дизайн-система: см. `DESIGN.md` в репозитории фабрики).
+- `assets/fonts/` — шрифт Geologica (OFL), `assets/logo.svg` — значок, `assets/og.png` — превью для соцсетей.
+- `i18n/ru.json`, `i18n/uz.json` — переводы интерфейса, контента и товаров.
+- `assets/site.css` — собранный Tailwind CSS (используется только админ-панелью).
+- `tools/` — конфиг для пересборки CSS админ-панели.
 
 ## Админ-панель
 1. Создайте fine-grained токен: https://github.com/settings/personal-access-tokens/new
@@ -24,7 +28,7 @@
 - Статус «В продаже» — кнопка «Buy on Whop». Включайте только когда товар реально готов и создан на Whop.
 - «Скрыт» — товар не показывается.
 
-## Пересборка CSS (только если меняли классы в HTML)
+## Пересборка CSS админ-панели (только если меняли её классы)
 ```
 npx tailwindcss@3.4.17 -c tools/tailwind.config.js -i tools/tailwind.input.css -o assets/site.css --minify
 ```
