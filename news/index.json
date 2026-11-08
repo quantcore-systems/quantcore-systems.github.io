@@ -1,5 +1,27 @@
 [
  {
+  "slug": "2026-11-08-new-chart-sync-330",
+  "type": "launch",
+  "title": "New: QuantCore Chart Sync & Symbol Linker (MT5)",
+  "summary": "An MT5 indicator that links your charts into colour groups. Change the symbol on one chart and the whole group follows; see a shared crosshair on every timeframe; copy the lines, zones and Fibonacci levels you draw to the other charts of the same symbol; scroll linked charts to the same time; switch symbols from a watchlist. Chart tool only: it never trades.",
+  "published": "2026-11-08T09:48:36Z",
+  "cover": "news/img/2026-11-08-new-chart-sync-330-cover.png",
+  "tags": [
+   "release"
+  ],
+  "price": 330,
+  "i18n": {
+   "ru": {
+    "title": "Новинка: QuantCore Chart Sync & Symbol Linker (MT5)",
+    "summary": "Индикатор MT5, который связывает ваши графики в цветные группы. Смените символ на одном графике — и вся группа переключится; общее перекрестие на всех таймфреймах; линии, зоны и уровни Фибоначчи, которые вы рисуете, копируются на другие графики того же символа; связанные графики прокручиваются к одному времени; символы переключаются кнопками списка наблюдения. Только инструмент графиков: никогда не торгует."
+   },
+   "uz": {
+    "title": "Yangi: QuantCore Chart Sync & Symbol Linker (MT5)",
+    "summary": "Grafiklaringizni rangli guruhlarga bog'laydigan MT5 indikatori. Bitta grafikda simvolni almashtiring — butun guruh unga o'tadi; barcha taymfreymlarda umumiy kursor chiziqlari; chizgan chiziqlar, zonalar va Fibonachchi darajalari shu simvolning boshqa grafiklariga ko'chiriladi; bog'langan grafiklar bir xil vaqtga suriladi; simvollar kuzatuv ro'yxati tugmalari bilan almashtiriladi. Faqat grafik vositasi: hech qachon savdo qilmaydi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-08-qeshm-strikes-cpi-week",
   "type": "analysis",
   "title": "US strikes Iran's Qeshm Island as Qatar pushes a Hormuz plan; oil ends its steepest week since 2020 and CPI is next",

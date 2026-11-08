@@ -591,6 +591,35 @@
       "accessPeriod": "One-time purchase, no subscription"
     },
     {
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_JHWNc6ZW3rXPd",
+      "currency": "USD",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files",
+      "id": "qc-chart-sync-330",
+      "title": "QuantCore Chart Sync & Symbol Linker (MT5)",
+      "category": "software",
+      "badge": "MT5 chart utility",
+      "version": "Version 1.0",
+      "price": 330,
+      "icon": "fa-link",
+      "shortDesc": "An MT5 indicator that links your charts into colour groups. Change the symbol on one chart and the whole group follows; see a shared crosshair on every timeframe; copy the lines, zones and Fibonacci levels you draw to the other charts of the same symbol; scroll linked charts to the same time; switch symbols from a watchlist. Chart tool only: it never trades.",
+      "deliverables": [
+        "QuantCore_ChartSync indicator (.ex5)",
+        "3 preset profiles: Default, Multi-Timeframe, Full Mirror",
+        "User guide (PDF)"
+      ],
+      "modules": [
+        "Four colour-coded link groups; each chart joins or leaves a group with one click on its panel",
+        "Symbol link: change the symbol on any linked chart and every chart in the group switches, each keeping its own timeframe; optional timeframe link",
+        "Shared crosshair: a time line on every linked chart and a price line on charts of the same symbol, always or only while Ctrl is held",
+        "Drawing copy: horizontal, vertical and trend lines, rectangles, channels, Fibonacci tools, text and arrows are copied, moved and deleted on the linked charts of the same symbol; 'nosync' in a description keeps an object local",
+        "Scroll link and one-key jump: linked charts follow your scrolling, or centre on the time under the mouse when you press J",
+        "Watchlist of up to 16 symbol buttons with broker-suffix matching; settings stay with each chart; never opens, modifies or closes trades"
+      ],
+      "accessPeriod": "One-time purchase, no subscription"
+    },
+    {
       "id": "qc-prop-desk-3500",
       "status": "available",
       "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",

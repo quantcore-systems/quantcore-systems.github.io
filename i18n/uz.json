@@ -620,6 +620,24 @@
     "Obyektlar bir bosishda yoki tavsifga «alert» so'zini yozib yoqiladi; bir martalik ogohlantirishlar ishlagan deb belgilanadi va bitta tugma bilan qayta yoqiladi",
     "Har bir ogohlantirish uchun qalqib chiquvchi oyna, ovoz, push, e-mail, grafik skrinshoti va CSV jurnal; o'z EA'laringiz uchun global o'zgaruvchilar; hech qachon savdo ochmaydi, o'zgartirmaydi yoki yopmaydi"
    ]
+  },
+  "qc-chart-sync-330": {
+   "title": "QuantCore Chart Sync & Symbol Linker (MT5)",
+   "badge": "MT5 grafik utilitasi",
+   "shortDesc": "Grafiklaringizni rangli guruhlarga bog'laydigan MT5 indikatori. Bitta grafikda simvolni almashtiring — butun guruh unga o'tadi; barcha taymfreymlarda umumiy kursor chiziqlari; chizgan chiziqlar, zonalar va Fibonachchi darajalari shu simvolning boshqa grafiklariga ko'chiriladi; bog'langan grafiklar bir xil vaqtga suriladi; simvollar kuzatuv ro'yxati tugmalari bilan almashtiriladi. Faqat grafik vositasi: hech qachon savdo qilmaydi.",
+   "deliverables": [
+    "QuantCore_ChartSync indikatori (.ex5)",
+    "3 ta profil: Default, Multi-Timeframe, Full Mirror",
+    "Foydalanuvchi qo'llanmasi (PDF)"
+   ],
+   "modules": [
+    "To'rtta rangli bog'lanish guruhi; grafik paneldagi bitta bosish bilan guruhga qo'shiladi yoki undan chiqadi",
+    "Simvol bog'lanishi: istalgan bog'langan grafikda simvolni almashtiring — guruhdagi barcha grafiklar o'z taymfreymida unga o'tadi; ixtiyoriy taymfreym bog'lanishi",
+    "Umumiy kursor: har bir bog'langan grafikda vaqt chizig'i va shu simvol grafiklarida narx chizig'i, doimo yoki faqat Ctrl bosib turilganda",
+    "Chizmalarni ko'chirish: gorizontal, vertikal va trend chiziqlari, to'rtburchaklar, kanallar, Fibonachchi vositalari, matn va strelkalar shu simvolning bog'langan grafiklarida ko'chiriladi, suriladi va o'chiriladi; tavsifdagi «nosync» so'zi obyektni faqat o'z grafigida qoldiradi",
+    "Aylantirish bog'lanishi va bitta tugma bilan o'tish: bog'langan grafiklar sizning aylantirishingizga ergashadi yoki J bosilganda kursor ostidagi vaqtga markazlashadi",
+    "Broker suffiksini hisobga oladigan 16 tagacha simvol tugmasidan iborat kuzatuv ro'yxati; sozlamalar har bir grafikda saqlanadi; hech qachon savdo ochmaydi, o'zgartirmaydi va yopmaydi"
+   ]
   }
  },
  "productCommon": {
