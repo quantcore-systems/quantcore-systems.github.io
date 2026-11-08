@@ -1,5 +1,31 @@
 [
  {
+  "slug": "2026-11-08-qeshm-strikes-cpi-week",
+  "type": "analysis",
+  "title": "US strikes Iran's Qeshm Island as Qatar pushes a Hormuz plan; oil ends its steepest week since 2020 and CPI is next",
+  "summary": "The US struck an air-defence target on Iran's Qeshm Island on Friday night while Qatar pressed a two-stage plan to reopen the Strait of Hormuz and Iran repeated its seven conditions. Brent settled at $98.32 and WTI at $90.83 after their steepest weekly fall since 2020; gold rose 4.51% on the week, the S&P 500 fell 2.68% and the Nasdaq 100 4.91%. US CPI for October is due on Tuesday at 13:30 UTC.",
+  "published": "2026-11-08T03:40:35Z",
+  "cover": "news/img/2026-11-08-cover.png",
+  "tags": [
+   "Iran",
+   "oil",
+   "gold",
+   "equities",
+   "CPI",
+   "Fed"
+  ],
+  "i18n": {
+   "ru": {
+    "title": "США нанесли удар по иранскому острову Кешм, Катар продвигает план по Ормузу; нефть завершила самую тяжёлую неделю с 2020 года, впереди CPI",
+    "summary": "В пятницу вечером США нанесли удар по объекту ПВО на иранском острове Кешм, а Катар продвигал двухэтапный план открытия Ормузского пролива; Иран повторил свои семь условий. Brent завершила торги на $98.32, WTI — на $90.83 после самого резкого недельного падения с 2020 года; золото за неделю выросло на 4.51%, S&P 500 снизился на 2.68%, Nasdaq 100 — на 4.91%. Данные CPI США за октябрь выйдут во вторник в 13:30 UTC."
+   },
+   "uz": {
+    "title": "AQSh Eronning Qeshm oroliga zarba berdi, Qatar Hormuz bo'yicha rejani ilgari surmoqda; neft 2020 yildan beri eng og'ir haftani yakunladi, navbatda CPI",
+    "summary": "Juma kuni kechqurun AQSh Eronning Qeshm orolidagi havo hujumidan mudofaa obyektiga zarba berdi, Qatar esa Hormuz bo'g'ozini ochish bo'yicha ikki bosqichli rejani ilgari surdi; Eron o'zining yettita shartini takrorladi. Brent $98.32, WTI $90.83 da yopildi — bu 2020 yildan beri eng keskin haftalik pasayish; oltin hafta davomida 4.51% oshdi, S&P 500 2.68%, Nasdaq 100 esa 4.91% pasaydi. AQShning oktyabr oyi CPI ma'lumotlari seshanba kuni 13:30 UTC da e'lon qilinadi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-07-new-line-alerts-310",
   "type": "launch",
   "title": "New: QuantCore Line & Zone Alerts (MT5)",
