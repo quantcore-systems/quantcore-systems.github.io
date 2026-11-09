@@ -1,5 +1,27 @@
 [
  {
+  "slug": "2026-11-09-new-volume-profile-370",
+  "type": "launch",
+  "title": "New: QuantCore Volume Profile & Value Area (MT5)",
+  "summary": "An MT5 indicator that draws a volume-at-price histogram for every day, week, month or trading session, and for any rectangle you mark with 'vp'. Shows the point of control (POC), value area high and low, and naked POCs of past periods that price has not reached since. Alerts at the previous POC, VAH, VAL and naked POCs; global variables for your own EAs. Information only: it never trades.",
+  "published": "2026-11-09T09:47:58Z",
+  "cover": "news/img/2026-11-09-new-volume-profile-370-cover.png",
+  "tags": [
+   "release"
+  ],
+  "price": 370,
+  "i18n": {
+   "ru": {
+    "title": "Новинка: QuantCore Volume Profile & Value Area (MT5)",
+    "summary": "Индикатор MT5, который строит гистограмму объёма по ценам для каждого дня, недели, месяца или торговой сессии, а также для любого прямоугольника, помеченного словом «vp». Показывает точку контроля (POC), верхнюю и нижнюю границы зоны стоимости (VAH/VAL) и «голые» POC прошлых периодов, до которых цена с тех пор не доходила. Алерты у предыдущих POC, VAH, VAL и у голых POC; глобальные переменные для ваших советников. Только информация: никогда не торгует."
+   },
+   "uz": {
+    "title": "Yangi: QuantCore Volume Profile & Value Area (MT5)",
+    "summary": "Har bir kun, hafta, oy yoki savdo sessiyasi uchun, shuningdek «vp» deb belgilangan istalgan to'rtburchak uchun narxlar bo'yicha hajm gistogrammasini chizadigan MT5 indikatori. Nazorat nuqtasi (POC), qiymat zonasining yuqori va pastki chegaralari (VAH/VAL) hamda narx o'shandan beri yetib bormagan o'tgan davrlarning «ochiq» POC'larini ko'rsatadi. Oldingi POC, VAH, VAL va ochiq POC'larda ogohlantirishlar; o'z EA'laringiz uchun global o'zgaruvchilar. Faqat ma'lumot: hech qachon savdo qilmaydi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-09-asia-rebound-cpi-eve",
   "type": "analysis",
   "title": "Asia rebounds and gold climbs as Trump plays down new Iran strikes; Houthi missiles target Saudi Aramco before US CPI",

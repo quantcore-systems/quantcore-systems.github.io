@@ -638,6 +638,24 @@
     "Aylantirish bog'lanishi va bitta tugma bilan o'tish: bog'langan grafiklar sizning aylantirishingizga ergashadi yoki J bosilganda kursor ostidagi vaqtga markazlashadi",
     "Broker suffiksini hisobga oladigan 16 tagacha simvol tugmasidan iborat kuzatuv ro'yxati; sozlamalar har bir grafikda saqlanadi; hech qachon savdo ochmaydi, o'zgartirmaydi va yopmaydi"
    ]
+  },
+  "qc-volume-profile-370": {
+   "title": "QuantCore Volume Profile & Value Area (MT5)",
+   "badge": "MT5 hajm profili",
+   "shortDesc": "Har bir kun, hafta, oy yoki savdo sessiyasi uchun, shuningdek «vp» deb belgilangan istalgan to'rtburchak uchun narxlar bo'yicha hajm gistogrammasini chizadigan MT5 indikatori. Nazorat nuqtasi (POC), qiymat zonasining yuqori va pastki chegaralari (VAH/VAL) hamda narx o'shandan beri yetib bormagan o'tgan davrlarning «ochiq» POC'larini ko'rsatadi. Oldingi POC, VAH, VAL va ochiq POC'larda ogohlantirishlar; o'z EA'laringiz uchun global o'zgaruvchilar. Faqat ma'lumot: hech qachon savdo qilmaydi.",
+   "deliverables": [
+    "QuantCore_VolumeProfile indikatori (.ex5)",
+    "3 ta profil: Default, Intraday, Swing",
+    "Foydalanuvchi qo'llanmasi (PDF)"
+   ],
+   "modules": [
+    "Har bir kun, hafta, oy yoki o'z sessiyangiz uchun hajm profillari (server vaqti, yarim tundan o'tadigan sessiyalar ham), grafikda 30 tagacha",
+    "Nazorat nuqtasi (POC), qiymat zonasining yuqori va pastki chegaralari (VAH/VAL), qiymat zonasi sozlanadi (50–95%)",
+    "Diapazon profillari: istalgan to'rtburchak tavsifiga «vp» deb yozing va aynan shu vaqt oralig'ining profilini oling; profil to'rtburchak bilan birga siljiydi",
+    "Ochiq POC'lar: narx hali kesib o'tmagan 60 tagacha o'tgan davrning POC'lari, narx ularga yetguncha o'ngga davom ettiriladi",
+    "M1 dan H1 gacha barlar bo'yicha, tik yoki real hajm bilan, avtomatik yoki belgilangan qator balandligi va bar hajmini taqsimlashning ikki usuli bilan quriladi",
+    "Joriy va oldingi darajalar hamda narx holati ko'rsatilgan panel; qalqib chiquvchi oyna, push va e-mail orqali ogohlantirishlar; o'z EA'laringiz uchun global o'zgaruvchilar; hech qachon savdo ochmaydi, o'zgartirmaydi yoki yopmaydi"
+   ]
   }
  },
  "productCommon": {

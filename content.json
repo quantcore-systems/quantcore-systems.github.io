@@ -620,6 +620,35 @@
       "accessPeriod": "One-time purchase, no subscription"
     },
     {
+      "status": "available",
+      "whopUrl": "https://whop.com/checkout/plan_De7fErMpDLb3N",
+      "currency": "USD",
+      "delivery": "Instant ZIP download via Whop",
+      "support": "Replacement of missing or damaged files",
+      "id": "qc-volume-profile-370",
+      "title": "QuantCore Volume Profile & Value Area (MT5)",
+      "category": "software",
+      "badge": "MT5 volume profile",
+      "version": "Version 1.0",
+      "price": 370,
+      "icon": "fa-chart-bar",
+      "shortDesc": "An MT5 indicator that draws a volume-at-price histogram for every day, week, month or trading session, and for any rectangle you mark with 'vp'. Shows the point of control (POC), value area high and low, and naked POCs of past periods that price has not reached since. Alerts at the previous POC, VAH, VAL and naked POCs; global variables for your own EAs. Information only: it never trades.",
+      "deliverables": [
+        "QuantCore_VolumeProfile indicator (.ex5)",
+        "3 preset profiles: Default, Intraday, Swing",
+        "User guide (PDF)"
+      ],
+      "modules": [
+        "Volume profiles for each day, week, month or custom session (server time, sessions past midnight supported), up to 30 on the chart",
+        "Point of control (POC), value area high and low (VAH/VAL) with an adjustable value area (50-95%)",
+        "Range profiles: write 'vp' in any rectangle's description to profile exactly that time span; moves with the rectangle",
+        "Naked POCs: POCs of up to 60 past periods that price has not traded through, extended until price reaches them",
+        "Built from M1 to H1 bars with tick or real volume, automatic or fixed row height, two ways of placing a bar's volume",
+        "Panel with current and previous levels and where price is now; alerts by pop-up, push and e-mail; global variables for your own EAs; never opens, modifies or closes trades"
+      ],
+      "accessPeriod": "One-time purchase, no subscription"
+    },
+    {
       "id": "qc-prop-desk-3500",
       "status": "available",
       "whopUrl": "https://whop.com/checkout/plan_YyeogdELzL0gD",
