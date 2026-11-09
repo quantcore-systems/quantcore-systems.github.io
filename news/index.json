@@ -1,5 +1,31 @@
 [
  {
+  "slug": "2026-11-09-asia-rebound-cpi-eve",
+  "type": "analysis",
+  "title": "Asia rebounds and gold climbs as Trump plays down new Iran strikes; Houthi missiles target Saudi Aramco before US CPI",
+  "summary": "Trump said new US strikes on Iran are \"highly unlikely\" if Tehran agrees a nuclear deal and reopens Hormuz, while Houthi missiles targeted Aramco sites in Saudi Arabia and Iran claimed two tankers hit mines. At 03:34 UTC on Monday the Nikkei 225 was up 3.44%, gold up 1.32% at $4,128.80 and Brent little changed at $98.17. China's October CPI rose 0.7% y/y, below forecasts; US CPI is due on Tuesday at 13:30 UTC.",
+  "published": "2026-11-09T03:40:50Z",
+  "cover": "news/img/2026-11-09-cover.png",
+  "tags": [
+   "Iran",
+   "oil",
+   "gold",
+   "equities",
+   "China",
+   "CPI"
+  ],
+  "i18n": {
+   "ru": {
+    "title": "Азия отскакивает, золото растёт: Трамп считает новые удары по Ирану маловероятными; ракеты хуситов нацелены на Saudi Aramco накануне CPI США",
+    "summary": "Трамп заявил, что новые удары США по Ирану «крайне маловероятны», если Тегеран согласится на ядерную сделку и откроет Ормуз; тем временем ракеты хуситов были нацелены на объекты Aramco в Саудовской Аравии, а Иран заявил о подрыве двух танкеров на минах. В 03:34 UTC в понедельник Nikkei 225 рос на 3.44%, золото — на 1.32% до $4,128.80, Brent почти не изменилась ($98.17). CPI Китая за октябрь вырос на 0.7% г/г, ниже прогноза; CPI США выйдет во вторник в 13:30 UTC."
+   },
+   "uz": {
+    "title": "Osiyo tiklanmoqda, oltin o'smoqda: Tramp Eronga yangi zarbalarni kam ehtimolli deb atadi; AQSh CPI oldidan husiy raketalari Saudi Aramconi nishonga oldi",
+    "summary": "Tramp, agar Tehron yadroviy kelishuvga rozi bo'lsa va Hormuzni ochsa, AQShning Eronga yangi zarbalari \"juda kam ehtimolli\" ekanini aytdi; shu bilan birga husiy raketalari Saudiya Arabistonidagi Aramco obyektlarini nishonga oldi, Eron esa ikki tanker minaga urilganini da'vo qildi. Dushanba 03:34 UTC holatiga Nikkei 225 3.44%, oltin 1.32% oshib $4,128.80 ga yetdi, Brent deyarli o'zgarmadi ($98.17). Xitoyning oktyabr CPI yillik 0.7% oshdi, prognozdan past; AQSh CPI seshanba 13:30 UTC da e'lon qilinadi."
+   }
+  }
+ },
+ {
   "slug": "2026-11-08-new-chart-sync-330",
   "type": "launch",
   "title": "New: QuantCore Chart Sync & Symbol Linker (MT5)",
